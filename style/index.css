@@ -1,0 +1,101 @@
+/*colocando cor de fundo no cabeçalho*/
+header {
+    background-color:#464143;
+   font-family: 'inter'ns-serif; /*fonte do cabeçalho*/
+   color: rgb(255, 255, 255); /*cor do texto do cabeçalho*/
+}
+
+nav a {
+    color: rgb(255, 255, 255); /*cor do texto do menu de navegação*/
+    text-decoration: none; /*removendo sublinhado dos links*/
+    margin: 0 30px; /*espaçamento entre os links*/
+    text-align: center; /*alinhamento do texto dos links*/
+}
+nav {
+    text-align: center; /*alinhamento do menu de navegação*/
+}
+nav{
+    text-align: center; /*alinhamento do menu de navegação*/
+    border-color: rgb(255, 255, 255); /*cor da borda do menu de navegação*/
+    border-width: 2px; /*largura da borda do menu de navegação*/
+    border-style: solid; /*estilo da borda do menu de navegação*/
+    padding: 20px; /*espaçamento interno do menu de navegação*/
+}
+.logo img {
+    height: 170px; /*altura da imagem do logo*/
+    width: 297px; /*largura da imagem do logo*/
+}
+
+/* configurando a caixa de pesquisara */
+.caixa-pesquisa input{
+    padding: 8px; /*distância entre as bordas do campo de pesquisa*/
+    border: 3px solid #ff0000; /*borda da caixa de pesquisa*/
+    border-radius: 10px; /*arredondamento dos cantos da caixa de pesquisa*/
+    font-family: 'inter', sans-serif; /*fonte da caixa de pesquisa*/
+    color: #000000; /*cor do texto da caixa de pesquisa*/
+    border-color: #000000; /*cor da borda da caixa de pesquisa*/
+    margin-bottom: 30px; /*espaçamento superior da caixa de pesquisa*/
+    margin-top: 30px; /*espaçamento inferior da caixa de pesquisa*/
+    width: 500px; /*largura da caixa de pesquisa*/
+    padding-left: 30px; 
+   
+}
+
+.caixa-pesquisa {
+  display: inline-block; /*definindo a caixa de pesquisa como um elemento inline-block para permitir que os ícones fiquem ao lado dela*/
+  justify-content: center; /*alinhando a caixa de pesquisa ao centro*/
+  margin-top: 30px; /*espaçamento superior da caixa de pesquisa*/
+  margin-bottom: 10px; /*espaçamento inferior da caixa de pesquisa*/
+    position: relative; /*definindo a posição da caixa de pesquisa como relativa para posicionar os ícones dentro dela*/
+}
+
+/* ALINHAR AS DIV DO CABEÇALHO */
+.topo {
+    display: flex; /*definindo o layout do cabeçalho como flexbox*/
+    align-items: center; /*alinhando os itens do cabeçalho verticalmente ao centro*/
+    justify-content: space-between; /*distribuindo os elementos do cabeçalho com espaço entre eles*/
+    padding: 10px; /*espaçamento interno do cabeçalho*/
+    
+}
+/* configurando os icones*/
+.caixa-pesquisa img{
+    height: 15px; /*altura dos icones*/
+    width: 15px; /*largura dos icones*/
+    position: absolute; /*definindo a posição dos icones como absoluta para posicioná-los dentro da caixa de pesquisa*/
+    left: 5px; /*distância dos icones em relação à borda esquerda da caixa de pesquisa*/
+   top: 50%; /*alinhando os icones verticalmente ao centro da caixa de pesquisa*/
+    transform: translateY(-50%); /*ajustando a posição dos icones para que fiquem exatamente no centro vertical da caixa de pesquisa*/
+
+}
+.icones a img{
+    height: 50px; /*altura dos icones do menu de navegação*/
+    width: 50px; /*largura dos icones do menu de navegação*/
+    margin-left: 50px; /*espaçamento entre os icones do menu de navegação*/
+    margin-right: 50px; /*espaçamento entre os icones do menu de navegação*/
+}
+
+
+/*configurando o texto dos icones de usuario e carrinho de compras*/
+.icones a small {
+font-size: 15px; /*tamanho da fonte dos textos dos icones de usuario e carrinho de compras*/
+display: block; /*definindo os textos dos icones de usuario e carrinho de compras como elementos de bloco para que fiquem abaixo dos icones*/
+color: rgb(255, 255, 255); /*cor dos textos dos icones de usuario e carrinho de compras*/
+text-decoration: none; /*removendo sublinhado dos textos dos icones de usuario e carrinho de compras*/
+}
+.icones a p{
+    font-size: 20px; /*tamanho da fonte dos textos dos icones de usuario e carrinho de compras*/
+    display: block; /*exibe o texto grande*/
+    color: rgb(255, 255, 255); /*cor dos textos dos icones de usuario e carrinho de compras*/
+    text-decoration: none; /*removendo sublinhado dos textos dos icones de usuario e carrinho de compras*/
+}
+
+.icones a{
+    text-decoration: none; /*removendo sublinhado dos links dos icones de usuario e carrinho de compras*/
+}
+
+.icones{
+    display: flex; /*definindo o layout dos icones de usuario e carrinho de compras como flexbox*/
+    align-items: center; /*alinhando os itens dos icones de usuario e carrinho de compras verticalmente ao centro*/
+    gap: 20px; /*espaçamento entre os icones de usuario e carrinho de compras*/
+
+}
