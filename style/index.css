@@ -68,34 +68,60 @@ nav{
 
 }
 .icones a img{
-    height: 50px; /*altura dos icones do menu de navegação*/
-    width: 50px; /*largura dos icones do menu de navegação*/
-    margin-left: 50px; /*espaçamento entre os icones do menu de navegação*/
-    margin-right: 50px; /*espaçamento entre os icones do menu de navegação*/
+    height: 40px; /*altura dos icones do menu de navegação*/
+    width: 40px; /*largura dos icones do menu de navegação*/
+    margin-left: 15px;/*espaçamento entre os icones do menu de navegação*/
+    margin-right: 15px; /*espaçamento entre os icones do menu de navegação*/
+    grid-row: 1 /3 ; /*ocupa as duas linhas da grande para alinhar os icones verticalmente*/
+    margin: 0; /*removendo margem dos icones do menu de navegação*/
+    
 }
 
 
 /*configurando o texto dos icones de usuario e carrinho de compras*/
 .icones a small {
-font-size: 15px; /*tamanho da fonte dos textos dos icones de usuario e carrinho de compras*/
+font-size: 20px; /*tamanho da fonte dos textos dos icones de usuario e carrinho de compras*/
 display: block; /*definindo os textos dos icones de usuario e carrinho de compras como elementos de bloco para que fiquem abaixo dos icones*/
 color: rgb(255, 255, 255); /*cor dos textos dos icones de usuario e carrinho de compras*/
 text-decoration: none; /*removendo sublinhado dos textos dos icones de usuario e carrinho de compras*/
+grid-row: 1 ; /*ocupa a segunda linha da grade para alinhar os textos dos icones verticalmente*/
+grid-column: 2;   
+margin: 0; 
 }
 .icones a p{
-    font-size: 20px; /*tamanho da fonte dos textos dos icones de usuario e carrinho de compras*/
+    font-size: 15px; /*tamanho da fonte dos textos dos icones de usuario e carrinho de compras*/
     display: block; /*exibe o texto grande*/
     color: rgb(255, 255, 255); /*cor dos textos dos icones de usuario e carrinho de compras*/
     text-decoration: none; /*removendo sublinhado dos textos dos icones de usuario e carrinho de compras*/
+    grid-row: 2 ; /*ocupa a segunda linha da grade para alinhar os textos dos icones verticalmente*/
+    grid-column:  2; /*ocupa a primeira coluna da grade para alinhar os textos dos icones horizontalmente*/
+    margin: 0; 
 }
 
 .icones a{
     text-decoration: none; /*removendo sublinhado dos links dos icones de usuario e carrinho de compras*/
+    display: grid; /*exibe os elementos em linha*/
+    grid-template-columns: 40px auto; /*definindo a largura da coluna dos icones e a largura da coluna dos textos dos icones*/
+    grid-template-rows: auto auto;
+   margin-right: 20px;  /*espaçamento entre os icones de usuario e carrinho de compras*/
 }
 
 .icones{
     display: flex; /*definindo o layout dos icones de usuario e carrinho de compras como flexbox*/
     align-items: center; /*alinhando os itens dos icones de usuario e carrinho de compras verticalmente ao centro*/
-    gap: 20px; /*espaçamento entre os icones de usuario e carrinho de compras*/
+    gap: 30px;   /*espaçamento entre os icones de usuario e carrinho de compras*/
 
+}
+
+
+/* configurando o banner */
+.imagem-banner img{
+    max-width: 100%;
+}
+
+.banner{
+    display: flex; 
+    justify-content: space-between; 
+   align-items: center; 
+ 
 }
