@@ -10,6 +10,7 @@ nav a {
     text-decoration: none; /*removendo sublinhado dos links*/
     margin: 0 30px; /*espaçamento entre os links*/
     text-align: center; /*alinhamento do texto dos links*/
+    background-color: #000000;
 }
 nav {
     text-align: center; /*alinhamento do menu de navegação*/
@@ -124,4 +125,94 @@ margin: 0;
     justify-content: space-between; 
    align-items: center; 
  
+}
+
+/* configurando a area de ofertas*/
+
+.ofertas{ 
+    padding: 20px;
+    /* distnacia entre o conteudo da div de ofertas e as bordas da div*/    
+}
+
+/*configurando os textos das ofertas*/
+.titulos-ofertas{ 
+    font-family:poppins  sans-serif; /*FONTE DO TITULO DAS OFERTAS*/
+    display: grid; /* EXIBE OS ELEMENTOS EM GRADE */
+    grid-template-columns:2 80% 20%;/* DEFINE O TAMANHO DAS COLUNAS NA GRADE*/
+    grid-template-rows: 2 50% 50%; /*DEFINE O TAMANHO DAS LINHAS DA GRADE*/
+}
+
+.titulos-ofertas h2{
+    color: #000000; /* COR DO TITULO DAS OFERTAS*/
+    font-size: 24px; /* TAMANHO DA FONTE DO TITULO DAS OFERTAS*/
+   grid-column: 1;
+   /* OCUPA A PRIMEIRA LINHA DA GRADE PARA ALINHAR O TITULO AO LADO DIREITO DO ÍCONE */
+   grid-row: 1;
+   /* OCUPA A PRIMEIRA LINHA DA GRADE PARA ALINHAR O TITULO VERTICALMENTE COM O ÍCONE*/
+   margin: 0; /* REMOVE A MARGEM PADRÃO DO ELEMENTO H2*/
+}
+
+.titulos-ofertas P{
+    color: #000000; /* COR DO SUBTITULO DAS OFERTAS*/
+    font-size: 14px; /* TAMANHO DA FONTE DO SUBTITULO DAS OFERTAS*/
+   grid-column: 1;
+   /* OCUPA A PRIMEIRA LINHA DA GRADE PARA ALINHAR O SUBTITULO AO LADO DIREITO DO ÍCONE */
+   grid-row: 1;
+   /* OCUPA A PRIMEIRA LINHA DA GRADE PARA ALINHAR O SUBTITULO VERTICALMENTE COM O ÍCONE*/
+   margin: 0; /* REMOVE A MARGEM PADRÃO DO ELEMENTO H2*/
+}
+
+.titulos-ofertas a{
+    color: #000000; /* COR DO TITULO DAS OFERTAS*/
+    font-size:  14PX;/* TAMANHO DA FONTE DO TITULO DAS OFERTAS*/
+   grid-column: 2;
+   /* OCUPA A PRIMEIRA LINHA DA GRADE PARA ALINHAR O TITULO AO LADO DIREITO DO ÍCONE */
+   grid-row: 2;
+   /* OCUPA A PRIMEIRA LINHA DA GRADE PARA ALINHAR O TITULO VERTICALMENTE COM O ÍCONE*/
+  align-self: center;
+  /* ALINHA O LINK VERTICALMENTE NO CENTRO SA GRADE*/
+  padding-left: 80%;
+  /* DISTANCIA ENTRE O LINK E O TITULO E SUBTITULO*/
+
+}
+
+.lista-produtos{
+    display: flex;
+    justify-content: space-between;
+    font-family: poppins, sans-serif;
+    margin-top: 20px;
+}
+
+.card-produtos{
+    width: 10%; /* LARGURA DE CADA CARD DE PRODUTO*/
+    height: 50%; /*ALTURA DE CADA CARD DE PRODUTO*/
+    background-color: #000000; /* COR DE FUNDO DE CADA CARD DE PRODUTO*/
+    border: 1px solid #ccc; /* BORDA DE CARD DE PRODUTO*/
+    border-radius: 10px; /* ARRENDODAMENTO DAS BORDAS DE CADA CARD DE PRODUTO*/
+    padding: 10px; /*DISTANCIA ENTRE O CONTEUDO DO CARD E AS BORDAS DO CARD */
+    text-align: center; /*ALINHAMENTO DO TEXTO NO CENTRO DO CARD*/
+
+}
+
+.card-produtos img{
+    width: 80%; /* LARGURA DA IMAGEM DO PRODUTO*/
+    height: auto; /*ALTURA DA IAMGEM DO PRODUTO*/
+    margin-bottom: 10px; /* MARGEM INFERIOR DA IMAGEM DO PRODUTO*/
+    border-radius: 10px; /* ARRENDODAMENTO DA IMAGEM DO PRODUTO*/
+    position: relative; /* POSIÇÃO RELATIVA PARA POSICIONAR O BOTÃO DE FAVORITO DO CARD DE PRODUTO */
+
+}
+
+.Favorito{
+    position: absolute;
+    border: none;
+    border-radius: 50%;
+    background-color: transparent;
+    top: 10px;
+    right: 10px;
+    padding: 10px;
+}
+
+.imagem-botao{ 
+    position: relative;
 }
