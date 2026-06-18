@@ -1,209 +1,301 @@
 /*colocando cor de fundo no cabeçalho*/
 header {
-    background-color:#464143;
-   font-family: 'inter'ns-serif; /*fonte do cabeçalho*/
-   color: rgb(255, 255, 255); /*cor do texto do cabeçalho*/
+    background-color: #464143;
+    font-family: 'inter' ns-serif;
+    /*fonte do cabeçalho*/
+    color: rgb(255, 255, 255);
+    /*cor do texto do cabeçalho*/
 }
 
 nav a {
-    color: rgb(255, 255, 255); /*cor do texto do menu de navegação*/
-    text-decoration: none; /*removendo sublinhado dos links*/
-    margin: 0 30px; /*espaçamento entre os links*/
-    text-align: center; /*alinhamento do texto dos links*/
+    color: rgb(255, 255, 255);
+    /*cor do texto do menu de navegação*/
+    text-decoration: none;
+    /*removendo sublinhado dos links*/
+    margin: 0 30px;
+    /*espaçamento entre os links*/
+    text-align: center;
+    /*alinhamento do texto dos links*/
     background-color: #000000;
 }
+
 nav {
-    text-align: center; /*alinhamento do menu de navegação*/
+    text-align: center;
+    /*alinhamento do menu de navegação*/
 }
-nav{
-    text-align: center; /*alinhamento do menu de navegação*/
-    border-color: rgb(255, 255, 255); /*cor da borda do menu de navegação*/
-    border-width: 2px; /*largura da borda do menu de navegação*/
-    border-style: solid; /*estilo da borda do menu de navegação*/
-    padding: 20px; /*espaçamento interno do menu de navegação*/
+
+nav {
+    text-align: center;
+    /*alinhamento do menu de navegação*/
+    border-color: rgb(255, 255, 255);
+    /*cor da borda do menu de navegação*/
+    border-width: 2px;
+    /*largura da borda do menu de navegação*/
+    border-style: solid;
+    /*estilo da borda do menu de navegação*/
+    padding: 20px;
+    /*espaçamento interno do menu de navegação*/
 }
+
 .logo img {
-    height: 170px; /*altura da imagem do logo*/
-    width: 297px; /*largura da imagem do logo*/
+    height: 170px;
+    /*altura da imagem do logo*/
+    width: 297px;
+    /*largura da imagem do logo*/
 }
 
 /* configurando a caixa de pesquisara */
-.caixa-pesquisa input{
-    padding: 8px; /*distância entre as bordas do campo de pesquisa*/
-    border: 3px solid #ff0000; /*borda da caixa de pesquisa*/
-    border-radius: 10px; /*arredondamento dos cantos da caixa de pesquisa*/
-    font-family: 'inter', sans-serif; /*fonte da caixa de pesquisa*/
-    color: #000000; /*cor do texto da caixa de pesquisa*/
-    border-color: #000000; /*cor da borda da caixa de pesquisa*/
-    margin-bottom: 30px; /*espaçamento superior da caixa de pesquisa*/
-    margin-top: 30px; /*espaçamento inferior da caixa de pesquisa*/
-    width: 500px; /*largura da caixa de pesquisa*/
-    padding-left: 30px; 
-   
+.caixa-pesquisa input {
+    padding: 8px;
+    /*distância entre as bordas do campo de pesquisa*/
+    border: 3px solid #ff0000;
+    /*borda da caixa de pesquisa*/
+    border-radius: 10px;
+    /*arredondamento dos cantos da caixa de pesquisa*/
+    font-family: 'inter', sans-serif;
+    /*fonte da caixa de pesquisa*/
+    color: #000000;
+    /*cor do texto da caixa de pesquisa*/
+    border-color: #000000;
+    /*cor da borda da caixa de pesquisa*/
+    margin-bottom: 30px;
+    /*espaçamento superior da caixa de pesquisa*/
+    margin-top: 30px;
+    /*espaçamento inferior da caixa de pesquisa*/
+    width: 500px;
+    /*largura da caixa de pesquisa*/
+    padding-left: 30px;
+
 }
 
 .caixa-pesquisa {
-  display: inline-block; /*definindo a caixa de pesquisa como um elemento inline-block para permitir que os ícones fiquem ao lado dela*/
-  justify-content: center; /*alinhando a caixa de pesquisa ao centro*/
-  margin-top: 30px; /*espaçamento superior da caixa de pesquisa*/
-  margin-bottom: 10px; /*espaçamento inferior da caixa de pesquisa*/
-    position: relative; /*definindo a posição da caixa de pesquisa como relativa para posicionar os ícones dentro dela*/
+    display: inline-block;
+    /*definindo a caixa de pesquisa como um elemento inline-block para permitir que os ícones fiquem ao lado dela*/
+    justify-content: center;
+    /*alinhando a caixa de pesquisa ao centro*/
+    margin-top: 30px;
+    /*espaçamento superior da caixa de pesquisa*/
+    margin-bottom: 10px;
+    /*espaçamento inferior da caixa de pesquisa*/
+    position: relative;
+    /*definindo a posição da caixa de pesquisa como relativa para posicionar os ícones dentro dela*/
 }
 
 /* ALINHAR AS DIV DO CABEÇALHO */
 .topo {
-    display: flex; /*definindo o layout do cabeçalho como flexbox*/
-    align-items: center; /*alinhando os itens do cabeçalho verticalmente ao centro*/
-    justify-content: space-between; /*distribuindo os elementos do cabeçalho com espaço entre eles*/
-    padding: 10px; /*espaçamento interno do cabeçalho*/
-    
-}
-/* configurando os icones*/
-.caixa-pesquisa img{
-    height: 15px; /*altura dos icones*/
-    width: 15px; /*largura dos icones*/
-    position: absolute; /*definindo a posição dos icones como absoluta para posicioná-los dentro da caixa de pesquisa*/
-    left: 5px; /*distância dos icones em relação à borda esquerda da caixa de pesquisa*/
-   top: 50%; /*alinhando os icones verticalmente ao centro da caixa de pesquisa*/
-    transform: translateY(-50%); /*ajustando a posição dos icones para que fiquem exatamente no centro vertical da caixa de pesquisa*/
+    display: flex;
+    /*definindo o layout do cabeçalho como flexbox*/
+    align-items: center;
+    /*alinhando os itens do cabeçalho verticalmente ao centro*/
+    justify-content: space-between;
+    /*distribuindo os elementos do cabeçalho com espaço entre eles*/
+    padding: 10px;
+    /*espaçamento interno do cabeçalho*/
 
 }
-.icones a img{
-    height: 40px; /*altura dos icones do menu de navegação*/
-    width: 40px; /*largura dos icones do menu de navegação*/
-    margin-left: 15px;/*espaçamento entre os icones do menu de navegação*/
-    margin-right: 15px; /*espaçamento entre os icones do menu de navegação*/
-    grid-row: 1 /3 ; /*ocupa as duas linhas da grande para alinhar os icones verticalmente*/
-    margin: 0; /*removendo margem dos icones do menu de navegação*/
-    
+
+/* configurando os icones*/
+.caixa-pesquisa img {
+    height: 15px;
+    /*altura dos icones*/
+    width: 15px;
+    /*largura dos icones*/
+    position: absolute;
+    /*definindo a posição dos icones como absoluta para posicioná-los dentro da caixa de pesquisa*/
+    left: 5px;
+    /*distância dos icones em relação à borda esquerda da caixa de pesquisa*/
+    top: 50%;
+    /*alinhando os icones verticalmente ao centro da caixa de pesquisa*/
+    transform: translateY(-50%);
+    /*ajustando a posição dos icones para que fiquem exatamente no centro vertical da caixa de pesquisa*/
+
+}
+
+.icones a img {
+    height: 40px;
+    /*altura dos icones do menu de navegação*/
+    width: 40px;
+    /*largura dos icones do menu de navegação*/
+    margin-left: 15px;
+    /*espaçamento entre os icones do menu de navegação*/
+    margin-right: 15px;
+    /*espaçamento entre os icones do menu de navegação*/
+    grid-row: 1 /3;
+    /*ocupa as duas linhas da grande para alinhar os icones verticalmente*/
+    margin: 0;
+    /*removendo margem dos icones do menu de navegação*/
+
 }
 
 
 /*configurando o texto dos icones de usuario e carrinho de compras*/
 .icones a small {
-font-size: 20px; /*tamanho da fonte dos textos dos icones de usuario e carrinho de compras*/
-display: block; /*definindo os textos dos icones de usuario e carrinho de compras como elementos de bloco para que fiquem abaixo dos icones*/
-color: rgb(255, 255, 255); /*cor dos textos dos icones de usuario e carrinho de compras*/
-text-decoration: none; /*removendo sublinhado dos textos dos icones de usuario e carrinho de compras*/
-grid-row: 1 ; /*ocupa a segunda linha da grade para alinhar os textos dos icones verticalmente*/
-grid-column: 2;   
-margin: 0; 
-}
-.icones a p{
-    font-size: 15px; /*tamanho da fonte dos textos dos icones de usuario e carrinho de compras*/
-    display: block; /*exibe o texto grande*/
-    color: rgb(255, 255, 255); /*cor dos textos dos icones de usuario e carrinho de compras*/
-    text-decoration: none; /*removendo sublinhado dos textos dos icones de usuario e carrinho de compras*/
-    grid-row: 2 ; /*ocupa a segunda linha da grade para alinhar os textos dos icones verticalmente*/
-    grid-column:  2; /*ocupa a primeira coluna da grade para alinhar os textos dos icones horizontalmente*/
-    margin: 0; 
+    font-size: 20px;
+    /*tamanho da fonte dos textos dos icones de usuario e carrinho de compras*/
+    display: block;
+    /*definindo os textos dos icones de usuario e carrinho de compras como elementos de bloco para que fiquem abaixo dos icones*/
+    color: rgb(255, 255, 255);
+    /*cor dos textos dos icones de usuario e carrinho de compras*/
+    text-decoration: none;
+    /*removendo sublinhado dos textos dos icones de usuario e carrinho de compras*/
+    grid-row: 1;
+    /*ocupa a segunda linha da grade para alinhar os textos dos icones verticalmente*/
+    grid-column: 2;
+    margin: 0;
 }
 
-.icones a{
-    text-decoration: none; /*removendo sublinhado dos links dos icones de usuario e carrinho de compras*/
-    display: grid; /*exibe os elementos em linha*/
-    grid-template-columns: 40px auto; /*definindo a largura da coluna dos icones e a largura da coluna dos textos dos icones*/
+.icones a p {
+    font-size: 15px;
+    /*tamanho da fonte dos textos dos icones de usuario e carrinho de compras*/
+    display: block;
+    /*exibe o texto grande*/
+    color: rgb(255, 255, 255);
+    /*cor dos textos dos icones de usuario e carrinho de compras*/
+    text-decoration: none;
+    /*removendo sublinhado dos textos dos icones de usuario e carrinho de compras*/
+    grid-row: 2;
+    /*ocupa a segunda linha da grade para alinhar os textos dos icones verticalmente*/
+    grid-column: 2;
+    /*ocupa a primeira coluna da grade para alinhar os textos dos icones horizontalmente*/
+    margin: 0;
+}
+
+.icones a {
+    text-decoration: none;
+    /*removendo sublinhado dos links dos icones de usuario e carrinho de compras*/
+    display: grid;
+    /*exibe os elementos em linha*/
+    grid-template-columns: 40px auto;
+    /*definindo a largura da coluna dos icones e a largura da coluna dos textos dos icones*/
     grid-template-rows: auto auto;
-   margin-right: 20px;  /*espaçamento entre os icones de usuario e carrinho de compras*/
+    margin-right: 20px;
+    /*espaçamento entre os icones de usuario e carrinho de compras*/
 }
 
-.icones{
-    display: flex; /*definindo o layout dos icones de usuario e carrinho de compras como flexbox*/
-    align-items: center; /*alinhando os itens dos icones de usuario e carrinho de compras verticalmente ao centro*/
-    gap: 30px;   /*espaçamento entre os icones de usuario e carrinho de compras*/
+.icones {
+    display: flex;
+    /*definindo o layout dos icones de usuario e carrinho de compras como flexbox*/
+    align-items: center;
+    /*alinhando os itens dos icones de usuario e carrinho de compras verticalmente ao centro*/
+    gap: 30px;
+    /*espaçamento entre os icones de usuario e carrinho de compras*/
 
 }
 
 
 /* configurando o banner */
-.imagem-banner img{
+.imagem-banner img {
     max-width: 100%;
 }
 
-.banner{
-    display: flex; 
-    justify-content: space-between; 
-   align-items: center; 
- 
+.banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
 }
 
 /* configurando a area de ofertas*/
 
-.ofertas{ 
+.ofertas {
     padding: 20px;
-    /* distnacia entre o conteudo da div de ofertas e as bordas da div*/    
+    /* distnacia entre o conteudo da div de ofertas e as bordas da div*/
 }
 
 /*configurando os textos das ofertas*/
-.titulos-ofertas{ 
-    font-family:poppins  sans-serif; /*FONTE DO TITULO DAS OFERTAS*/
-    display: grid; /* EXIBE OS ELEMENTOS EM GRADE */
-    grid-template-columns:2 80% 20%;/* DEFINE O TAMANHO DAS COLUNAS NA GRADE*/
-    grid-template-rows: 2 50% 50%; /*DEFINE O TAMANHO DAS LINHAS DA GRADE*/
+.titulos-ofertas {
+    font-family: poppins sans-serif;
+    /*FONTE DO TITULO DAS OFERTAS*/
+    display: grid;
+    /* EXIBE OS ELEMENTOS EM GRADE */
+    grid-template-columns: 2 80% 20%;
+    /* DEFINE O TAMANHO DAS COLUNAS NA GRADE*/
+    grid-template-rows: 2 50% 50%;
+    /*DEFINE O TAMANHO DAS LINHAS DA GRADE*/
 }
 
-.titulos-ofertas h2{
-    color: #000000; /* COR DO TITULO DAS OFERTAS*/
-    font-size: 24px; /* TAMANHO DA FONTE DO TITULO DAS OFERTAS*/
-   grid-column: 1;
-   /* OCUPA A PRIMEIRA LINHA DA GRADE PARA ALINHAR O TITULO AO LADO DIREITO DO ÍCONE */
-   grid-row: 1;
-   /* OCUPA A PRIMEIRA LINHA DA GRADE PARA ALINHAR O TITULO VERTICALMENTE COM O ÍCONE*/
-   margin: 0; /* REMOVE A MARGEM PADRÃO DO ELEMENTO H2*/
+.titulos-ofertas h2 {
+    color: #000000;
+    /* COR DO TITULO DAS OFERTAS*/
+    font-size: 24px;
+    /* TAMANHO DA FONTE DO TITULO DAS OFERTAS*/
+    grid-column: 1;
+    /* OCUPA A PRIMEIRA LINHA DA GRADE PARA ALINHAR O TITULO AO LADO DIREITO DO ÍCONE */
+    grid-row: 1;
+    /* OCUPA A PRIMEIRA LINHA DA GRADE PARA ALINHAR O TITULO VERTICALMENTE COM O ÍCONE*/
+    margin: 0;
+    /* REMOVE A MARGEM PADRÃO DO ELEMENTO H2*/
 }
 
-.titulos-ofertas P{
-    color: #000000; /* COR DO SUBTITULO DAS OFERTAS*/
-    font-size: 14px; /* TAMANHO DA FONTE DO SUBTITULO DAS OFERTAS*/
-   grid-column: 1;
-   /* OCUPA A PRIMEIRA LINHA DA GRADE PARA ALINHAR O SUBTITULO AO LADO DIREITO DO ÍCONE */
-   grid-row: 1;
-   /* OCUPA A PRIMEIRA LINHA DA GRADE PARA ALINHAR O SUBTITULO VERTICALMENTE COM O ÍCONE*/
-   margin: 0; /* REMOVE A MARGEM PADRÃO DO ELEMENTO H2*/
+.titulos-ofertas P {
+    color: #000000;
+    /* COR DO SUBTITULO DAS OFERTAS*/
+    font-size: 14px;
+    /* TAMANHO DA FONTE DO SUBTITULO DAS OFERTAS*/
+    grid-column: 1;
+    /* OCUPA A PRIMEIRA LINHA DA GRADE PARA ALINHAR O SUBTITULO AO LADO DIREITO DO ÍCONE */
+    grid-row: 1;
+    /* OCUPA A PRIMEIRA LINHA DA GRADE PARA ALINHAR O SUBTITULO VERTICALMENTE COM O ÍCONE*/
+    margin: 0;
+    /* REMOVE A MARGEM PADRÃO DO ELEMENTO H2*/
 }
 
-.titulos-ofertas a{
-    color: #000000; /* COR DO TITULO DAS OFERTAS*/
-    font-size:  14PX;/* TAMANHO DA FONTE DO TITULO DAS OFERTAS*/
-   grid-column: 2;
-   /* OCUPA A PRIMEIRA LINHA DA GRADE PARA ALINHAR O TITULO AO LADO DIREITO DO ÍCONE */
-   grid-row: 2;
-   /* OCUPA A PRIMEIRA LINHA DA GRADE PARA ALINHAR O TITULO VERTICALMENTE COM O ÍCONE*/
-  align-self: center;
-  /* ALINHA O LINK VERTICALMENTE NO CENTRO SA GRADE*/
-  padding-left: 80%;
-  /* DISTANCIA ENTRE O LINK E O TITULO E SUBTITULO*/
+.titulos-ofertas a {
+    color: #000000;
+    /* COR DO TITULO DAS OFERTAS*/
+    font-size: 14PX;
+    /* TAMANHO DA FONTE DO TITULO DAS OFERTAS*/
+    grid-column: 2;
+    /* OCUPA A PRIMEIRA LINHA DA GRADE PARA ALINHAR O TITULO AO LADO DIREITO DO ÍCONE */
+    grid-row: 2;
+    /* OCUPA A PRIMEIRA LINHA DA GRADE PARA ALINHAR O TITULO VERTICALMENTE COM O ÍCONE*/
+    align-self: center;
+    /* ALINHA O LINK VERTICALMENTE NO CENTRO SA GRADE*/
+    padding-left: 80%;
+    /* DISTANCIA ENTRE O LINK E O TITULO E SUBTITULO*/
 
 }
 
-.lista-produtos{
+.lista-produtos {
     display: flex;
     justify-content: space-between;
     font-family: poppins, sans-serif;
     margin-top: 20px;
 }
 
-.card-produtos{
-    width: 20%; /* LARGURA DE CADA CARD DE PRODUTO*/
-    height: 50%; /*ALTURA DE CADA CARD DE PRODUTO*/
-    background-color: #555252; /* COR DE FUNDO DE CADA CARD DE PRODUTO*/
-    border: 1px solid #ccc; /* BORDA DE CARD DE PRODUTO*/
-    border-radius: 10px; /* ARRENDODAMENTO DAS BORDAS DE CADA CARD DE PRODUTO*/
-    padding: 10px; /*DISTANCIA ENTRE O CONTEUDO DO CARD E AS BORDAS DO CARD */
-    text-align: center; /*ALINHAMENTO DO TEXTO NO CENTRO DO CARD*/
-  
-}
-
-.card-produtos img{
-    width: 80%; /* LARGURA DA IMAGEM DO PRODUTO*/
-    height: auto; /*ALTURA DA IAMGEM DO PRODUTO*/
-    margin-bottom: 10px; /* MARGEM INFERIOR DA IMAGEM DO PRODUTO*/
-    border-radius: 10px; /* ARRENDODAMENTO DA IMAGEM DO PRODUTO*/
-    position: relative; /* POSIÇÃO RELATIVA PARA POSICIONAR O BOTÃO DE FAVORITO DO CARD DE PRODUTO */
+.card-produtos {
+    width: 20%;
+    /* LARGURA DE CADA CARD DE PRODUTO*/
+    height: 50%;
+    /*ALTURA DE CADA CARD DE PRODUTO*/
+    background-color: #555252;
+    /* COR DE FUNDO DE CADA CARD DE PRODUTO*/
+    border: 1px solid #ccc;
+    /* BORDA DE CARD DE PRODUTO*/
+    border-radius: 10px;
+    /* ARRENDODAMENTO DAS BORDAS DE CADA CARD DE PRODUTO*/
+    padding: 10px;
+    /*DISTANCIA ENTRE O CONTEUDO DO CARD E AS BORDAS DO CARD */
+    text-align: center;
+    /*ALINHAMENTO DO TEXTO NO CENTRO DO CARD*/
 
 }
 
-.Favorito{
+.card-produtos img {
+    width: 80%;
+    /* LARGURA DA IMAGEM DO PRODUTO*/
+    height: auto;
+    /*ALTURA DA IAMGEM DO PRODUTO*/
+    margin-bottom: 10px;
+    /* MARGEM INFERIOR DA IMAGEM DO PRODUTO*/
+    border-radius: 10px;
+    /* ARRENDODAMENTO DA IMAGEM DO PRODUTO*/
+    position: relative;
+    /* POSIÇÃO RELATIVA PARA POSICIONAR O BOTÃO DE FAVORITO DO CARD DE PRODUTO */
+
+}
+
+.Favorito {
     position: absolute;
     border: none;
     border-radius: 50%;
@@ -214,53 +306,105 @@ margin: 0;
 
 }
 
-.imagem-botao{ 
+.imagem-botao {
     position: relative;
 }
 
-.card-produtos h3{
+.Favorito img{ 
+    
+}
+
+.card-produtos h3 {
     font-size: 18px;
     font-family: poppins, sans-serif;
-    color: #ffffff;/* ADICIONAR COR NO TEXTO */
-    font-style: bold; /* DEIXA O TEXTO EM NEGRITO*/
+    color: #ffffff;
+    /* ADICIONAR COR NO TEXTO */
+    font-style: bold;
+    /* DEIXA O TEXTO EM NEGRITO*/
 }
 
 
 /* CONFIGURANDO O BOTÃO DE ADICIONAR AO CARRIMHO */
- .btn-adicionar{
-    border-radius: 40%; /* ARRENDODAR O BOTÃO */
-    background-color: rgb(0, 0, 0); /* COR DE FUNDO DO BOTÃO */
-    border: none; /* RETIRAR AS BORDAS DO BOTÃO */
-    margin-left: 80%; /* DEFINIR QUE O BOTÃO FICARA NO LADO DIREITO DO CARD */
-    
- }
+.btn-adicionar {
+    border-radius: 20px;
+    /* ARRENDODAR O BOTÃO */
+    background-color: rgb(50, 221, 59);
+    /* COR DE FUNDO DO BOTÃO */
+    border: none;
+    /* RETIRAR AS BORDAS DO BOTÃO */
+  font-size: 20px;
+  color: #ffffff;
+}
 
- .btn-adicionar img{
-    width: 50px; /* ALTERARO TAMANHO DO ÍCONE DE CARRINHO */
-    padding-top: 10px; /* DISTANCIAR A IMAGEM DO TOPO DO BOTÃO */
-  
 
- }
-  .preços{
-    display: grid; /* PERMITE COLOCAR ITENS UM AO LADO DO OUTRO */
-    grid-template-columns: 2; /*DUAS COLUNAS */
-    grid-template-rows: 1; /* UMA LINHA */
+
+.preços {
+    display: grid;
+    /* PERMITE COLOCAR ITENS UM AO LADO DO OUTRO */
+    grid-template-columns: 2;
+    /*DUAS COLUNAS */
+    grid-template-rows: 1;
+    /* UMA LINHA */
     align-items: center;
-  }
+}
 
-  .p-antigo{
+.p-antigo {
     grid-column: 1;
     grid-row: 1;
     /* traçar uma linha cortando o preço */
-    text-decoration: line-through; 
-    font-size: 14px; /* tamanho do texto */
-    color: #87dd76; /* cor de texto */
-  }
+    text-decoration: line-through;
+    font-size: 14px;
+    /* tamanho do texto */
+    color: #eb0000;
+    /* cor de texto */
+}
 
-  .p-promocional{
+.p-promocional {
     grid-column: 2;
     grid-row: 1;
     text-decoration: bold;
     font-size: 20px;
     color: #2bff00;
-  }
+}
+
+/* configurações de Rodapé */
+
+footer {
+    background-color: #555252;
+    color: #ffffff;
+    font-family: poppins, sans-serif;
+    padding: 10px;
+}
+
+.superior {
+    display: flex;
+    /* permitir flexibilidade entre as colunas */
+    gap: 10px;
+    /* espaçamento entre as divs */
+    justify-content: space-between;
+    /* definir um tamanho igual entre as divs */
+    flex-wrap: wrap;
+    /* joga os textos para outra linha caso não possa caber na div */
+    align-items: center;
+    /* alinha os paragrafos no centro */
+}
+
+.coluna1,.coluna2,.coluna3,.coluna4{
+    flex:1; /* que cada coluna ocupa 1 espaço na página */
+    padding: 5px;
+}
+
+.superior h2{
+    font-size: 18px; /* tamamho dos titulos */
+    font-weight: bold; /* apliquei negrito aos titulos */
+
+}
+ 
+.superior p{
+    font-size: 20px;
+}
+
+.superior img{
+    width: 50px; /* definir tamanho dos ícones */
+
+}
