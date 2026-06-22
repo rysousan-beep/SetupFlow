@@ -1,0 +1,70 @@
+// CRIANDO VÁRIAVEIS
+/* nome das váriaveis não pode ter:
+-acento
+-espaço
+-simbolos
+-não pode começar com números 
+-não deve ser escrito com a primeira letra maiúsculo
+*/
+ 
+// variaveis que alteram de valor 
+const preco= 299.99;
+const preco_antigo= 499.99;
+const quantidade= 10;
+const favorito=false;
+const desconto= "-15%";
+
+// variaveis que são constantes/ não alteram de valor
+let nomeProduto= "mouse razer";
+let avaliacoes;
+let img_miniaturas=
+[
+   "/assets/foto-2.png",
+   "/assets/foto-3.png",
+   "/assets/foto-4.png",
+   "/assets/foto-5.png",
+];
+let img_principal="/assets/mouse.png";
+let descricao="o mouse razer v3 HyperSpeed Sem Fio,  e o melhor do mercado tanto para jogos e trabalhar";
+let frete;
+// botoes e arquivos
+let btn_add_carrinho;
+let btn_comprar;
+let btn_add_quantidade;
+let btn_remover_quantidade;
+let btn_calcular_frete;
+
+// CÓDIGO PARA PREENCHER AS IMAGENS NO HTML
+
+
+
+// LENDO A QUANTIDADE DE IMAGENS CADASTRADAS E CRIANDO AS TANGS IMG
+
+/* ForEach: percorre uma lista de itens até o final
+- ele percorre o primeiro, se ver que tem outro, ele lé o outro 
+- quando chega  no último ele para de ler o finaliza a execusão
+- img_miniatura é chamado pq e ele que  contém a lista de imagens
+- depois o ForEach é chamado para ler a lista 
+- e dentro do ForEach passamos o tipo de documento lido (imagem)
+*/
+
+img_miniaturas.forEach(imagem=>{
+    //CRIANDO UMA VÁRIAVEL PARA RECONHECER O ID DA IMAGEM LATERAL
+const lateral= document.creatoElement("img");
+//criando o codígo que mostra as imagens no site
+   img.src=imagem; //ele joga o caminho da imagem na tag img
+  img.classList.add ("img-lateral");//jogar a tag criada na div
+
+/* criando o código que substitui a imagem principal pela miniatura cliacada */
+img.addEventListener("click",()=>{
+  document.getElementById("imagem-maior"). src=imagem;
+});// ver se a pessoa clicou na imagem
+
+});// fechar o ForEach
+
+// preencher a imagem principal
+document.getElementById("imagem-maior").src= img-principal
+
+
+
+
