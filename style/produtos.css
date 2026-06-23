@@ -201,3 +201,63 @@ nav {
     /*espaçamento entre os icones de usuario e carrinho de compras*/
 
 }
+
+/* CONFIGUAR AS IMAGENS */
+
+/* GALERIA */
+
+.area-detalhes {
+    max-width: 1200px;
+    /* tamamho máximo da largura da área */
+    margin: 50px auto;
+    /* margem de espaçamento, distanciar as imagens sa borda da tela*/
+    padding: 20px;
+    /* serve para separar os elementos de perto das bordas da div */
+    display: flex;
+    /* permitir que as imagens fiquem uma abaixo da outra ou uma do lado da outra */
+    gap: 50px;
+    /* e a distancia das tags dentro da div */
+}
+
+.area-imagens {
+   display: flex;
+   gap: 20px;
+   /* e a distancia das  tags dentro da div */
+}
+
+.img-laretal {
+     display: flex;
+     flex-direction: column;
+     /* deixa as  imagens uma embaixo da outra */
+     gap: 15px;
+     /* e a distancia entre uma miniatura e outra */
+}
+
+.img-laretal {
+     width: 70px;
+     height: 90px;
+}
+
+.img-laretal{
+ width: 70px;
+ height: 90px;
+ object-fit: cover; /* redimenciona a imagem para caber na área */
+ border: 2px solid transparent;/* bordas ao redor da área */
+ border-radius: 10px; /* arrendodar as bordas */
+ cursor: pointer; /* alterar o curso para a mão */
+ transition: 0,3s; /* colocar efeito da transição */
+}
+
+.img-laretal:houver {
+     border-color: #000000;
+     /* adicionar borda ao passar o mouse pela imagem */
+}
+
+.img-principal img {
+      width: 500px;
+      /* tamanho da imagemprincipal */
+      border-radius: 15px;
+    /* arrendondar a imagem principal */
+      box-shadow: 0 5px  rgba(0, 0, 0, 0.1);
+      /* adicionar sombra a imagem principal*/
+}

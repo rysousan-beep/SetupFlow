@@ -6,26 +6,26 @@
 -não pode começar com números 
 -não deve ser escrito com a primeira letra maiúsculo
 */
- 
+
 // variaveis que alteram de valor 
-const preco= 299.99;
-const preco_antigo= 499.99;
-const quantidade= 10;
-const favorito=false;
-const desconto= "-15%";
+const preco = 299.99;
+const preco_antigo = 499.99;
+const quantidade = 10;
+const favorito = false;
+const desconto = "-15%";
 
 // variaveis que são constantes/ não alteram de valor
-let nomeProduto= "mouse razer";
+const nomeProduto = "mouse razer";
 let avaliacoes;
-let img_miniaturas=
-[
-   "/assets/foto-2.png",
-   "/assets/foto-3.png",
-   "/assets/foto-4.png",
-   "/assets/foto-5.png",
-];
-let img_principal="/assets/mouse.png";
-let descricao="o mouse razer v3 HyperSpeed Sem Fio,  e o melhor do mercado tanto para jogos e trabalhar";
+const img_miniaturas =
+  [
+    "/assets/foto-2.png",
+    "/assets/foto-3.png",
+    "/assets/foto-4.png",
+    "/assets/foto-5.png"
+  ];
+const img_principal = "/assets/mouse.png";
+const descricao = "o mouse razer v3 HyperSpeed Sem Fio,  e o melhor do mercado tanto para jogos e trabalhar";
 let frete;
 // botoes e arquivos
 let btn_add_carrinho;
@@ -36,7 +36,7 @@ let btn_calcular_frete;
 
 // CÓDIGO PARA PREENCHER AS IMAGENS NO HTML
 
-
+const lateral = document.getElementById("img-lateral");
 
 // LENDO A QUANTIDADE DE IMAGENS CADASTRADAS E CRIANDO AS TANGS IMG
 
@@ -48,23 +48,52 @@ let btn_calcular_frete;
 - e dentro do ForEach passamos o tipo de documento lido (imagem)
 */
 
-img_miniaturas.forEach(imagem=>{
-    //CRIANDO UMA VÁRIAVEL PARA RECONHECER O ID DA IMAGEM LATERAL
-const lateral= document.creatoElement("img");
-//criando o codígo que mostra as imagens no site
-   img.src=imagem; //ele joga o caminho da imagem na tag img
-  img.classList.add ("img-lateral");//jogar a tag criada na div
+img_miniaturas.forEach(imagem => {
+  //CRIANDO UMA VÁRIAVEL PARA RECONHECER O ID DA IMAGEM LATERAL
+  const img = document.createElement("img");
+  //criando o codígo que mostra as imagens no site
+  img.src = imagem; //ele joga o caminho da imagem na tag img
+  img.classList.add("img-lateral");//jogar a tag criada na div
 
-/* criando o código que substitui a imagem principal pela miniatura cliacada */
-img.addEventListener("click",()=>{
-  document.getElementById("imagem-maior"). src=imagem;
-});// ver se a pessoa clicou na imagem
+  /* criando o código que substitui a imagem principal pela miniatura cliacada */
+  img.addEventListener("click", () => {
+    document.getElementById("imagem-maior").src = imagem;
+  });// ver se a pessoa clicou na imagem
+
+  lateral.appendChild(img);
 
 });// fechar o ForEach
 
 // preencher a imagem principal
-document.getElementById("imagem-maior").src= img-principal
+document.getElementById("imagem-maior").src = img_principal;
 
+//----------------------------------PREENCHER DADOS DO PRODUTO--------------------------------------------//
+ 
+document.getElementById("nome-produto").textContent = nomeProduto;
+document.getElementById("valor-avaliacao").textContent = avaliacoes;
+document.getElementById("preco-antigo").textContent = preco_antigo;
+document.getElementById("preco-promocional").textContent = preco_promocional;
+document.getElementById("desconto").textContent = desconto;
+//--------------------------------CORES DO PRODUTO--------------------------------------------------------//
 
+//ELE VAI LER QUANTAS CORES O PRODUTO TEM E
+// VAI CRIAR BOTÕES PARA AS CORES
+const listaCores = document.getElementById("cores");
+Cores.forEach(cores => { // percorrer as cores cadastradas
+   const botao = document.createElement("button");
+   //criar um botão para cada cor que ele encontrar
+   botao.textContent(cores);
+   listaCores.appendChild(botao);
+});
+ 
+//-------------------------------TAMANHO DO PRODUTO-----------------------------------------------------//
 
-
+//ELE VAI LER QUANTAS TAMANHOS O PRODUTO TEM E
+// VAI CRIAR BOTÕES PARA OS TAMANHOS
+const listatamanhos = document.getElementById("tamanhos");
+Cores.forEach(cores => { // percorrer as cores cadastradas
+   const botao = document.createElement("button");
+   //criar um botão para cada cor que ele encontrar
+   botao.textContent(tamanhos);
+   listaTamanhos.appendChild(botao);
+   });
