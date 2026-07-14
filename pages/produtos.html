@@ -1,134 +1,174 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>produto</title>
 
-    <!--CONEXÃO COM O CSS-->
-    <link rel="stylesheet" href="/style/produtos.css">
-    <!--LOGO DA EMPRESA PARA O NAVEGADOR-->
-    <link rel="icon" type="image/png" href="/assets/logo.nv.png">
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title id="pageTitle"></title>
+
+    <link rel="stylesheet"
+          href="/style/detalhe.css">
 
 </head>
 
 <body>
 
+    <!--========================================-->
+    <!-- HEADER -->
+    <!--========================================-->
+
     <header>
-        <div class="topo">
-            <!--LOGO DO SITE-->
-            <div class="logo">
-                <img src="/assets/logo.nv.png" alt="Logo do site">
-                <h1></h1>
+
+        <div class="container header-container">
+
+            <div class="logo-area">
+
+                <img id="logo"
+                     src=""
+                     alt="">
+
+                <h1 id="tituloPagina"></h1>
+
             </div>
 
-            <!--caixa de pesquisa -->
-            <div class="caixa-pesquisa">
-                <img src="/assets/lupa.png" alt="Lupa de pesquisa">
-                <input type="text" placeholder="o que você procura?">
-            </div>
+            <nav>
 
+                <ul class="menu">
 
+                    <li>
 
-            <div class="icones">
-                <a href="">
-                    <img src="/assets/carrinho.png" alt="Carrinhos">
-                    <small> Carrinho </small>
-                    <p>Menu</p>
+                        <a id="btnHome"
+                           href="">
 
-                </a>
-                <a href="">
-                    <img src="/assets/perfil.png" alt="login">
-                    <small>Perfil</small>
-                    <p>Entrar</p>
-                </a>
+                            <img id="iconeHome"
+                                 src=""
+                                 alt="">
 
-                <a href="">
-                    <img src="/assets/localização.png" alt="rastreamento">
-                    <small>Rastreamento</small>
-                    <p>rastrear</p>
-                </a>
+                            <span id="textoHome"></span>
 
-                <a href="">
-                    <img src="/assets/favoritos.png" alt="favoritos">
-                    <small>Meus favoritos</small>
-                    <p>entrar</p>
-                </a>
-            </div>
+                        </a>
+
+                    </li>
+
+                </ul>
+
+            </nav>
+
         </div>
 
-
-
-
-
-
-
-        <!--MENU DE NAVEGAÇÃO-->
-        <nav class="menu">
-            <a href="">Home</a>
-            <a href="#">Departamento</a>
-            <a href="#">Monte seu PC</a>
-            <a href="#">Pcs Games</a>
-            <a href="#">Hardware</a>
-
-        </nav>
     </header>
 
+    <!--========================================-->
+    <!-- MAIN -->
+    <!--========================================-->
 
-    <!--ÁREA DOS DADOS DO PRODUTO-->
-    <div class="area-detalhes">
-        <div class="area-imagens">
-            <div class="img-lateral" id="img-lateral">
+    <main>
+
+        <!--========================================-->
+        <!-- PRODUTO -->
+        <!--========================================-->
+
+        <section class="produto">
+
+            <div class="container produto-container">
+
+                <!-- Imagem -->
+
+                <div class="produto-imagem">
+
+                    <img id="imagemProduto"
+                         src=""
+                         alt="">
+
+                </div>
+
+                <!-- Informações -->
+
+                <div class="produto-info">
+
+                    <h2 id="nomeProduto"></h2>
+
+                    <div class="preco-area">
+
+                        <span id="precoProduto"></span>
+
+                    </div>
+
+                    <ul id="listaCaracteristicas">
+
+                        <!-- Características criadas pelo JS -->
+
+                    </ul>
+
+                    <div class="acoes">
+
+                        <button id="btnCarrinho"
+                                type="button">
+                        </button>
+
+                        <button id="btnComprar"
+                                type="button">
+                        </button>
+
+                    </div>
+
+                </div>
 
             </div>
-            <div class="img-principal" id="img-principal">
-                <img id="imagem-maior">
+
+        </section>
+
+        <!--========================================-->
+        <!-- AVALIAÇÕES -->
+        <!--========================================-->
+
+        <section class="avaliacoes">
+
+            <div class="container">
+
+                <div class="titulo-avaliacoes">
+
+                    <h2 id="tituloAvaliacoes"></h2>
+
+                    <p id="descricaoAvaliacoes"></p>
+
+                </div>
+
+                <div id="listaAvaliacoes">
+
+                    <!-- Cards criados pelo JavaScript -->
+
+                </div>
 
             </div>
 
+        </section>
+
+    </main>
+
+    <!--========================================-->
+    <!-- FOOTER -->
+    <!--========================================-->
+
+    <footer>
+
+        <div class="container footer-container">
+
+            <p id="copyright"></p>
+
+            <a id="linkPrivacidade"
+               href=""></a>
 
         </div>
-        <div class="area-textos">
-          <!--nome do produto-->
-         <h1 id="nome-produto"></h1>
-         <!--area das avaliações do produto-->
-        <div class="avaliacoes-produto">
-         <img id="estrela-avaliacao">
-         <span id="valor-avaliacao"></span>
-        </div>
 
-        <p id="preco-antigo"></p>
-            <!--area do preço promocional-->
-            <div class="preco-promocional">
-                <p id="preco-promocional"></p>
-                <span id="desconto"></span>
-            </div>
+    </footer>
 
-         <div id="tamanho"></div>
-         <div id="cores"></div>
-         <div class="quantidade">
-             <button id="diminuir"></button>
-             <span id="numero-quantidade"></span>
-             <button id="aumentar"></button>
-         </div>
+    <script src="/js/detalhe.js"></script>
 
-         <div class="bnt-add-carrinho">
-              <button id="bnt-add-carrinho"></button>
-         </div>
-
-        <div class="area-frete">
-            <p>calcular o frete</p>
-            <input id="cep">
-            <button id="bnt-calcular-frete">calcular</button>
-        </div>
-
-
-        </div>
-    </div>
-
-        <!--FAZENDO A CONEXÃO COM JAVASCRIPT-->
-        <script src="/js/produto.js"></script>
 </body>
 
 </html>

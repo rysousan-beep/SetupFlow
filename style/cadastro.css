@@ -1,0 +1,302 @@
+/*==================================================
+    RESET
+==================================================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#49A9CF;
+    color:#333;
+}
+
+
+/*==================================================
+    HEADER
+==================================================*/
+
+#header{
+    width:100%;
+    min-height:80px;
+    background:#FFFFFF;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    box-shadow:0 2px 8px rgba(0,0,0,.08);
+}
+
+
+/*==================================================
+    MAIN
+==================================================*/
+
+#main{
+    width:100%;
+}
+
+
+/*==================================================
+    BANNER
+==================================================*/
+
+#banner{
+    width:100%;
+    height:45px;
+    background:#6D6D6D;
+}
+
+
+/*==================================================
+    ÁREA DE CADASTRO
+==================================================*/
+
+#cadastro{
+    width:100%;
+    background:#6D6D6D;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:60px 20px;
+}
+
+#cadastro-container{
+    width:100%;
+    max-width:560px;
+}
+
+#cadastro-topo{
+    margin-bottom:35px;
+}
+
+#cadastro-topo h1{
+    color:#FFFFFF;
+    font-size:42px;
+    margin-bottom:12px;
+}
+
+#cadastro-topo p{
+    color:#DDDDDD;
+    font-size:15px;
+    line-height:1.6;
+}
+
+
+/*==================================================
+    FORMULÁRIO
+==================================================*/
+
+#form-cadastro{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+
+.campo{
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+}
+
+.campo label{
+    color:#FFFFFF;
+    font-size:14px;
+    font-weight:bold;
+}
+
+.campo input{
+    width:100%;
+    height:48px;
+    border:none;
+    border-radius:6px;
+    outline:none;
+    padding:0 16px;
+    font-size:15px;
+    transition:.3s;
+    background:#FFFFFF;
+}
+
+.campo input::placeholder{
+    color:#9A9A9A;
+}
+
+.campo input:focus{
+    box-shadow:0 0 10px rgba(73,169,207,.45);
+    border:2px solid #49A9CF;
+}
+
+
+/*==================================================
+    BOTÕES
+==================================================*/
+
+#cadastro-botoes{
+    display:flex;
+    gap:15px;
+    margin-top:35px;
+}
+
+#cadastro-botoes button{
+    flex:1;
+    height:48px;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
+    font-size:15px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+#cadastro-botoes button:first-child{
+    background:#49A9CF;
+    color:#FFFFFF;
+}
+
+#cadastro-botoes button:first-child:hover{
+    background:#328CB3;
+}
+
+#cadastro-botoes button:last-child{
+    background:#D7D7D7;
+    color:#555555;
+}
+
+#cadastro-botoes button:last-child:hover{
+    background:#C3C3C3;
+}
+
+
+/*==================================================
+    BENEFÍCIOS
+==================================================*/
+
+#beneficios{
+    width:100%;
+    background:#FFFFFF;
+    padding:60px 20px;
+}
+
+#beneficios-container{
+    max-width:1100px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:35px;
+}
+
+.card-beneficio{
+    text-align:center;
+    padding:25px;
+    transition:.3s;
+}
+
+.card-beneficio:hover{
+    transform:translateY(-6px);
+}
+
+.card-beneficio img{
+    width:80px;
+    height:80px;
+    object-fit:contain;
+    margin-bottom:18px;
+}
+
+.card-beneficio h3{
+    margin-bottom:10px;
+    font-size:22px;
+}
+
+.card-beneficio p{
+    color:#777777;
+    line-height:1.6;
+}
+
+
+/*==================================================
+    FOOTER
+==================================================*/
+
+#footer{
+    width:100%;
+    min-height:90px;
+    background:#FFFFFF;
+    border-top:1px solid #E5E5E5;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:20px;
+}
+
+
+/*==================================================
+    RESPONSIVIDADE
+==================================================*/
+
+@media(max-width:768px){
+
+    #cadastro{
+        padding:40px 20px;
+    }
+
+    #cadastro-container{
+        max-width:100%;
+    }
+
+    #cadastro-topo{
+        text-align:center;
+    }
+
+    #cadastro-topo h1{
+        font-size:34px;
+    }
+
+    #cadastro-botoes{
+        flex-direction:column;
+    }
+
+    #cadastro-botoes button{
+        width:100%;
+    }
+
+}
+
+
+@media(max-width:480px){
+
+    #header{
+        min-height:70px;
+    }
+
+    #banner{
+        height:35px;
+    }
+
+    #cadastro{
+        padding:30px 15px;
+    }
+
+    #cadastro-topo h1{
+        font-size:30px;
+    }
+
+    #cadastro-topo p{
+        font-size:14px;
+    }
+
+    .campo input{
+        height:46px;
+        font-size:14px;
+    }
+
+    #beneficios{
+        padding:45px 15px;
+    }
+
+}

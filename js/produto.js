@@ -8,7 +8,7 @@
 */
 
 // variaveis que alteram de valor 
-const preco = 299.99;
+const preco_promocional = 299.99;
 const preco_antigo = 499.99;
 const quantidade = 10;
 const favorito = false;
@@ -16,7 +16,7 @@ const desconto = "-15%";
 
 // variaveis que são constantes/ não alteram de valor
 const nomeProduto = "mouse razer";
-let avaliacoes;
+let avaliacoes=5;
 const img_miniaturas =
   [
     "/assets/foto-2.png",
@@ -76,6 +76,7 @@ document.getElementById("preco-promocional").textContent = preco_promocional;
 document.getElementById("desconto").textContent = desconto;
 //--------------------------------CORES DO PRODUTO--------------------------------------------------------//
 
+/*
 //ELE VAI LER QUANTAS CORES O PRODUTO TEM E
 // VAI CRIAR BOTÕES PARA AS CORES
 const listaCores = document.getElementById("cores");
@@ -97,3 +98,39 @@ Cores.forEach(cores => { // percorrer as cores cadastradas
    botao.textContent(tamanhos);
    listaTamanhos.appendChild(botao);
    });
+*/
+   //----------------------- QUANTIDADE DE PRODUTO-------------------------------//
+/* O LIMITE DE QUANTIDADE VAI SER IGUAL A QUANTIDADE DE PRODUTOS QUE O LOJISTA CAASTROU NO ESTOQUE.
+QUANDO O CLIENTE CLICAR NO BOTÃO = A QUANTIDADE COMPRADAD AUMENTA DE 1 EM 1.
+QUANDO ELE CLICAR NO BOTAO DE - A QUANTIDADE COMPRADA DIMINIUI DE 1 EM 1 
+INICIALMENTE O VALOR DA QUANTIDADE APARECE COMO 1. */
+
+let quantidade_inicial = 1;//criar a quantidade inicial.
+// chamar os botões e passar o id do HTML dentro deles
+btn_add_quantidade = document.getElementById("aumentar");
+btn_remover_quantidade = document.getElementById("diminuir");
+const numero = document.getElementById("numero-quantidade");
+
+// passando o valor inicial a tag html
+numero.textContent = quantidade_inicial;
+
+// criando o código de aumentar a quantidade de 1 em 1
+btn_add_quantidade.addEventListener("click", () => {
+  // se quantidade for memor que estoque
+  if (quantidade_inicial < quantidade) {
+   quantidade_inicial++;//aumentar de 1 em 1
+    numero.textContent = quantidade_inicial;
+  } else {
+       alert("você atingiu o limite do estoque");
+  }
+
+});
+ 
+// criando o código de diminuir a quantidade de 1 em 1
+btn_remover_quantidade.addEventListener("click", () => {
+  if (quantidade_inicial > 0) {
+    quantidade_inicial--;//aumentar de 1 em 1
+    numero.textContent = quantidade_inicial;
+  }
+});
+

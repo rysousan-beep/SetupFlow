@@ -1,0 +1,1165 @@
+/*=====================================================
+    RESET
+=====================================================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+:root{
+
+    --cor-fundo:#2EA8D3;
+    --cor-header:#FF1717;
+    --cor-sidebar:#120A0A;
+    --cor-card:#2A2A2A;
+    --cor-card-sec:#1D1D1D;
+
+    --cor-branco:#FFFFFF;
+    --cor-preto:#000000;
+
+    --cor-verde:#72FF00;
+    --cor-verde-hover:#5CD100;
+
+    --cor-vermelho:#FF1B1B;
+
+    --cor-cinza:#BEBEBE;
+    --cor-texto:#EFEFEF;
+    --cor-texto-sec:#AAAAAA;
+
+    --radius:8px;
+
+    --shadow:0 5px 18px rgba(0,0,0,.35);
+
+    --transition:.30s;
+
+}
+
+/*=====================================================
+    BODY
+=====================================================*/
+
+body{
+
+    font-family:Arial, Helvetica, sans-serif;
+
+    background:var(--cor-fundo);
+
+    color:var(--cor-branco);
+
+    min-height:100vh;
+
+}
+
+/*=====================================================
+    CONTAINER
+=====================================================*/
+
+.container{
+
+    width:96%;
+
+    max-width:1600px;
+
+    margin:auto;
+
+}
+
+/*=====================================================
+    HEADER
+=====================================================*/
+
+header{
+
+    background:var(--cor-header);
+
+    box-shadow:var(--shadow);
+
+    position:sticky;
+
+    top:0;
+
+    z-index:1000;
+
+}
+
+.header-container{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:14px 0;
+
+}
+
+/*=====================================================
+    LOGO
+=====================================================*/
+
+.logo-area{
+
+    display:flex;
+
+    align-items:center;
+
+}
+
+#logo{
+
+    width:55px;
+
+    height:55px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    background:#FFF;
+
+}
+
+/*=====================================================
+    MENU
+=====================================================*/
+
+.menu{
+
+    list-style:none;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:40px;
+
+}
+
+.menu li{
+
+    display:flex;
+
+}
+
+.menu a{
+
+    text-decoration:none;
+
+    color:#FFF;
+
+    font-weight:bold;
+
+    font-size:15px;
+
+    text-transform:uppercase;
+
+    letter-spacing:.5px;
+
+    transition:var(--transition);
+
+    position:relative;
+
+    padding:6px 0;
+
+}
+
+.menu a:hover{
+
+    color:#F5F5F5;
+
+}
+
+.menu a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-6px;
+
+    width:0;
+
+    height:2px;
+
+    background:var(--cor-branco);
+
+    transition:.3s;
+
+}
+
+.menu a:hover::after{
+
+    width:100%;
+
+}
+
+/*=====================================================
+    MAIN
+=====================================================*/
+
+main{
+
+    padding:25px 0;
+
+}
+
+/*=====================================================
+    LAYOUT
+=====================================================*/
+
+.rastreamento-container{
+
+    display:grid;
+
+    grid-template-columns:340px 1fr;
+
+    gap:0;
+
+    min-height:850px;
+
+    background:#111;
+
+    border-radius:var(--radius);
+
+    overflow:hidden;
+
+    box-shadow:var(--shadow);
+
+}
+
+/*=====================================================
+    RESPONSIVIDADE HEADER
+=====================================================*/
+
+@media(max-width:1000px){
+
+    .header-container{
+
+        flex-direction:column;
+
+        gap:20px;
+
+    }
+
+    .menu{
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+
+        gap:20px;
+
+    }
+
+}
+
+@media(max-width:600px){
+
+    .menu{
+
+        flex-direction:column;
+
+        gap:15px;
+
+    }
+
+    .menu a{
+
+        font-size:14px;
+
+    }
+
+    #logo{
+
+        width:48px;
+
+        height:48px;
+
+    }
+
+    .rastreamento-container{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+/*=====================================================
+    SIDEBAR
+=====================================================*/
+
+.sidebar{
+
+    background:var(--cor-sidebar);
+
+    padding:25px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:25px;
+
+}
+
+/*=====================================================
+    TÍTULO
+=====================================================*/
+
+#tituloRastreamento{
+
+    font-size:2rem;
+
+    color:var(--cor-branco);
+
+    margin-bottom:10px;
+
+}
+
+#numeroPedido{
+
+    color:var(--cor-texto-sec);
+
+    font-size:15px;
+
+    font-weight:bold;
+
+}
+
+/*=====================================================
+    CARD DO PRODUTO
+=====================================================*/
+
+.produto-card{
+
+    background:var(--cor-card);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:var(--radius);
+
+    padding:15px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+}
+
+.produto-card img{
+
+    width:70px;
+
+    height:70px;
+
+    object-fit:contain;
+
+    background:#FFF;
+
+    border-radius:6px;
+
+    padding:6px;
+
+}
+
+.produto-info{
+
+    flex:1;
+
+}
+
+.produto-info h3{
+
+    font-size:15px;
+
+    color:#FFF;
+
+    margin-bottom:12px;
+
+    line-height:1.4;
+
+}
+
+.produto-info span{
+
+    font-size:30px;
+
+    font-weight:bold;
+
+    color:var(--cor-verde);
+
+}
+
+/*=====================================================
+    PREVISÃO
+=====================================================*/
+
+.previsao{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:10px;
+
+}
+
+#tituloPrevisao{
+
+    font-size:13px;
+
+    color:var(--cor-texto-sec);
+
+    text-transform:uppercase;
+
+    letter-spacing:1px;
+
+}
+
+#horarioEntrega{
+
+    color:var(--cor-verde);
+
+    font-size:2rem;
+
+    font-weight:bold;
+
+}
+
+/*=====================================================
+    TIMELINE
+=====================================================*/
+
+.timeline{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+.status-item{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:15px;
+
+}
+
+.status-icon{
+
+    width:26px;
+
+    height:26px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:#4B4B4B;
+
+    color:#FFF;
+
+    flex-shrink:0;
+
+}
+
+.status-item.ativo .status-icon{
+
+    background:var(--cor-verde);
+
+    color:#000;
+
+}
+
+.status-item.entregue .status-icon{
+
+    background:#4CAF50;
+
+}
+
+.status-info{
+
+    flex:1;
+
+}
+
+.status-info h4{
+
+    color:#FFF;
+
+    font-size:15px;
+
+    margin-bottom:5px;
+
+}
+
+.status-info span{
+
+    display:block;
+
+    color:var(--cor-texto-sec);
+
+    font-size:12px;
+
+    margin-bottom:3px;
+
+}
+
+.status-info p{
+
+    color:var(--cor-cinza);
+
+    font-size:12px;
+
+}
+
+/*=====================================================
+    CARD ENTREGADOR
+=====================================================*/
+
+.entregador-card{
+
+    margin-top:auto;
+
+    background:var(--cor-card);
+
+    border-radius:var(--radius);
+
+    padding:15px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+}
+
+.entregador-card img{
+
+    width:60px;
+
+    height:60px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    border:2px solid var(--cor-header);
+
+}
+
+.entregador-info{
+
+    flex:1;
+
+}
+
+.entregador-info small{
+
+    color:var(--cor-texto-sec);
+
+    display:block;
+
+    margin-bottom:4px;
+
+}
+
+.entregador-info h4{
+
+    color:#FFF;
+
+    margin-bottom:5px;
+
+}
+
+.entregador-info span{
+
+    color:#FFD700;
+
+    font-size:14px;
+
+    font-weight:bold;
+
+}
+
+/*=====================================================
+    BOTÕES ENTREGADOR
+=====================================================*/
+
+.entregador-acoes{
+
+    display:flex;
+
+    gap:10px;
+
+}
+
+.entregador-acoes button{
+
+    width:42px;
+
+    height:42px;
+
+    border:none;
+
+    border-radius:8px;
+
+    background:#3B3B3B;
+
+    color:#FFF;
+
+    cursor:pointer;
+
+    transition:var(--transition);
+
+    font-size:18px;
+
+}
+
+.entregador-acoes button:hover{
+
+    background:var(--cor-header);
+
+}
+
+/*=====================================================
+    RESPONSIVIDADE SIDEBAR
+=====================================================*/
+
+@media(max-width:1000px){
+
+    .sidebar{
+
+        padding:20px;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .produto-card{
+
+        flex-direction:column;
+
+        text-align:center;
+
+    }
+
+    .entregador-card{
+
+        flex-direction:column;
+
+        text-align:center;
+
+    }
+
+    .entregador-acoes{
+
+        justify-content:center;
+
+    }
+
+}
+
+@media(max-width:600px){
+
+    #tituloRastreamento{
+
+        font-size:1.7rem;
+
+    }
+
+    #horarioEntrega{
+
+        font-size:1.5rem;
+
+    }
+
+    .produto-info span{
+
+        font-size:24px;
+
+    }
+
+}
+
+/*=====================================================
+    ÁREA DO MAPA
+=====================================================*/
+
+.mapa-area{
+
+    position:relative;
+
+    background:#F5F5F5;
+
+    overflow:hidden;
+
+}
+
+#mapaContainer{
+
+    position:relative;
+
+    width:100%;
+
+    height:100%;
+
+    min-height:850px;
+
+}
+
+#imagemMapa{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    display:block;
+
+}
+
+/*=====================================================
+    MARCADORES
+=====================================================*/
+
+#marcadoresMapa{
+
+    position:absolute;
+
+    inset:0;
+
+    pointer-events:none;
+
+}
+
+.marcador{
+
+    position:absolute;
+
+    width:48px;
+
+    height:48px;
+
+    border-radius:50%;
+
+    background:#FFFFFF;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    box-shadow:0 6px 18px rgba(0,0,0,.30);
+
+    pointer-events:auto;
+
+    transition:.3s;
+
+}
+
+.marcador:hover{
+
+    transform:scale(1.08);
+
+}
+
+.marcador img{
+
+    width:26px;
+
+    height:26px;
+
+    object-fit:contain;
+
+}
+
+.marcador.casa{
+
+    top:68%;
+
+    left:72%;
+
+}
+
+.marcador.entregador{
+
+    top:45%;
+
+    left:48%;
+
+}
+
+.marcador.destino{
+
+    top:22%;
+
+    left:82%;
+
+}
+
+/*=====================================================
+    CONTROLES DO MAPA
+=====================================================*/
+
+.controles-mapa{
+
+    position:absolute;
+
+    top:25px;
+
+    right:25px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:12px;
+
+}
+
+.controles-mapa button{
+
+    width:48px;
+
+    height:48px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#FFFFFF;
+
+    color:#333;
+
+    font-size:20px;
+
+    cursor:pointer;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.25);
+
+    transition:var(--transition);
+
+}
+
+.controles-mapa button:hover{
+
+    background:var(--cor-header);
+
+    color:#FFF;
+
+}
+
+/*=====================================================
+    CARD FLUTUANTE
+=====================================================*/
+
+.produto-flutuante{
+
+    position:absolute;
+
+    left:30px;
+
+    bottom:30px;
+
+    background:#FFFFFF;
+
+    width:320px;
+
+    border-radius:12px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+
+    overflow:hidden;
+
+}
+
+.produto-topo{
+
+    display:flex;
+
+    gap:15px;
+
+    padding:18px;
+
+}
+
+.produto-topo img{
+
+    width:80px;
+
+    height:80px;
+
+    object-fit:contain;
+
+}
+
+.produto-detalhes{
+
+    flex:1;
+
+}
+
+.produto-detalhes h3{
+
+    color:#222;
+
+    font-size:16px;
+
+    margin-bottom:10px;
+
+    line-height:1.4;
+
+}
+
+.produto-detalhes span{
+
+    color:var(--cor-verde);
+
+    font-size:22px;
+
+    font-weight:bold;
+
+}
+
+.produto-flutuante button{
+
+    width:100%;
+
+    border:none;
+
+    background:var(--cor-header);
+
+    color:#FFF;
+
+    padding:16px;
+
+    font-size:15px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:var(--transition);
+
+}
+
+.produto-flutuante button:hover{
+
+    background:#D30000;
+
+}
+
+/*=====================================================
+    FOOTER
+=====================================================*/
+
+footer{
+
+    background:#111;
+
+    margin-top:40px;
+
+    padding:20px 0;
+
+}
+
+.footer-container{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    gap:15px;
+
+}
+
+footer p{
+
+    color:#FFF;
+
+    font-size:14px;
+
+}
+
+footer a{
+
+    color:#FFF;
+
+    text-decoration:none;
+
+    transition:.3s;
+
+}
+
+footer a:hover{
+
+    color:var(--cor-verde);
+
+}
+
+/*=====================================================
+    RESPONSIVIDADE
+=====================================================*/
+
+@media(max-width:1200px){
+
+    .produto-flutuante{
+
+        width:280px;
+
+    }
+
+}
+
+@media(max-width:992px){
+
+    #mapaContainer{
+
+        min-height:600px;
+
+    }
+
+    .produto-flutuante{
+
+        left:20px;
+
+        bottom:20px;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .controles-mapa{
+
+        top:15px;
+
+        right:15px;
+
+    }
+
+    .controles-mapa button{
+
+        width:42px;
+
+        height:42px;
+
+    }
+
+    .produto-flutuante{
+
+        position:relative;
+
+        width:100%;
+
+        left:auto;
+
+        bottom:auto;
+
+        margin:20px;
+
+    }
+
+    .produto-topo{
+
+        flex-direction:column;
+
+        align-items:center;
+
+        text-align:center;
+
+    }
+
+}
+
+@media(max-width:600px){
+
+    #mapaContainer{
+
+        min-height:420px;
+
+    }
+
+    .marcador{
+
+        width:40px;
+
+        height:40px;
+
+    }
+
+    .marcador img{
+
+        width:20px;
+
+        height:20px;
+
+    }
+
+    .footer-container{
+
+        flex-direction:column;
+
+        text-align:center;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    .produto-flutuante{
+
+        margin:15px;
+
+    }
+
+    .produto-topo img{
+
+        width:70px;
+
+        height:70px;
+
+    }
+
+    .produto-detalhes h3{
+
+        font-size:15px;
+
+    }
+
+    .produto-detalhes span{
+
+        font-size:20px;
+
+    }
+
+}

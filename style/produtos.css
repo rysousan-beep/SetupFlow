@@ -233,12 +233,12 @@ nav {
      /* e a distancia entre uma miniatura e outra */
 }
 
-.img-laretal {
+.img-lateral {
      width: 70px;
      height: 90px;
 }
 
-.img-laretal{
+.img-lateral img{
  width: 70px;
  height: 90px;
  object-fit: cover; /* redimenciona a imagem para caber na área */
@@ -248,7 +248,7 @@ nav {
  transition: 0,3s; /* colocar efeito da transição */
 }
 
-.img-laretal:houver {
+.img-lateral:houver {
      border-color: #000000;
      /* adicionar borda ao passar o mouse pela imagem */
 }

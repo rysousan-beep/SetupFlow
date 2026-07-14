@@ -1,0 +1,434 @@
+/* ===================================================
+   RESET
+=================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    font-size:16px;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#3da7d4;
+    color:#222;
+    min-height:100vh;
+}
+
+/* ===================================================
+   CONTAINER
+=================================================== */
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+/* ===================================================
+   HEADER
+=================================================== */
+
+header{
+
+    background:#ffffff;
+    height:70px;
+
+    display:flex;
+    align-items:center;
+
+    box-shadow:0 2px 6px rgba(0,0,0,.15);
+
+}
+
+.logo-area{
+
+    display:flex;
+    align-items:center;
+    gap:15px;
+
+}
+
+#logo{
+
+    width:45px;
+    height:45px;
+    object-fit:contain;
+
+}
+
+#empresaNome{
+
+    font-size:1.8rem;
+    font-weight:bold;
+
+}
+
+/* ===================================================
+   MENU
+=================================================== */
+
+nav{
+
+    display:none;
+
+}
+
+/* ===================================================
+   LOGIN
+=================================================== */
+
+.login{
+
+    background:#666;
+    padding:70px 20px;
+
+}
+
+.container-login{
+
+    max-width:500px;
+    margin:auto;
+
+}
+
+.login-info{
+
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+
+}
+
+#tituloLogin{
+
+    color:#FFF;
+    font-size:2.3rem;
+
+}
+
+#descricaoLogin{
+
+    color:#EEE;
+    line-height:1.6;
+
+}
+
+/* ===================================================
+   FORM
+=================================================== */
+
+#formLogin{
+
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+
+}
+
+#email,
+#senha{
+
+    width:100%;
+    height:46px;
+
+    border:none;
+    outline:none;
+
+    border-radius:5px;
+
+    padding:0 15px;
+
+    font-size:15px;
+
+}
+
+#email:focus,
+#senha:focus{
+
+    box-shadow:0 0 0 3px rgba(61,167,212,.3);
+
+}
+
+/* ===================================================
+   BOTÕES
+=================================================== */
+
+.botoes{
+
+    display:flex;
+    gap:12px;
+
+}
+
+#btnEntrar,
+#btnCadastrar{
+
+    border:none;
+
+    padding:12px 20px;
+
+    border-radius:5px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    font-size:14px;
+
+}
+
+#btnEntrar{
+
+    background:#FFF;
+    color:#333;
+
+}
+
+#btnCadastrar{
+
+    background:#e7e7e7;
+    color:#444;
+
+}
+
+#btnEntrar:hover{
+
+    background:#3da7d4;
+    color:#FFF;
+
+}
+
+#btnCadastrar:hover{
+
+    background:#444;
+    color:#FFF;
+
+}
+
+/* ===================================================
+   BENEFÍCIOS
+=================================================== */
+
+.beneficios{
+
+    background:#FFF;
+
+    padding:70px 30px;
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:50px;
+
+}
+
+.beneficio{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    text-align:center;
+
+}
+
+.icone{
+
+    width:80px;
+    height:80px;
+
+    border-radius:50%;
+
+    background:#f3f3f3;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    margin-bottom:20px;
+
+}
+
+#icone1,
+#icone2{
+
+    width:45px;
+    height:45px;
+
+    object-fit:contain;
+
+}
+
+#tituloCard1,
+#tituloCard2{
+
+    margin-bottom:8px;
+
+    font-size:1.3rem;
+
+}
+
+#descricaoCard1,
+#descricaoCard2{
+
+    color:#777;
+
+    margin-bottom:15px;
+
+}
+
+#destaqueCard1,
+#destaqueCard2{
+
+    font-size:1.8rem;
+
+}
+
+/* ===================================================
+   FOOTER
+=================================================== */
+
+footer{
+
+    background:#FFF;
+
+    border-top:1px solid #DDD;
+
+    padding:35px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:50px;
+
+    flex-wrap:wrap;
+
+}
+
+footer p{
+
+    font-size:15px;
+
+}
+
+footer a{
+
+    text-decoration:none;
+
+    color:#222;
+
+    transition:.3s;
+
+}
+
+footer a:hover{
+
+    color:#3da7d4;
+
+}
+
+/* ===================================================
+   TABLETS
+=================================================== */
+
+@media(max-width:900px){
+
+    .beneficios{
+
+        grid-template-columns:1fr;
+
+    }
+
+    #tituloLogin{
+
+        font-size:2rem;
+
+    }
+
+}
+
+/* ===================================================
+   CELULARES
+=================================================== */
+
+@media(max-width:600px){
+
+    header{
+
+        height:auto;
+
+        padding:15px 0;
+
+    }
+
+    .logo-area{
+
+        flex-direction:column;
+
+        text-align:center;
+
+    }
+
+    #empresaNome{
+
+        font-size:1.4rem;
+
+    }
+
+    .login{
+
+        padding:40px 20px;
+
+    }
+
+    #tituloLogin{
+
+        font-size:1.8rem;
+
+    }
+
+    .botoes{
+
+        flex-direction:column;
+
+    }
+
+    #btnEntrar,
+    #btnCadastrar{
+
+        width:100%;
+
+    }
+
+    .beneficios{
+
+        padding:40px 20px;
+
+        gap:40px;
+
+    }
+
+    footer{
+
+        flex-direction:column;
+
+        gap:15px;
+
+        text-align:center;
+
+    }
+
+}

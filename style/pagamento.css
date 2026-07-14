@@ -1,0 +1,458 @@
+/*=====================================================
+    RESET
+=====================================================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+:root{
+
+    --cor-fundo:#686363;
+    --cor-card:#686363;
+    --cor-header:#FF0018;
+    --cor-branca:#FFFFFF;
+    --cor-preta:#222222;
+    --cor-verde:#8BC500;
+    --cor-borda:#DDDDDD;
+    --cor-texto:#F2F2F2;
+    --cor-texto-sec:#CFCFCF;
+    --sombra:0 2px 10px rgba(0,0,0,.15);
+
+}
+
+body{
+
+    font-family:Arial, Helvetica, sans-serif;
+
+    background:var(--cor-fundo);
+
+    color:var(--cor-texto);
+
+    min-height:100vh;
+
+}
+
+/*=====================================================
+    CONTAINER
+=====================================================*/
+
+.container{
+
+    width:92%;
+
+    max-width:1200px;
+
+    margin:auto;
+
+}
+
+/*=====================================================
+    HEADER
+=====================================================*/
+
+header{
+
+    background:var(--cor-header);
+
+    box-shadow:var(--sombra);
+
+}
+
+.header-container{
+
+    height:70px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+.logo-area{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+}
+
+#logo{
+
+    width:40px;
+
+    height:40px;
+
+    border-radius:50%;
+
+    background:#FFF;
+
+    object-fit:cover;
+
+}
+
+#tituloPagina{
+
+    font-size:1.5rem;
+
+    color:#FFF;
+
+}
+
+.menu{
+
+    list-style:none;
+
+}
+
+.menu a{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    color:#FFF;
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+}
+
+#iconeHome{
+
+    width:24px;
+
+    height:24px;
+
+}
+
+/*=====================================================
+    MAIN
+=====================================================*/
+
+main{
+
+    padding:60px 0;
+
+}
+
+.pagamento{
+
+    background:var(--cor-card);
+
+    border-radius:8px;
+
+    padding:60px 40px;
+
+    box-shadow:var(--sombra);
+
+}
+
+/*=====================================================
+    TÍTULO
+=====================================================*/
+
+.titulo-pagina{
+
+    text-align:center;
+
+    margin-bottom:50px;
+
+}
+
+#tituloFormulario{
+
+    font-size:2.4rem;
+
+    margin-bottom:12px;
+
+    color:#FFF;
+
+}
+
+#descricaoFormulario{
+
+    color:var(--cor-texto-sec);
+
+    font-size:15px;
+
+}
+
+/*=====================================================
+    GRID
+=====================================================*/
+
+.grid-form{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:30px;
+
+}
+
+.campo{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.campo label{
+
+    margin-bottom:8px;
+
+    font-weight:bold;
+
+    font-size:14px;
+
+}
+
+.campo input,
+
+.campo select{
+
+    height:45px;
+
+    border:none;
+
+    border-radius:5px;
+
+    padding:0 15px;
+
+    font-size:15px;
+
+    outline:none;
+
+}
+
+.campo input:focus,
+
+.campo select:focus{
+
+    box-shadow:0 0 0 3px rgba(57,169,214,.4);
+
+}
+
+.campo small{
+
+    margin-top:8px;
+
+    color:#CCCCCC;
+
+    font-size:12px;
+
+}
+
+/*=====================================================
+    BOTÕES
+=====================================================*/
+
+.acoes{
+
+    margin-top:45px;
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+}
+
+#btnVoltar{
+
+    background:transparent;
+
+    border:1px solid var(--cor-branca);
+
+    color:var(--cor-branca);
+
+    padding:14px 28px;
+
+    border-radius:6px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    font-size:15px;
+
+}
+
+#btnVoltar:hover{
+
+    background:#FFF;
+
+    color:#333;
+
+}
+
+#btnFinalizar{
+
+    background:var(--cor-verde);
+
+    color:#FFF;
+
+    border:none;
+
+    padding:14px 35px;
+
+    border-radius:6px;
+
+    cursor:pointer;
+
+    font-weight:bold;
+
+    transition:.3s;
+
+    font-size:15px;
+
+}
+
+#btnFinalizar:hover{
+
+    transform:scale(1.05);
+
+}
+
+/*=====================================================
+    FOOTER
+=====================================================*/
+
+footer{
+
+    margin-top:40px;
+
+    padding:25px 0;
+
+}
+
+.footer-container{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    gap:20px;
+
+}
+
+footer p{
+
+    color:#FFF;
+
+}
+
+footer a{
+
+    color:#FFF;
+
+    text-decoration:none;
+
+}
+
+footer a:hover{
+
+    color:#8BC500;
+
+}
+
+/*=====================================================
+    TABLET
+=====================================================*/
+
+@media(max-width:900px){
+
+    .grid-form{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+/*=====================================================
+    MOBILE
+=====================================================*/
+
+@media(max-width:600px){
+
+    .header-container{
+
+        flex-direction:column;
+
+        justify-content:center;
+
+        gap:15px;
+
+        height:auto;
+
+        padding:20px 0;
+
+    }
+
+    .logo-area{
+
+        flex-direction:column;
+
+    }
+
+    #tituloPagina{
+
+        font-size:1.3rem;
+
+        text-align:center;
+
+    }
+
+    .pagamento{
+
+        padding:30px 20px;
+
+    }
+
+    #tituloFormulario{
+
+        font-size:2rem;
+
+    }
+
+    .acoes{
+
+        flex-direction:column;
+
+    }
+
+    #btnVoltar,
+
+    #btnFinalizar{
+
+        width:100%;
+
+    }
+
+    .footer-container{
+
+        flex-direction:column;
+
+        text-align:center;
+
+    }
+
+}
