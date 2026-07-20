@@ -1,116 +1,186 @@
-/*==================================================
+/*=========================================================
     CONFIGURAÇÃO DA APLICAÇÃO
-==================================================*/
+=========================================================*/
 
 const app = {
 
     pagina: {
+
         titulo: "PCs Prontos",
-        subtitulo: "Encontre o computador ideal para jogos, trabalho e estudos."
+
+        descricao: "Monte ou escolha o computador ideal para jogos, trabalho e estudos."
+
     },
+
+    /*=====================================================
+        HEADER
+    =====================================================*/
 
     header: {
 
         logo: "/ASSETS/logo.nv.png",
 
         menu: [
-            "HOME",
-            "PCS GAMER",
-            "MONITORES",
-            "PERIFÉRICOS",
-            "CONTATO"
+
+            {
+                texto: "HOME",
+                link: "#"
+            },
+
+            {
+                texto: "PCS MONTADOS",
+                link: "#"
+            },
+
+            {
+                texto: "MONTE SEU PC",
+                link: "#"
+            },
+
+          
         ],
 
-        acoes: [
+        botoes: [
+
             {
-                icone: "🔍",
-                id: "buscar"
+                id: "buscar",
+                icone: "🔍"
             },
+
             {
-                icone: "❤",
-                id: "favoritos"
+                id: "usuario",
+                icone: "👤"
             },
+
             {
-                icone: "🛒",
-                id: "carrinho"
+                id: "favoritos",
+                icone: "❤"
+            },
+
+            {
+                id: "carrinho",
+                icone: "🛒"
             }
+
         ]
 
     },
 
+    /*=====================================================
+        BANNER
+    =====================================================*/
+
     banner: {
 
-        tag: "DESTAQUE",
+        tag: "LANÇAMENTO",
 
         titulo: "PC GAMER",
 
         subtitulo:
-            "Máquinas de alto desempenho para quem exige velocidade e qualidade.",
 
-        botao: "COMPRAR AGORA",
+        "Os computadores gamers mais vendidos do Brasil.",
+
+        botao: "VER OFERTAS",
 
         imagem:
-            "../ASSETS/imagens/banner.jpg"
+
+        "../ASSETS/banner.png"
 
     },
+
+    /*=====================================================
+        FILTROS
+    =====================================================*/
 
     filtros: [
 
         {
-            titulo: "Categoria",
+
+            titulo: "Categorias",
 
             tipo: "checkbox",
 
             opcoes: [
+
                 "PC Gamer",
+
                 "PC Escritório",
+
                 "Workstation",
+
                 "Mini PC"
+
             ]
+
         },
 
         {
+
             titulo: "Processador",
 
             tipo: "checkbox",
 
             opcoes: [
+
                 "Intel Core i5",
+
                 "Intel Core i7",
+
                 "Intel Core i9",
-                "AMD Ryzen 5",
-                "AMD Ryzen 7",
-                "AMD Ryzen 9"
+
+                "Ryzen 5",
+
+                "Ryzen 7",
+
+                "Ryzen 9"
+
             ]
+
         },
 
         {
+
+            titulo: "Placa de Vídeo",
+
+            tipo: "checkbox",
+
+            opcoes: [
+
+                "RTX 4060",
+
+                "RTX 4070",
+
+                "RTX 4080",
+
+                "RTX 4090"
+
+            ]
+
+        },
+
+        {
+
             titulo: "Memória RAM",
 
             tipo: "checkbox",
 
             opcoes: [
-                "8GB",
-                "16GB",
-                "32GB",
-                "64GB"
+
+                "16 GB",
+
+                "32 GB",
+
+                "64 GB"
+
             ]
-        },
 
-        {
-            titulo: "Armazenamento",
-
-            tipo: "checkbox",
-
-            opcoes: [
-                "SSD 256GB",
-                "SSD 512GB",
-                "SSD 1TB",
-                "SSD 2TB"
-            ]
         }
 
     ],
+
+    /*=====================================================
+        PRODUTOS
+    =====================================================*/
 
     produtos: [
 
@@ -118,21 +188,28 @@ const app = {
 
             id:1,
 
-            destaque:"LANÇAMENTO",
+            destaque:"OFERTA",
 
             nome:"PC Gamer RTX 4060",
 
-            imagem:"../ASSETS/imagens/pc1.png",
+            imagem:"/ASSETS/pc-4060.webp",
 
             preco:5499.90,
 
-            parcelas:"12x de R$ 458,32",
+            parcelado:"12x de R$ 458,32",
+
+            avista:"À vista no PIX",
 
             especificacoes:[
+
                 "Intel Core i5 14400F",
+
                 "RTX 4060 8GB",
+
                 "16GB DDR5",
+
                 "SSD NVMe 1TB"
+
             ]
 
         },
@@ -141,21 +218,28 @@ const app = {
 
             id:2,
 
-            destaque:"OFERTA",
+            destaque:"NOVO",
 
-            nome:"PC Gamer Ryzen 7",
+            nome:"PC Gamer RTX 4070",
 
-            imagem:"../ASSETS/imagens/pc2.png",
+            imagem:"/ASSETS/pc2.webp",
 
-            preco:6899.90,
+            preco:7399.90,
 
-            parcelas:"12x de R$ 574,99",
+            parcelado:"12x de R$ 616,65",
+
+            avista:"À vista no PIX",
 
             especificacoes:[
+
                 "Ryzen 7 7800X",
+
                 "RTX 4070",
+
                 "32GB DDR5",
+
                 "SSD 1TB"
+
             ]
 
         },
@@ -168,17 +252,24 @@ const app = {
 
             nome:"PC Gamer RTX 4080",
 
-            imagem:"../ASSETS/imagens/pc3.png",
+            imagem:"/ASSETS/pc3.png",
 
-            preco:11999.90,
+            preco:11499.90,
 
-            parcelas:"12x de R$ 999,99",
+            parcelado:"12x de R$ 958,32",
+
+            avista:"À vista no PIX",
 
             especificacoes:[
+
                 "Core i9",
+
                 "RTX 4080",
+
                 "32GB DDR5",
+
                 "SSD 2TB"
+
             ]
 
         },
@@ -189,72 +280,101 @@ const app = {
 
             destaque:"PROMOÇÃO",
 
-            nome:"PC Escritório",
+            nome:"PC Office Ryzen 5",
 
-            imagem:"../ASSETS/imagens/pc4.png",
+            imagem:"/ASSETS/pc4.webp",
 
-            preco:2799.90,
+            preco:2899.90,
 
-            parcelas:"12x de R$ 233,32",
+            parcelado:"12x de R$ 241,65",
+
+            avista:"À vista no PIX",
 
             especificacoes:[
+
                 "Ryzen 5",
-                "16GB RAM",
+
+                "16GB DDR4",
+
                 "SSD 512GB",
+
                 "Windows 11"
+
             ]
 
         }
 
     ],
 
+    /*=====================================================
+        FOOTER
+    =====================================================*/
+//
     footer:{
 
         logo:"/ASSETS/logo.nv.png",
 
         descricao:
-        "Os melhores computadores gamers e profissionais com garantia e suporte.",
+
+        "Especialistas em computadores gamers, workstations e acessórios.",
 
         links:[
+
             "Empresa",
+
             "Produtos",
+
             "Promoções",
+
             "Contato",
+
             "Suporte"
+
         ],
 
-        redes:[
-            "facebook",
-            "instagram",
-            "youtube",
-            "x"
-        ],
+        
 
         copyright:
+
         "© 2026 - Todos os direitos reservados."
 
     }
 
 };
 
-/*==================================================
-    VARIÁVEIS GLOBAIS
-==================================================*/
+/*=========================================================
+    ELEMENTOS DA PÁGINA
+=========================================================*/
 
-const header=document.getElementById("header");
-const banner=document.getElementById("banner");
-const filtros=document.getElementById("filtros");
-const tituloProdutos=document.getElementById("titulo-produtos");
-const listaProdutos=document.getElementById("lista-produtos");
-const footer=document.getElementById("footer");
+const header = document.getElementById("header");
 
-/*==================================================
-    FUNÇÕES DE RENDERIZAÇÃO
-==================================================*/
+const banner = document.getElementById("banner");
 
-/*==================================================
-    HEADER
-==================================================*/
+const filtros = document.getElementById("filtros");
+
+const tituloProdutos = document.getElementById("titulo-produtos");
+
+const ordenacao = document.getElementById("ordenacao");
+
+const listaProdutos = document.getElementById("lista-produtos");
+
+const footer = document.getElementById("footer");
+
+/*=========================================================
+    VARIÁVEIS DE CONTROLE
+=========================================================*/
+
+let produtosRenderizados = [...app.produtos];
+
+let filtrosSelecionados = [];
+
+let textoPesquisa = "";
+
+let ordenacaoAtual = "padrao";
+
+/*=========================================================
+    RENDERIZA O HEADER
+=========================================================*/
 
 function renderHeader() {
 
@@ -265,7 +385,9 @@ function renderHeader() {
         .content
         .cloneNode(true);
 
-    /* Logo */
+    /*============================
+        LOGO
+    ============================*/
 
     const logo = template.querySelector(".menu-logo");
 
@@ -273,35 +395,46 @@ function renderHeader() {
         <img src="${app.header.logo}" alt="Logo">
     `;
 
-    /* Menu */
+    /*============================
+        MENU
+    ============================*/
 
     const menu = template.querySelector(".menu-links");
 
     app.header.menu.forEach(item => {
 
-        const li = document.createElement("li");
+        const tpl = document
+            .getElementById("template-link-menu")
+            .content
+            .cloneNode(true);
 
-        li.textContent = item;
+        const link = tpl.querySelector(".menu-link");
 
-        menu.appendChild(li);
+        link.textContent = item.texto;
+
+        link.href = item.link;
+
+        menu.appendChild(tpl);
 
     });
 
-    /* Ações */
+    /*============================
+        BOTÕES
+    ============================*/
 
     const acoes = template.querySelector(".menu-acoes");
 
-    app.header.acoes.forEach(item => {
+    app.header.botoes.forEach(botao => {
 
-        const botao = document.createElement("button");
+        const button = document.createElement("button");
 
-        botao.className = "menu-btn";
+        button.className = "menu-btn";
 
-        botao.id = item.id;
+        button.id = botao.id;
 
-        botao.innerHTML = item.icone;
+        button.innerHTML = botao.icone;
 
-        acoes.appendChild(botao);
+        acoes.appendChild(button);
 
     });
 
@@ -309,9 +442,9 @@ function renderHeader() {
 
 }
 
-/*==================================================
-    BANNER
-==================================================*/
+/*=========================================================
+    RENDERIZA O BANNER
+=========================================================*/
 
 function renderBanner() {
 
@@ -342,9 +475,9 @@ function renderBanner() {
 
 }
 
-/*==================================================
-    FILTROS
-==================================================*/
+/*=========================================================
+    RENDERIZA OS FILTROS
+=========================================================*/
 
 function renderFiltros() {
 
@@ -352,105 +485,114 @@ function renderFiltros() {
 
     app.filtros.forEach(filtro => {
 
-        const template = document
+        const bloco = document
             .getElementById("template-filtro")
             .content
             .cloneNode(true);
 
-        template.querySelector(".titulo-filtro").textContent =
+        bloco.querySelector(".titulo-filtro").textContent =
             filtro.titulo;
 
         const conteudo =
-            template.querySelector(".conteudo-filtro");
+            bloco.querySelector(".conteudo-filtro");
 
         filtro.opcoes.forEach(opcao => {
 
-            const label =
-                document.createElement("label");
+            const item = document
+                .getElementById("template-checkbox")
+                .content
+                .cloneNode(true);
 
-            label.className = "checkbox-item";
+            item.querySelector("span").textContent = opcao;
 
-            label.innerHTML = `
-                <input type="${filtro.tipo}">
-                <span>${opcao}</span>
-            `;
+            const input = item.querySelector("input");
 
-            conteudo.appendChild(label);
+            input.value = opcao;
+
+            input.dataset.grupo = filtro.titulo;
+
+            conteudo.appendChild(item);
 
         });
 
-        filtros.appendChild(template);
+        filtros.appendChild(bloco);
 
     });
 
 }
 
-/*==================================================
+/*=========================================================
     TÍTULO DOS PRODUTOS
-==================================================*/
+=========================================================*/
 
 function renderTituloProdutos() {
 
     tituloProdutos.innerHTML = `
         <h2>${app.pagina.titulo}</h2>
-        <span>${app.pagina.subtitulo}</span>
+        <span>${app.pagina.descricao}</span>
     `;
 
 }
 
-/*==================================================
-    PRODUTOS
-==================================================*/
+/*=========================================================
+    CAMPO DE ORDENAÇÃO
+=========================================================*/
 
-function renderProdutos(lista = app.produtos) {
+function renderOrdenacao() {
+
+    ordenacao.innerHTML = `
+        <select id="selectOrdenacao">
+
+            <option value="padrao">
+                Ordenar por
+            </option>
+
+            <option value="menor">
+                Menor preço
+            </option>
+
+            <option value="maior">
+                Maior preço
+            </option>
+
+            <option value="az">
+                Nome A-Z
+            </option>
+
+            <option value="za">
+                Nome Z-A
+            </option>
+
+        </select>
+    `;
+
+}
+
+/*=========================================================
+    RENDERIZA PRODUTOS
+=========================================================*/
+
+function renderProdutos(lista = produtosRenderizados) {
 
     listaProdutos.innerHTML = "";
 
     lista.forEach(produto => {
 
-        const template = document
+        const card = document
             .getElementById("template-produto")
             .content
             .cloneNode(true);
 
-        template.querySelector(".produto-etiqueta").textContent =
+        card.querySelector(".produto-etiqueta").textContent =
             produto.destaque;
 
-        /* Imagem */
+        card.querySelector(".produto-nome").textContent =
+            produto.nome;
 
-        const imagem =
-            template.querySelector(".produto-imagem");
+        card.querySelector(".produto-a-vista").textContent =
+            produto.avista;
 
-        imagem.innerHTML = `
-            <img
-                src="${produto.imagem}"
-                alt="${produto.nome}">
-        `;
-
-        /* Nome */
-
-        template.querySelector(".produto-nome")
-            .textContent = produto.nome;
-
-        /* Especificações */
-
-        const listaSpecs =
-            template.querySelector(".produto-especificacoes");
-
-        produto.especificacoes.forEach(item => {
-
-            const li = document.createElement("li");
-
-            li.textContent = item;
-
-            listaSpecs.appendChild(li);
-
-        });
-
-        /* Preço */
-
-        template.querySelector(".produto-preco")
-            .textContent =
+        card.querySelector(".produto-preco").textContent =
             produto.preco.toLocaleString("pt-BR", {
 
                 style: "currency",
@@ -459,30 +601,58 @@ function renderProdutos(lista = app.produtos) {
 
             });
 
-        /* Parcelamento */
+        card.querySelector(".produto-parcelado").textContent =
+            produto.parcelado;
 
-        template.querySelector(".produto-parcelamento")
-            .textContent =
-            produto.parcelas;
+        /*============================
+            IMAGEM
+        ============================*/
 
-        /* Botão */
+        card.querySelector(".produto-imagem").innerHTML = `
+            <img src="${produto.imagem}" alt="${produto.nome}">
+        `;
+
+        /*============================
+            ESPECIFICAÇÕES
+        ============================*/
+
+        const listaSpecs =
+            card.querySelector(".produto-especificacoes");
+
+        produto.especificacoes.forEach(spec => {
+
+            const item = document
+                .getElementById("template-especificacao")
+                .content
+                .cloneNode(true);
+
+            item.querySelector(".spec-item").textContent =
+                spec;
+
+            listaSpecs.appendChild(item);
+
+        });
+
+        /*============================
+            BOTÃO
+        ============================*/
 
         const botao =
-            template.querySelector(".produto-botao");
+            card.querySelector(".produto-botao");
 
         botao.textContent = "COMPRAR";
 
         botao.dataset.id = produto.id;
 
-        listaProdutos.appendChild(template);
+        listaProdutos.appendChild(card);
 
     });
 
 }
 
-/*==================================================
-    FOOTER
-==================================================*/
+/*=========================================================
+    RENDERIZA O FOOTER
+=========================================================*/
 
 function renderFooter() {
 
@@ -493,58 +663,70 @@ function renderFooter() {
         .content
         .cloneNode(true);
 
-    /* Logo */
+    /*============================
+        LOGO
+    ============================*/
 
     template.querySelector(".footer-logo").innerHTML = `
         <img src="${app.footer.logo}" alt="Logo">
         <p>${app.footer.descricao}</p>
     `;
 
-    /* Links */
+    /*============================
+        LINKS
+    ============================*/
 
     const links =
         template.querySelector(".footer-links");
 
-    links.innerHTML = `<h3>Institucional</h3>`;
+    links.innerHTML = "<h3>Institucional</h3>";
 
-    app.footer.links.forEach(item => {
+    app.footer.links.forEach(link => {
 
-        const a = document.createElement("a");
+        const item = document
+            .getElementById("template-footer-link")
+            .content
+            .cloneNode(true);
 
-        a.href = "#";
+        item.querySelector(".footer-link").textContent =
+            link;
 
-        a.textContent = item;
-
-        links.appendChild(a);
+        links.appendChild(item);
 
     });
 
-    /* Redes */
+    /*============================
+        REDES SOCIAIS
+    ============================*/
 
-    const social =
-        template.querySelector(".footer-social");
+    const redes =
+        template.querySelector(".footer-redes");
 
-    social.innerHTML = `
+    redes.innerHTML = `
         <h3>Redes Sociais</h3>
-        <div class="footer-social-icons"></div>
+        <div class="redes-icons"></div>
     `;
 
-    const icons =
-        social.querySelector(".footer-social-icons");
+    const container =
+        redes.querySelector(".redes-icons");
 
     app.footer.redes.forEach(rede => {
 
-        const a = document.createElement("a");
+        const item = document
+            .getElementById("template-social")
+            .content
+            .cloneNode(true);
 
-        a.href = "#";
+        item.querySelector(".social-item").textContent =
+            rede.substring(0, 1);
 
-        a.innerHTML = rede.substring(0,1).toUpperCase();
-
-        icons.appendChild(a);
+        container.appendChild(item);
 
     });
 
-    /* Copyright */
+    /*============================
+        COPYRIGHT
+    ============================*/
 
     template.querySelector(".footer-copy").innerHTML = `
         <p>${app.footer.copyright}</p>
@@ -554,31 +736,31 @@ function renderFooter() {
 
 }
 
-/*==================================================
+/*=========================================================
     ORDENAÇÃO DOS PRODUTOS
-==================================================*/
+=========================================================*/
 
 function ordenarProdutos(tipo) {
 
-    let produtos = [...app.produtos];
+    produtosRenderizados = [...app.produtos];
 
     switch (tipo) {
 
         case "menor":
 
-            produtos.sort((a, b) => a.preco - b.preco);
+            produtosRenderizados.sort((a, b) => a.preco - b.preco);
 
             break;
 
         case "maior":
 
-            produtos.sort((a, b) => b.preco - a.preco);
+            produtosRenderizados.sort((a, b) => b.preco - a.preco);
 
             break;
 
         case "az":
 
-            produtos.sort((a, b) =>
+            produtosRenderizados.sort((a, b) =>
                 a.nome.localeCompare(b.nome)
             );
 
@@ -586,7 +768,7 @@ function ordenarProdutos(tipo) {
 
         case "za":
 
-            produtos.sort((a, b) =>
+            produtosRenderizados.sort((a, b) =>
                 b.nome.localeCompare(a.nome)
             );
 
@@ -598,29 +780,31 @@ function ordenarProdutos(tipo) {
 
     }
 
-    renderProdutos(produtos);
+    renderProdutos(produtosRenderizados);
+
+    iniciarEventosProdutos();
 
 }
 
-/*==================================================
+/*=========================================================
     PESQUISA
-==================================================*/
+=========================================================*/
 
 function pesquisarProdutos(texto) {
 
-    const pesquisa = texto.toLowerCase();
+    textoPesquisa = texto.toLowerCase();
 
-    const resultado = app.produtos.filter(produto => {
+    produtosRenderizados = app.produtos.filter(produto => {
 
         return (
 
-            produto.nome.toLowerCase().includes(pesquisa)
+            produto.nome.toLowerCase().includes(textoPesquisa)
 
             ||
 
             produto.especificacoes.some(item =>
 
-                item.toLowerCase().includes(pesquisa)
+                item.toLowerCase().includes(textoPesquisa)
 
             )
 
@@ -628,76 +812,127 @@ function pesquisarProdutos(texto) {
 
     });
 
-    renderProdutos(resultado);
+    renderProdutos(produtosRenderizados);
+
+    iniciarEventosProdutos();
 
 }
 
-/*==================================================
+/*=========================================================
+    FILTROS
+=========================================================*/
+
+function aplicarFiltros() {
+
+    filtrosSelecionados = [];
+
+    document
+        .querySelectorAll("#filtros input:checked")
+        .forEach(item => {
+
+            filtrosSelecionados.push(item.value);
+
+        });
+
+    if (filtrosSelecionados.length === 0) {
+
+        produtosRenderizados = [...app.produtos];
+
+    } else {
+
+        produtosRenderizados = app.produtos.filter(produto => {
+
+            return filtrosSelecionados.some(filtro => {
+
+                return (
+
+                    produto.nome.includes(filtro)
+
+                    ||
+
+                    produto.especificacoes.some(spec =>
+
+                        spec.includes(filtro)
+
+                    )
+
+                );
+
+            });
+
+        });
+
+    }
+
+    renderProdutos(produtosRenderizados);
+
+    iniciarEventosProdutos();
+
+}
+
+/*=========================================================
     LIMPAR FILTROS
-==================================================*/
+=========================================================*/
 
 function limparFiltros() {
 
     document
-        .querySelectorAll('#filtros input')
+        .querySelectorAll("#filtros input")
         .forEach(input => {
 
             input.checked = false;
 
         });
 
-    renderProdutos(app.produtos);
+    produtosRenderizados = [...app.produtos];
+
+    renderProdutos(produtosRenderizados);
+
+    iniciarEventosProdutos();
 
 }
 
-/*==================================================
+/*=========================================================
     EVENTOS DOS FILTROS
-==================================================*/
+=========================================================*/
 
-function iniciarFiltros() {
+function iniciarEventosFiltros() {
 
-    const inputs = document.querySelectorAll(
-        "#filtros input"
-    );
+    document
+        .querySelectorAll("#filtros input")
+        .forEach(input => {
 
-    inputs.forEach(input => {
-
-        input.addEventListener("change", () => {
-
-            // Local para implementar filtros reais
-            console.log("Filtro alterado.");
+            input.addEventListener("change", aplicarFiltros);
 
         });
 
-    });
-
 }
 
-/*==================================================
-    EVENTOS DO MENU
-==================================================*/
+/*=========================================================
+    EVENTOS DOS BOTÕES DO MENU
+=========================================================*/
 
-function iniciarMenu() {
+function iniciarEventosMenu() {
 
-    const botoes = document.querySelectorAll(".menu-btn");
+    document
+        .querySelectorAll(".menu-btn")
+        .forEach(botao => {
 
-    botoes.forEach(botao => {
+            botao.addEventListener("click", () => {
 
-        botao.addEventListener("click", () => {
+                console.log(`Botão ${botao.id} clicado.`);
 
-            console.log("Botão:", botao.id);
+            });
 
         });
 
-    });
-
 }
 
-/*==================================================
+/*=========================================================
     EVENTOS DOS PRODUTOS
-==================================================*/
+=========================================================*/
 
-function iniciarProdutos() {
+function iniciarEventosProdutos() {
 
     document
         .querySelectorAll(".produto-botao")
@@ -711,7 +946,16 @@ function iniciarProdutos() {
 
                 if (!produto) return;
 
-                alert(`Produto selecionado:\n\n${produto.nome}`);
+                alert(
+`Produto selecionado:
+
+${produto.nome}
+
+Preço: ${produto.preco.toLocaleString("pt-BR",{
+style:"currency",
+currency:"BRL"
+})}`
+                );
 
             });
 
@@ -719,31 +963,29 @@ function iniciarProdutos() {
 
 }
 
-/*==================================================
-    EVENTOS DE ORDENAÇÃO
-==================================================*/
+/*=========================================================
+    EVENTO DA ORDENAÇÃO
+=========================================================*/
 
 function iniciarOrdenacao() {
 
-    const select = document.querySelector(
-        "#ordenacao select"
-    );
+    const select = document.getElementById("selectOrdenacao");
 
     if (!select) return;
 
     select.addEventListener("change", e => {
 
-        ordenarProdutos(e.target.value);
+        ordenacaoAtual = e.target.value;
 
-        iniciarProdutos();
+        ordenarProdutos(ordenacaoAtual);
 
     });
 
 }
 
-/*==================================================
-    EVENTO DA PESQUISA
-==================================================*/
+/*=========================================================
+    CAMPO DE PESQUISA
+=========================================================*/
 
 function iniciarPesquisa() {
 
@@ -755,38 +997,13 @@ function iniciarPesquisa() {
 
         pesquisarProdutos(e.target.value);
 
-        iniciarProdutos();
-
     });
 
 }
 
-/*==================================================
-    CRIA SELECT DE ORDENAÇÃO
-==================================================*/
-
-function criarOrdenacao() {
-
-    const ordenacao =
-        document.getElementById("ordenacao");
-
-    if (!ordenacao) return;
-
-    ordenacao.innerHTML = `
-        <select>
-            <option value="padrao">Ordenar por</option>
-            <option value="menor">Menor preço</option>
-            <option value="maior">Maior preço</option>
-            <option value="az">A → Z</option>
-            <option value="za">Z → A</option>
-        </select>
-    `;
-
-}
-
-/*==================================================
+/*=========================================================
     INICIALIZAÇÃO
-==================================================*/
+=========================================================*/
 
 function iniciarAplicacao() {
 
@@ -798,27 +1015,27 @@ function iniciarAplicacao() {
 
     renderTituloProdutos();
 
-    criarOrdenacao();
+    renderOrdenacao();
 
     renderProdutos();
 
     renderFooter();
 
-    iniciarMenu();
+    iniciarEventosMenu();
 
-    iniciarFiltros();
+    iniciarEventosFiltros();
 
     iniciarOrdenacao();
 
     iniciarPesquisa();
 
-    iniciarProdutos();
+    iniciarEventosProdutos();
 
 }
 
-/*==================================================
+/*=========================================================
     DOM READY
-==================================================*/
+=========================================================*/
 
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -826,8 +1043,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
-/*==================================================
-    EXPORTAÇÃO (OPCIONAL)
-==================================================*/
+/*=========================================================
+    DISPONIBILIZA APP GLOBALMENTE
+=========================================================*/
 
 window.app = app;

@@ -1,0 +1,2880 @@
+/* ==========================================
+   RESET
+========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:"Segoe UI",Tahoma,Geneva,Verdana,sans-serif;
+    background:#f5f6fa;
+    color:#222;
+    min-height:100vh;
+}
+
+/* ==========================================
+   VARIÁVEIS
+========================================== */
+
+:root{
+
+    --cor-principal:#666;
+    --cor-secundaria:#3483fa;
+
+    --preto:#222;
+    --cinza:#666;
+    --cinza-claro:#999;
+    --fundo:#666;
+    --branco:#ffffff;
+
+    --borda:#e8e8e8;
+
+    --verde:#00a650;
+    --laranja:#ff7733;
+    --vermelho:#f23d4f;
+
+    --sombra:0 8px 24px rgba(0,0,0,.08);
+
+    --radius:18px;
+
+    --transition:.30s;
+}
+
+/* ==========================================
+   LAYOUT
+========================================== */
+
+.dashboard{
+
+    display:flex;
+    width:100%;
+    min-height:100vh;
+    background:var(--fundo);
+
+}
+
+/* ==========================================
+   MENU LATERAL
+========================================== */
+
+.sidebar{
+
+    width:260px;
+
+    background:#fff;
+
+    border-right:1px solid var(--borda);
+
+    position:fixed;
+
+    left:0;
+    top:0;
+
+    height:100vh;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:space-between;
+
+    padding:30px 20px;
+
+    box-shadow:var(--sombra);
+
+    z-index:1000;
+
+}
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    margin-bottom:40px;
+
+}
+
+.logo img{
+
+    width:170px;
+
+}
+
+.menu{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:10px;
+
+}
+
+.menu a{
+
+    text-decoration:none;
+
+    color:var(--cinza);
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    padding:14px 18px;
+
+    border-radius:12px;
+
+    transition:var(--transition);
+
+    font-size:15px;
+
+    font-weight:500;
+
+}
+
+.menu a:hover{
+
+    background:var(--cor-principal);
+
+    color:#000;
+
+    transform:translateX(5px);
+
+}
+
+.menu a.ativo{
+
+    background:var(--cor-principal);
+
+    color:#000;
+
+    font-weight:700;
+
+}
+
+.menu a i{
+
+    font-size:18px;
+
+}
+
+/* ==========================================
+   RODAPÉ MENU
+========================================== */
+
+.sidebarFooter{
+
+    border-top:1px solid var(--borda);
+
+    padding-top:20px;
+
+}
+
+.sidebarFooter button{
+
+    width:100%;
+
+    padding:14px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#111;
+
+    color:#fff;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    font-size:15px;
+
+}
+
+.sidebarFooter button:hover{
+
+    background:#333;
+
+}
+
+/* ==========================================
+   CONTEÚDO
+========================================== */
+
+.main{
+
+    flex:1;
+
+    margin-left:260px;
+
+    padding:35px;
+
+}
+
+/* ==========================================
+   TOPO
+========================================== */
+
+.topo{
+
+    background:#fff;
+
+    border-radius:20px;
+
+    box-shadow:var(--sombra);
+
+    padding:18px 30px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:35px;
+
+}
+
+.topoEsquerda{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:8px;
+
+}
+
+.topoEsquerda h1{
+
+    font-size:30px;
+
+    font-weight:700;
+
+}
+
+.topoEsquerda p{
+
+    color:var(--cinza);
+
+}
+
+.topoDireita{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+
+}
+
+.topoDireita button{
+
+    border:none;
+
+    background:#fff;
+
+    cursor:pointer;
+
+    font-size:22px;
+
+    transition:.3s;
+
+}
+
+.topoDireita button:hover{
+
+    transform:scale(1.08);
+
+}
+
+.usuario{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+}
+
+.usuario img{
+
+    width:48px;
+
+    height:48px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+}
+
+.usuario strong{
+
+    display:block;
+
+    font-size:15px;
+
+}
+
+.usuario span{
+
+    color:var(--cinza);
+
+    font-size:13px;
+
+}
+
+/* ==========================================
+   HERO
+========================================== */
+
+.hero{
+
+    background:linear-gradient(
+        135deg,
+        #ffe600,
+        #ffd000
+    );
+
+    border-radius:24px;
+
+    padding:45px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:50px;
+
+    margin-bottom:40px;
+
+    overflow:hidden;
+
+}
+
+.heroTexto{
+
+    max-width:550px;
+
+}
+
+.heroTexto h2{
+
+    font-size:42px;
+
+    line-height:1.2;
+
+    margin-bottom:20px;
+
+    color:#111;
+
+}
+
+.heroTexto p{
+
+    font-size:17px;
+
+    color:#333;
+
+    margin-bottom:30px;
+
+}
+
+.heroTexto button{
+
+    background:#111;
+
+    color:#fff;
+
+    border:none;
+
+    padding:16px 30px;
+
+    border-radius:14px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    font-size:15px;
+
+    font-weight:600;
+
+}
+
+.heroTexto button:hover{
+
+    transform:translateY(-3px);
+
+    background:#333;
+
+}
+
+.heroImagem{
+
+    flex:1;
+
+    display:flex;
+
+    justify-content:flex-end;
+
+}
+
+.heroImagem img{
+
+    max-width:360px;
+
+    width:100%;
+
+}
+
+/* ==========================================
+   TÍTULOS DAS SEÇÕES
+========================================== */
+
+section{
+
+    margin-bottom:70px;
+
+}
+
+section h2{
+
+    font-size:36px;
+
+    text-align:center;
+
+    margin-bottom:15px;
+
+    color:#111;
+
+}
+
+section>p{
+
+    text-align:center;
+
+    color:#777;
+
+    margin-bottom:45px;
+
+}
+
+/* ==========================================
+   ANIMAÇÃO
+========================================== */
+
+.card,
+.cardProduto,
+.cardAtalho{
+
+    transition:.35s;
+
+}
+
+.card:hover,
+.cardProduto:hover,
+.cardAtalho:hover{
+
+    transform:translateY(-6px);
+
+}
+
+/* ==========================================
+   SCROLLBAR
+========================================== */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#d8d8d8;
+
+    border-radius:30px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#bdbdbd;
+
+}
+
+/* ==========================================
+   RESUMO DA SEMANA
+========================================== */
+
+.resumo{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:25px;
+
+    margin-bottom:70px;
+
+}
+
+.cardResumo{
+
+    background:var(--branco);
+
+    border-radius:20px;
+
+    padding:28px;
+
+    box-shadow:var(--sombra);
+
+    border:1px solid var(--borda);
+
+    transition:.3s;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.cardResumo:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:0 15px 35px rgba(0,0,0,.12);
+
+}
+
+.cardResumo::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:6px;
+    height:100%;
+
+    background:var(--cor-principal);
+
+}
+
+.cardResumo h3{
+
+    font-size:17px;
+
+    color:var(--cinza);
+
+    margin-bottom:12px;
+
+}
+
+.cardResumo strong{
+
+    display:block;
+
+    font-size:34px;
+
+    color:#111;
+
+    margin-bottom:10px;
+
+}
+
+.cardResumo span{
+
+    color:var(--verde);
+
+    font-size:14px;
+
+    font-weight:600;
+
+}
+
+/* ==========================================
+   DESEMPENHO DE VENDAS
+========================================== */
+
+.desempenho{
+
+    margin-top:40px;
+
+}
+
+.cabecalhoDesempenho{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    gap:20px;
+
+    margin-bottom:35px;
+
+}
+
+.cabecalhoDesempenho h2{
+
+    text-align:left;
+
+    margin:0;
+
+    font-size:34px;
+
+}
+
+.cabecalhoDesempenho p{
+
+    color:var(--cinza);
+
+    margin-top:8px;
+
+}
+
+.acoesDesempenho{
+
+    display:flex;
+
+    gap:15px;
+
+}
+
+.acoesDesempenho button{
+
+    padding:14px 22px;
+
+    border-radius:12px;
+
+    border:none;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    font-size:14px;
+
+    font-weight:600;
+
+}
+
+#btnBaixarGrafico{
+
+    background:#fff;
+
+    border:1px solid var(--borda);
+
+}
+
+#btnBaixarGrafico:hover{
+
+    background:#f2f2f2;
+
+}
+
+#btnAnalisar{
+
+    background:#111;
+
+    color:#fff;
+
+}
+
+#btnAnalisar:hover{
+
+    background:#333;
+
+}
+
+/* ==========================================
+   GRID DOS GRÁFICOS
+========================================== */
+
+.graficos{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:25px;
+
+}
+
+.graficoCard{
+
+    background:#fff;
+
+    border-radius:20px;
+
+    padding:25px;
+
+    box-shadow:var(--sombra);
+
+    border:1px solid var(--borda);
+
+    transition:.3s;
+
+}
+
+.graficoCard:hover{
+
+    transform:translateY(-5px);
+
+}
+
+.graficoHeader{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:20px;
+
+}
+
+.graficoHeader h3{
+
+    font-size:22px;
+
+    color:#111;
+
+}
+
+.graficoHeader span{
+
+    color:var(--cinza);
+
+    font-size:14px;
+
+}
+
+/* ==========================================
+   ÁREA DO GRÁFICO
+========================================== */
+
+.graficoContainer{
+
+    width:100%;
+
+    height:340px;
+
+    border-radius:18px;
+
+    background:#fafafa;
+
+    border:1px solid #ececec;
+
+    padding:20px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+}
+
+.graficoContainer canvas{
+
+    width:100% !important;
+
+    height:100% !important;
+
+}
+
+/* ==========================================
+   PLACEHOLDER DOS GRÁFICOS
+========================================== */
+
+.graficoContainer::before{
+
+    content:"Gráfico será carregado pelo JavaScript";
+
+    position:absolute;
+
+    color:#999;
+
+    font-size:14px;
+
+    pointer-events:none;
+
+}
+
+.graficoContainer{
+
+    position:relative;
+
+}
+
+.graficoContainer canvas{
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+/* ==========================================
+   RESPONSIVIDADE
+========================================== */
+
+@media(max-width:1200px){
+
+    .graficos{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+@media(max-width:900px){
+
+    .resumo{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .cabecalhoDesempenho{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+    }
+
+    .acoesDesempenho{
+
+        width:100%;
+
+    }
+
+    .acoesDesempenho button{
+
+        flex:1;
+
+    }
+
+}
+
+@media(max-width:600px){
+
+    .graficoCard{
+
+        padding:18px;
+
+    }
+
+    .graficoContainer{
+
+        height:260px;
+
+    }
+
+    .graficoHeader{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:8px;
+
+    }
+
+}
+
+/* ==========================================
+   PRODUTOS EM DESTAQUE
+========================================== */
+
+.produtosDestaque{
+
+    margin-top:70px;
+
+}
+
+.cabecalhoProdutos{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    gap:20px;
+
+    margin-bottom:35px;
+
+}
+
+.cabecalhoProdutos h2{
+
+    font-size:34px;
+
+    color:#111;
+
+    margin:0;
+
+    text-align:left;
+
+}
+
+.cabecalhoProdutos p{
+
+    color:var(--cinza);
+
+    margin-top:8px;
+
+}
+
+.acoesProdutos{
+
+    display:flex;
+
+    gap:15px;
+
+}
+
+.acoesProdutos button{
+
+    padding:14px 24px;
+
+    border:none;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+/* Botão Promoção */
+
+#btnPromocao{
+
+    background:var(--cor-principal);
+
+    color:#111;
+
+}
+
+#btnPromocao:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 10px 25px rgba(255,230,0,.35);
+
+}
+
+/* Botão Catálogo */
+
+#btnCatalogo{
+
+    background:#111;
+
+    color:#fff;
+
+}
+
+#btnCatalogo:hover{
+
+    background:#333;
+
+}
+
+/* ==========================================
+   GRID DOS PRODUTOS
+========================================== */
+
+.listaProdutos{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:25px;
+
+}
+
+/* ==========================================
+   CARD
+========================================== */
+
+.cardProduto{
+
+    background:#fff;
+
+    border-radius:20px;
+
+    padding:22px;
+
+    border:1px solid var(--borda);
+
+    box-shadow:var(--sombra);
+
+    position:relative;
+
+    transition:.35s;
+
+    overflow:hidden;
+
+}
+
+.cardProduto:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 18px 40px rgba(0,0,0,.12);
+
+}
+
+/* ==========================================
+   BADGE
+========================================== */
+
+.badge{
+
+    position:absolute;
+
+    top:18px;
+
+    right:18px;
+
+    background:var(--cor-principal);
+
+    color:#111;
+
+    padding:6px 12px;
+
+    border-radius:30px;
+
+    font-size:12px;
+
+    font-weight:700;
+
+}
+
+/* ==========================================
+   IMAGEM
+========================================== */
+
+.imagemProduto{
+
+    width:100%;
+
+    height:180px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:#fafafa;
+
+    border-radius:16px;
+
+    margin-bottom:20px;
+
+}
+
+.imagemProduto img{
+
+    max-width:140px;
+
+    max-height:140px;
+
+    object-fit:contain;
+
+    transition:.3s;
+
+}
+
+.cardProduto:hover img{
+
+    transform:scale(1.08);
+
+}
+
+/* ==========================================
+   INFORMAÇÕES
+========================================== */
+
+.informacoesProduto{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:12px;
+
+}
+
+.informacoesProduto h3{
+
+    font-size:20px;
+
+    color:#111;
+
+    min-height:48px;
+
+}
+
+.vendas{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    color:var(--cinza);
+
+    font-size:14px;
+
+}
+
+.vendas strong{
+
+    color:var(--verde);
+
+    font-size:18px;
+
+}
+
+/* ==========================================
+   BOTÕES
+========================================== */
+
+.acoesCard{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    margin-top:12px;
+
+}
+
+.acoesCard .icone{
+
+    width:44px;
+
+    height:44px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#f5f5f5;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    font-size:18px;
+
+}
+
+.acoesCard .icone:hover{
+
+    background:var(--cor-principal);
+
+    transform:translateY(-3px);
+
+}
+
+/* ==========================================
+   EFEITO
+========================================== */
+
+.cardProduto::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:0;
+
+    width:100%;
+
+    height:5px;
+
+    background:var(--cor-principal);
+
+    transform:scaleX(0);
+
+    transition:.35s;
+
+}
+
+.cardProduto:hover::after{
+
+    transform:scaleX(1);
+
+}
+
+/* ==========================================
+   RESPONSIVIDADE
+========================================== */
+
+@media(max-width:1300px){
+
+    .listaProdutos{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .cabecalhoProdutos{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+    }
+
+    .acoesProdutos{
+
+        width:100%;
+
+    }
+
+    .acoesProdutos button{
+
+        flex:1;
+
+    }
+
+    .listaProdutos{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+@media(max-width:500px){
+
+    .cardProduto{
+
+        padding:18px;
+
+    }
+
+    .imagemProduto{
+
+        height:150px;
+
+    }
+
+    .imagemProduto img{
+
+        max-width:110px;
+
+    }
+
+    .informacoesProduto h3{
+
+        font-size:18px;
+
+    }
+
+}
+
+/* ==========================================
+   ATALHOS DO LOJISTA
+========================================== */
+
+.atalhosLojista{
+
+    margin-top:70px;
+
+}
+
+.cabecalhoAtalhos{
+
+    margin-bottom:35px;
+
+    text-align:center;
+
+}
+
+.cabecalhoAtalhos h2{
+
+    font-size:34px;
+
+    color:#111;
+
+    margin-bottom:10px;
+
+}
+
+.cabecalhoAtalhos p{
+
+    color:var(--cinza);
+
+    font-size:15px;
+
+}
+
+/* ==========================================
+   GRID DOS ATALHOS
+========================================== */
+
+.listaAtalhos{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:25px;
+
+}
+
+/* ==========================================
+   CARD
+========================================== */
+
+.cardAtalho{
+
+    background:#fff;
+
+    border-radius:20px;
+
+    padding:28px;
+
+    border:1px solid var(--borda);
+
+    box-shadow:var(--sombra);
+
+    text-align:center;
+
+    transition:.35s;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.cardAtalho:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 18px 40px rgba(0,0,0,.12);
+
+}
+
+/* Barra superior */
+
+.cardAtalho::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:5px;
+
+    background:var(--cor-principal);
+
+}
+
+/* ==========================================
+   ÍCONE
+========================================== */
+
+.iconeAtalho{
+
+    width:80px;
+
+    height:80px;
+
+    margin:0 auto 20px;
+
+    border-radius:50%;
+
+    background:#fff8cc;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    transition:.3s;
+
+}
+
+.iconeAtalho img{
+
+    width:42px;
+
+    height:42px;
+
+    object-fit:contain;
+
+}
+
+.cardAtalho:hover .iconeAtalho{
+
+    transform:scale(1.08) rotate(5deg);
+
+    background:var(--cor-principal);
+
+}
+
+/* ==========================================
+   TÍTULO
+========================================== */
+
+.cardAtalho h3{
+
+    font-size:20px;
+
+    color:#111;
+
+    margin-bottom:10px;
+
+}
+
+/* ==========================================
+   DESCRIÇÃO
+========================================== */
+
+.cardAtalho span{
+
+    display:block;
+
+    color:var(--cinza);
+
+    font-size:14px;
+
+    margin-bottom:18px;
+
+    line-height:1.5;
+
+}
+
+/* ==========================================
+   VALOR / INDICADOR
+========================================== */
+
+.cardAtalho strong{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    min-width:80px;
+
+    padding:10px 18px;
+
+    background:#f5f5f5;
+
+    border-radius:12px;
+
+    color:var(--verde);
+
+    font-size:18px;
+
+    font-weight:700;
+
+}
+
+/* ==========================================
+   CORES DIFERENTES
+========================================== */
+
+.cardAtalho:nth-child(1) strong{
+
+    color:#3483fa;
+
+}
+
+.cardAtalho:nth-child(2) strong{
+
+    color:#ff7733;
+
+}
+
+.cardAtalho:nth-child(3) strong{
+
+    color:#00a650;
+
+}
+
+.cardAtalho:nth-child(4) strong{
+
+    color:#8e44ad;
+
+}
+
+/* ==========================================
+   HOVER
+========================================== */
+
+.cardAtalho:hover strong{
+
+    background:var(--cor-principal);
+
+    color:#111;
+
+}
+
+/* ==========================================
+   ANIMAÇÃO
+========================================== */
+
+.cardAtalho{
+
+    animation:fadeCard .6s ease;
+
+}
+
+@keyframes fadeCard{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(30px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ==========================================
+   RESPONSIVIDADE
+========================================== */
+
+@media(max-width:1200px){
+
+    .listaAtalhos{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .listaAtalhos{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .cabecalhoAtalhos{
+
+        text-align:left;
+
+    }
+
+    .cabecalhoAtalhos h2{
+
+        font-size:30px;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    .cardAtalho{
+
+        padding:22px;
+
+    }
+
+    .iconeAtalho{
+
+        width:65px;
+
+        height:65px;
+
+    }
+
+    .iconeAtalho img{
+
+        width:34px;
+
+        height:34px;
+
+    }
+
+    .cardAtalho h3{
+
+        font-size:18px;
+
+    }
+
+    .cardAtalho strong{
+
+        font-size:16px;
+
+    }
+
+}
+
+/* ==========================================
+   AVALIAÇÕES RECENTES
+========================================== */
+
+.avaliacoesRecentes{
+
+    margin-top:70px;
+
+}
+
+.cabecalhoAvaliacoes{
+
+    text-align:center;
+
+    margin-bottom:35px;
+
+}
+
+.cabecalhoAvaliacoes h2{
+
+    font-size:34px;
+
+    color:#111;
+
+    margin-bottom:10px;
+
+}
+
+.cabecalhoAvaliacoes p{
+
+    color:var(--cinza);
+
+    font-size:15px;
+
+}
+
+/* ==========================================
+   GRID
+========================================== */
+
+.listaAvaliacoes{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:25px;
+
+}
+
+/* ==========================================
+   CARD
+========================================== */
+
+.cardAvaliacao{
+
+    background:#fff;
+
+    border-radius:20px;
+
+    padding:25px;
+
+    border:1px solid var(--borda);
+
+    box-shadow:var(--sombra);
+
+    transition:.35s;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.cardAvaliacao:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 18px 40px rgba(0,0,0,.12);
+
+}
+
+.cardAvaliacao::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:5px;
+
+    background:var(--cor-principal);
+
+}
+
+/* ==========================================
+   TOPO
+========================================== */
+
+.topoAvaliacao{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+/* ==========================================
+   CLIENTE
+========================================== */
+
+.cliente{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+}
+
+.avatar{
+
+    width:55px;
+
+    height:55px;
+
+    border-radius:50%;
+
+    overflow:hidden;
+
+    background:#f3f3f3;
+
+    border:2px solid var(--cor-principal);
+
+}
+
+.avatar img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+}
+
+.cliente span{
+
+    font-size:17px;
+
+    font-weight:600;
+
+    color:#111;
+
+}
+
+/* ==========================================
+   ESTRELAS
+========================================== */
+
+.estrelas{
+
+    display:flex;
+
+    gap:4px;
+
+    color:#FFC107;
+
+    font-size:18px;
+
+}
+
+/* ==========================================
+   COMENTÁRIO
+========================================== */
+
+.comentario{
+
+    color:#555;
+
+    line-height:1.7;
+
+    font-size:15px;
+
+    min-height:95px;
+
+}
+
+/* ==========================================
+   AÇÕES
+========================================== */
+
+.acoesAvaliacao{
+
+    display:flex;
+
+    justify-content:flex-end;
+
+    gap:12px;
+
+    margin-top:auto;
+
+}
+
+.acoesAvaliacao .icone{
+
+    width:42px;
+
+    height:42px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#f5f5f5;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    font-size:18px;
+
+}
+
+.acoesAvaliacao .icone:hover{
+
+    background:var(--cor-principal);
+
+    transform:translateY(-3px);
+
+}
+
+/* ==========================================
+   EFEITO
+========================================== */
+
+.cardAvaliacao::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:0;
+
+    width:100%;
+
+    height:4px;
+
+    background:var(--cor-principal);
+
+    transform:scaleX(0);
+
+    transition:.35s;
+
+}
+
+.cardAvaliacao:hover::after{
+
+    transform:scaleX(1);
+
+}
+
+/* ==========================================
+   ANIMAÇÃO
+========================================== */
+
+.cardAvaliacao{
+
+    animation:aparecerComentario .6s ease;
+
+}
+
+@keyframes aparecerComentario{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(25px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ==========================================
+   RESPONSIVIDADE
+========================================== */
+
+@media(max-width:1200px){
+
+    .listaAvaliacoes{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .listaAvaliacoes{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .topoAvaliacao{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:15px;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    .cardAvaliacao{
+
+        padding:20px;
+
+    }
+
+    .avatar{
+
+        width:48px;
+
+        height:48px;
+
+    }
+
+    .cliente span{
+
+        font-size:16px;
+
+    }
+
+    .comentario{
+
+        font-size:14px;
+
+    }
+
+    .acoesAvaliacao{
+
+        justify-content:center;
+
+    }
+
+}
+
+/* ==========================================
+   BOAS PRÁTICAS PARA VENDER MAIS
+========================================== */
+
+.boasPraticas{
+
+    margin-top:70px;
+
+}
+
+.cabecalhoBoasPraticas{
+
+    text-align:center;
+
+    margin-bottom:40px;
+
+}
+
+.cabecalhoBoasPraticas h2{
+
+    font-size:34px;
+
+    color:#111;
+
+    margin-bottom:10px;
+
+}
+
+.cabecalhoBoasPraticas p{
+
+    color:var(--cinza);
+
+    font-size:15px;
+
+}
+
+/* ==========================================
+   GRID
+========================================== */
+
+.listaBoasPraticas{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:30px;
+
+}
+
+/* ==========================================
+   CARD
+========================================== */
+
+.cardPratica{
+
+    display:flex;
+
+    gap:25px;
+
+    background:#fff;
+
+    border-radius:22px;
+
+    padding:25px;
+
+    border:1px solid var(--borda);
+
+    box-shadow:var(--sombra);
+
+    transition:.35s;
+
+    overflow:hidden;
+
+    position:relative;
+
+}
+
+.cardPratica:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 20px 40px rgba(0,0,0,.12);
+
+}
+
+.cardPratica::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    top:0;
+
+    width:6px;
+
+    height:100%;
+
+    background:var(--cor-principal);
+
+}
+
+/* ==========================================
+   IMAGEM
+========================================== */
+
+.imagemPratica{
+
+    width:180px;
+
+    min-width:180px;
+
+    height:180px;
+
+    border-radius:18px;
+
+    background:#fafafa;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    overflow:hidden;
+
+}
+
+.imagemPratica img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    transition:.35s;
+
+}
+
+.cardPratica:hover .imagemPratica img{
+
+    transform:scale(1.06);
+
+}
+
+/* ==========================================
+   CONTEÚDO
+========================================== */
+
+.conteudoPratica{
+
+    flex:1;
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.conteudoPratica h3{
+
+    font-size:24px;
+
+    color:#111;
+
+    margin-bottom:12px;
+
+    line-height:1.4;
+
+}
+
+/* ==========================================
+   CATEGORIA
+========================================== */
+
+.categoriaPratica{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    width:max-content;
+
+    background:#fff7cc;
+
+    color:#8a6d00;
+
+    padding:8px 14px;
+
+    border-radius:30px;
+
+    font-size:13px;
+
+    font-weight:600;
+
+    margin-bottom:18px;
+
+}
+
+/* ==========================================
+   TEXTO
+========================================== */
+
+.conteudoPratica p{
+
+    color:#555;
+
+    line-height:1.8;
+
+    font-size:15px;
+
+    margin-bottom:25px;
+
+    flex:1;
+
+}
+
+/* ==========================================
+   BOTÕES
+========================================== */
+
+.acoesPratica{
+
+    display:flex;
+
+    gap:12px;
+
+}
+
+.acoesPratica .icone{
+
+    width:45px;
+
+    height:45px;
+
+    border:none;
+
+    border-radius:14px;
+
+    background:#f5f5f5;
+
+    cursor:pointer;
+
+    transition:.30s;
+
+    font-size:18px;
+
+}
+
+.acoesPratica .icone:hover{
+
+    background:var(--cor-principal);
+
+    transform:translateY(-3px);
+
+}
+
+/* ==========================================
+   LINHA INFERIOR
+========================================== */
+
+.cardPratica::after{
+
+    content:"";
+
+    position:absolute;
+
+    bottom:0;
+
+    left:0;
+
+    width:100%;
+
+    height:5px;
+
+    background:var(--cor-principal);
+
+    transform:scaleX(0);
+
+    transition:.35s;
+
+}
+
+.cardPratica:hover::after{
+
+    transform:scaleX(1);
+
+}
+
+/* ==========================================
+   ANIMAÇÃO
+========================================== */
+
+.cardPratica{
+
+    animation:fadePratica .7s ease;
+
+}
+
+@keyframes fadePratica{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(35px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ==========================================
+   RESPONSIVIDADE
+========================================== */
+
+@media(max-width:1200px){
+
+    .listaBoasPraticas{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .cardPratica{
+
+        flex-direction:column;
+
+    }
+
+    .imagemPratica{
+
+        width:100%;
+
+        min-width:100%;
+
+        height:220px;
+
+    }
+
+    .conteudoPratica h3{
+
+        font-size:22px;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    .cardPratica{
+
+        padding:18px;
+
+    }
+
+    .imagemPratica{
+
+        height:180px;
+
+    }
+
+    .conteudoPratica h3{
+
+        font-size:19px;
+
+    }
+
+    .conteudoPratica p{
+
+        font-size:14px;
+
+    }
+
+    .acoesPratica{
+
+        justify-content:center;
+
+    }
+
+}
+
+/* ==========================================
+   ATUALIZAR STATUS DE PROMOÇÕES
+========================================== */
+
+.statusPromocoes{
+
+    margin-top:70px;
+
+    background:#fff;
+
+    border-radius:24px;
+
+    padding:40px;
+
+    border:1px solid var(--borda);
+
+    box-shadow:var(--sombra);
+
+}
+
+/* ==========================================
+   CABEÇALHO
+========================================== */
+
+.cabecalhoPromocao{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:30px;
+
+    margin-bottom:35px;
+
+}
+
+.imagemPromocao{
+
+    width:180px;
+
+    min-width:180px;
+
+    height:180px;
+
+    border-radius:20px;
+
+    background:#fafafa;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    overflow:hidden;
+
+}
+
+.imagemPromocao img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    transition:.35s;
+
+}
+
+.imagemPromocao:hover img{
+
+    transform:scale(1.05);
+
+}
+
+.textoPromocao{
+
+    flex:1;
+
+}
+
+.textoPromocao h2{
+
+    font-size:34px;
+
+    color:#111;
+
+    margin-bottom:15px;
+
+}
+
+.textoPromocao p{
+
+    color:var(--cinza);
+
+    line-height:1.8;
+
+    font-size:15px;
+
+}
+
+/* ==========================================
+   FORMULÁRIO
+========================================== */
+
+.formularioPromocao{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:30px;
+
+    margin-bottom:35px;
+
+}
+
+.campo{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.campo label{
+
+    font-size:15px;
+
+    font-weight:600;
+
+    color:#333;
+
+    margin-bottom:10px;
+
+}
+
+.campo input{
+
+    width:100%;
+
+    padding:16px 18px;
+
+    border:1px solid var(--borda);
+
+    border-radius:14px;
+
+    font-size:15px;
+
+    background:#fafafa;
+
+    transition:.3s;
+
+}
+
+.campo input:focus{
+
+    outline:none;
+
+    border-color:var(--cor-secundaria);
+
+    background:#fff;
+
+    box-shadow:0 0 0 4px rgba(52,131,250,.12);
+
+}
+
+.campo small{
+
+    margin-top:8px;
+
+    color:#888;
+
+    font-size:13px;
+
+}
+
+/* ==========================================
+   BOTÕES
+========================================== */
+
+.acoesPromocao{
+
+    display:flex;
+
+    justify-content:flex-end;
+
+    gap:18px;
+
+}
+
+.acoesPromocao button{
+
+    padding:15px 28px;
+
+    border:none;
+
+    border-radius:14px;
+
+    cursor:pointer;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    transition:.30s;
+
+}
+
+/* Salvar */
+
+#btnSalvarRascunho{
+
+    background:#f3f3f3;
+
+    color:#444;
+
+}
+
+#btnSalvarRascunho:hover{
+
+    background:#e8e8e8;
+
+    transform:translateY(-3px);
+
+}
+
+/* Publicar */
+
+#btnPublicarPromocao{
+
+    background:var(--cor-principal);
+
+    color:#111;
+
+}
+
+#btnPublicarPromocao:hover{
+
+    background:#ffd500;
+
+    transform:translateY(-3px);
+
+    box-shadow:0 12px 25px rgba(255,214,0,.35);
+
+}
+
+/* ==========================================
+   ANIMAÇÃO
+========================================== */
+
+.statusPromocoes{
+
+    animation:fadePromocao .8s ease;
+
+}
+
+@keyframes fadePromocao{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ==========================================
+   RESPONSIVIDADE
+========================================== */
+
+@media(max-width:1100px){
+
+    .cabecalhoPromocao{
+
+        flex-direction:column;
+
+        text-align:center;
+
+    }
+
+    .imagemPromocao{
+
+        width:220px;
+
+        height:220px;
+
+    }
+
+    .formularioPromocao{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .statusPromocoes{
+
+        padding:25px;
+
+    }
+
+    .acoesPromocao{
+
+        flex-direction:column;
+
+    }
+
+    .acoesPromocao button{
+
+        width:100%;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    .textoPromocao h2{
+
+        font-size:26px;
+
+    }
+
+    .imagemPromocao{
+
+        width:170px;
+
+        height:170px;
+
+    }
+
+    .campo input{
+
+        padding:14px;
+
+    }
+
+}
+
+/* ==========================================
+   MELHORIAS GERAIS
+========================================== */
+
+img{
+
+    max-width:100%;
+
+    display:block;
+
+}
+
+button{
+
+    font-family:inherit;
+
+}
+
+input{
+
+    font-family:inherit;
+
+}
+
+button:focus,
+input:focus{
+
+    outline:none;
+
+}
+
+section{
+
+    scroll-margin-top:100px;
+
+}
+
+/* ==========================================
+   TRANSIÇÕES GLOBAIS
+========================================== */
+
+.cardResumo,
+.graficoCard,
+.cardProduto,
+.cardAtalho,
+.cardAvaliacao,
+.cardPratica,
+.statusPromocoes{
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease;
+
+}
+
+/* ==========================================
+   FOOTER (Opcional)
+========================================== */
+
+.footer{
+
+    margin-top:80px;
+
+    text-align:center;
+
+    color:#777;
+
+    font-size:14px;
+
+    padding:30px 0;
+
+}
+

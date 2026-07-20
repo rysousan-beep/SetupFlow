@@ -2,25 +2,29 @@
 <html lang="pt-BR">
 
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>PCs Prontos</title>
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="../style/pcs_montados.css">
+    <link rel="stylesheet" href="/style/pcs_montados.css">
+
 </head>
 
 <body>
 
-    <!--==================================================
+    <!--==========================
         HEADER
-    ==================================================-->
+    ===========================-->
+
     <header id="header"></header>
 
-    <!--==================================================
-        CONTEÚDO PRINCIPAL
-    ==================================================-->
+    <!--==========================
+        MAIN
+    ===========================-->
+
     <main id="main">
 
         <!-- Banner -->
@@ -29,22 +33,16 @@
         <!-- Conteúdo -->
         <section id="conteudo">
 
-            <!--==========================================
-                FILTROS
-            ===========================================-->
+            <!-- Sidebar -->
             <aside id="sidebar">
 
-                <!-- Os filtros serão carregados pelo JS -->
                 <div id="filtros"></div>
 
             </aside>
 
-            <!--==========================================
-                ÁREA DOS PRODUTOS
-            ===========================================-->
+            <!-- Produtos -->
             <section id="produtos-area">
 
-                <!-- Cabeçalho -->
                 <div id="produtos-topo">
 
                     <div id="titulo-produtos"></div>
@@ -53,8 +51,7 @@
 
                 </div>
 
-                <!-- Lista de Produtos -->
-                <div id="lista-produtos"></div>
+                <section id="lista-produtos"></section>
 
             </section>
 
@@ -62,15 +59,15 @@
 
     </main>
 
-    <!--==================================================
-        RODAPÉ
-    ==================================================-->
+    <!--==========================
+        FOOTER
+    ===========================-->
+
     <footer id="footer"></footer>
 
-    <!--==================================================
-        TEMPLATE DO MENU
-        (Utilizado pelo JavaScript)
-    ==================================================-->
+    <!--====================================================
+                    TEMPLATE MENU
+    =====================================================-->
 
     <template id="template-menu">
 
@@ -86,13 +83,17 @@
 
     </template>
 
-    <!--==================================================
-        TEMPLATE DO BANNER
-    ==================================================-->
+    <!--====================================================
+                    TEMPLATE BANNER
+    =====================================================-->
 
     <template id="template-banner">
 
         <div class="banner">
+
+            <div class="banner-imagem"></div>
+
+            <div class="banner-overlay"></div>
 
             <div class="banner-info">
 
@@ -106,15 +107,13 @@
 
             </div>
 
-            <div class="banner-imagem"></div>
-
         </div>
 
     </template>
 
-    <!--==================================================
-        TEMPLATE DOS FILTROS
-    ==================================================-->
+    <!--====================================================
+                    TEMPLATE FILTROS
+    =====================================================-->
 
     <template id="template-filtro">
 
@@ -128,27 +127,37 @@
 
     </template>
 
-    <!--==================================================
-        TEMPLATE PRODUTO
-    ==================================================-->
+    <!--====================================================
+                    TEMPLATE PRODUTO
+    =====================================================-->
 
     <template id="template-produto">
 
         <article class="produto-card">
 
-            <div class="produto-etiqueta"></div>
+            <div class="produto-topo">
+
+                <span class="produto-etiqueta"></span>
+
+            </div>
 
             <div class="produto-imagem"></div>
 
-            <div class="produto-conteudo">
+            <div class="produto-info">
 
                 <h2 class="produto-nome"></h2>
 
                 <ul class="produto-especificacoes"></ul>
 
-                <div class="produto-preco"></div>
+                <div class="produto-precos">
 
-                <div class="produto-parcelamento"></div>
+                    <small class="produto-a-vista"></small>
+
+                    <strong class="produto-preco"></strong>
+
+                    <small class="produto-parcelado"></small>
+
+                </div>
 
                 <button class="produto-botao"></button>
 
@@ -158,9 +167,9 @@
 
     </template>
 
-    <!--==================================================
-        TEMPLATE DO FOOTER
-    ==================================================-->
+    <!--====================================================
+                    TEMPLATE RODAPÉ
+    =====================================================-->
 
     <template id="template-footer">
 
@@ -170,7 +179,7 @@
 
             <div class="footer-links"></div>
 
-            <div class="footer-social"></div>
+            <div class="footer-redes"></div>
 
             <div class="footer-copy"></div>
 
@@ -178,8 +187,67 @@
 
     </template>
 
-    <!-- JavaScript -->
-    <script src="../js/pcs_montados.js"></script>
+    <!--====================================================
+                    TEMPLATE LINK MENU
+    =====================================================-->
+
+    <template id="template-link-menu">
+
+        <li class="menu-item">
+
+            <a href="#" class="menu-link"></a>
+
+        </li>
+
+    </template>
+
+    <!--====================================================
+                TEMPLATE ITEM FILTRO
+    =====================================================-->
+
+    <template id="template-checkbox">
+
+        <label class="checkbox-item">
+
+            <input type="checkbox">
+
+            <span></span>
+
+        </label>
+
+    </template>
+
+    <!--====================================================
+                TEMPLATE ESPECIFICAÇÃO
+    =====================================================-->
+
+    <template id="template-especificacao">
+
+        <li class="spec-item"></li>
+
+    </template>
+
+    <!--====================================================
+                TEMPLATE LINK FOOTER
+    =====================================================-->
+
+    <template id="template-footer-link">
+
+        <a href="#" class="footer-link"></a>
+
+    </template>
+
+    <!--====================================================
+                TEMPLATE REDE SOCIAL
+    =====================================================-->
+
+    <template id="template-social">
+
+        <a href="#" class="social-item"></a>
+
+    </template>
+
+    <script src="/js/pcs_montados.js"></script>
 
 </body>
 

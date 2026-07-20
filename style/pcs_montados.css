@@ -1,6 +1,6 @@
-/*==================================================
+/*=========================================================
     RESET
-==================================================*/
+=========================================================*/
 
 *{
     margin:0;
@@ -13,107 +13,119 @@ html{
 }
 
 body{
-    background:#3f3a3d;
-    color:#ffffff;
+
     font-family:Arial, Helvetica, sans-serif;
+
+    background:#454042;
+
+    color:#FFF;
+
     overflow-x:hidden;
+
 }
 
-/*==================================================
+img{
+
+    max-width:100%;
+
+    display:block;
+
+}
+
+a{
+
+    text-decoration:none;
+
+    color:inherit;
+
+}
+
+ul{
+
+    list-style:none;
+
+}
+
+/*=========================================================
     VARIÁVEIS
-==================================================*/
+=========================================================*/
 
 :root{
 
-    --cor-fundo:#3f3a3d;
-    --cor-card:#2f2b2d;
-    --cor-header:#ff1f1f;
+    --bg:#454042;
 
-    --verde:#7dff00;
-    --verde-hover:#67d100;
+    --card:#322f31;
 
-    --vermelho:#ff2424;
-    --vermelho-hover:#df1111;
+    --header:#ff1717;
 
-    --cinza:#5d595c;
-    --cinza-claro:#d8d8d8;
+    --verde:#7CFF00;
 
-    --texto:#ffffff;
-    --texto2:#bdbdbd;
+    --verdeHover:#6be000;
+
+    --vermelho:#ff1d1d;
+
+    --cinza:#a5a5a5;
+
+    --cinza2:#666;
+
+    --branco:#fff;
 
     --radius:10px;
 
     --shadow:
-    0 5px 18px rgba(0,0,0,.35);
+        0 6px 18px rgba(0,0,0,.35);
 
     --transition:.30s;
 
 }
 
-/*==================================================
-    LINKS
-==================================================*/
-
-a{
-    color:inherit;
-    text-decoration:none;
-}
-
-ul{
-    list-style:none;
-}
-
-img{
-    display:block;
-    max-width:100%;
-}
-
-/*==================================================
-    CONTAINER
-==================================================*/
+/*=========================================================
+    MAIN
+=========================================================*/
 
 #main{
 
     width:100%;
-    max-width:1400px;
+
+    max-width:1450px;
 
     margin:auto;
 
-    padding:15px;
+    padding:18px;
 
 }
 
-/*==================================================
+/*=========================================================
     HEADER
-==================================================*/
+=========================================================*/
 
 #header{
 
     width:100%;
 
-    background:var(--cor-header);
-
-    box-shadow:var(--shadow);
+    background:var(--header);
 
     position:sticky;
 
     top:0;
 
-    left:0;
-
     z-index:999;
+
+    box-shadow:var(--shadow);
 
 }
 
-/* Menu */
+/*=========================================================
+    MENU
+=========================================================*/
 
 .menu{
 
-    max-width:1400px;
+    max-width:1450px;
+
+    height:52px;
 
     margin:auto;
-
-    height:58px;
 
     display:flex;
 
@@ -125,7 +137,9 @@ img{
 
 }
 
-/* Logo */
+/*=========================================================
+    LOGO
+=========================================================*/
 
 .menu-logo{
 
@@ -133,11 +147,17 @@ img{
 
     align-items:center;
 
-    gap:15px;
+}
+
+.menu-logo img{
+
+    height:36px;
 
 }
 
-/* Links */
+/*=========================================================
+    LINKS
+=========================================================*/
 
 .menu-links{
 
@@ -149,37 +169,35 @@ img{
 
 }
 
-.menu-links li{
-
-    font-size:14px;
-
-    font-weight:bold;
-
-    color:#fff;
-
-    cursor:pointer;
-
-    transition:var(--transition);
+.menu-item{
 
     position:relative;
 
 }
 
-.menu-links li:hover{
+.menu-link{
+
+    color:#FFF;
+
+    font-size:14px;
+
+    font-weight:bold;
+
+    transition:var(--transition);
+
+    text-transform:uppercase;
+
+}
+
+.menu-link:hover{
 
     color:#ffee00;
 
 }
 
-.menu-links li::after{
+.menu-item::after{
 
     content:"";
-
-    position:absolute;
-
-    left:0;
-
-    bottom:-8px;
 
     width:0;
 
@@ -187,17 +205,25 @@ img{
 
     background:#ffee00;
 
-    transition:.3s;
+    position:absolute;
+
+    left:0;
+
+    bottom:-8px;
+
+    transition:.30s;
 
 }
 
-.menu-links li:hover::after{
+.menu-item:hover::after{
 
     width:100%;
 
 }
 
-/* Ações */
+/*=========================================================
+    AÇÕES
+=========================================================*/
 
 .menu-acoes{
 
@@ -209,9 +235,39 @@ img{
 
 }
 
-/*==================================================
+.menu-btn{
+
+    width:40px;
+
+    height:40px;
+
+    border:none;
+
+    border-radius:50%;
+
+    cursor:pointer;
+
+    background:rgba(255,255,255,.12);
+
+    color:#FFF;
+
+    font-size:18px;
+
+    transition:var(--transition);
+
+}
+
+.menu-btn:hover{
+
+    background:#FFF;
+
+    color:#000;
+
+}
+
+/*=========================================================
     BANNER
-==================================================*/
+=========================================================*/
 
 #banner{
 
@@ -219,29 +275,25 @@ img{
 
 }
 
-/* Card */
+/*=========================================================
+    CARD
+=========================================================*/
 
 .banner{
 
-    width:100%;
+    position:relative;
+
+    overflow:hidden;
 
     min-height:320px;
 
     border-radius:12px;
 
-    overflow:hidden;
-
     border:2px solid var(--verde);
-
-    background:#181818;
-
-    position:relative;
 
     display:flex;
 
     align-items:center;
-
-    justify-content:space-between;
 
     padding:45px;
 
@@ -249,7 +301,9 @@ img{
 
 }
 
-/* Fundo */
+/*=========================================================
+    IMAGEM
+=========================================================*/
 
 .banner-imagem{
 
@@ -263,106 +317,97 @@ img{
 
     background-repeat:no-repeat;
 
-    opacity:.35;
+    z-index:1;
 
 }
 
-/* Gradiente */
+/*=========================================================
+    OVERLAY
+=========================================================*/
 
-.banner::before{
-
-    content:"";
+.banner-overlay{
 
     position:absolute;
 
     inset:0;
 
     background:linear-gradient(
+
         90deg,
-        rgba(0,0,0,.88),
-        rgba(0,0,0,.35),
-        rgba(0,0,0,.10)
+
+        rgba(0,0,0,.90),
+
+        rgba(0,0,0,.45),
+
+        rgba(0,0,0,.15)
+
     );
 
-    z-index:1;
+    z-index:2;
 
 }
 
-/* Conteúdo */
+/*=========================================================
+    TEXTO
+=========================================================*/
 
 .banner-info{
 
     position:relative;
 
-    z-index:2;
+    z-index:3;
 
     max-width:520px;
 
 }
 
-/* Tag */
-
 .banner-tag{
 
-    display:inline-flex;
-
-    align-items:center;
-
-    justify-content:center;
+    display:inline-block;
 
     background:var(--vermelho);
 
-    color:#fff;
+    padding:8px 15px;
+
+    border-radius:5px;
 
     font-size:13px;
 
     font-weight:bold;
 
-    padding:8px 16px;
-
-    border-radius:5px;
-
-    margin-bottom:20px;
+    margin-bottom:18px;
 
 }
 
-/* Título */
-
 .banner-titulo{
 
-    font-size:56px;
+    font-size:58px;
 
     font-weight:900;
 
     color:var(--verde);
 
-    line-height:1.05;
+    line-height:1;
 
-    margin-bottom:15px;
+    margin-bottom:18px;
+
+    text-transform:uppercase;
 
 }
-
-/* Texto */
 
 .banner-subtitulo{
 
-    font-size:20px;
-
-    color:#fff;
+    font-size:22px;
 
     line-height:1.6;
 
-    margin-bottom:35px;
+    margin-bottom:30px;
 
 }
-
-/* Botão */
 
 .banner-botao{
 
     border:none;
-
-    outline:none;
 
     cursor:pointer;
 
@@ -370,13 +415,13 @@ img{
 
     color:#000;
 
-    font-size:18px;
-
-    font-weight:bold;
+    padding:18px 35px;
 
     border-radius:8px;
 
-    padding:18px 36px;
+    font-size:18px;
+
+    font-weight:bold;
 
     transition:var(--transition);
 
@@ -384,47 +429,47 @@ img{
 
 .banner-botao:hover{
 
-    background:var(--verde-hover);
+    background:var(--verdeHover);
 
     transform:translateY(-3px);
 
 }
 
-/*==================================================
+/*=========================================================
     CONTEÚDO
-==================================================*/
+=========================================================*/
 
 #conteudo{
 
+    margin-top:30px;
+
     display:grid;
 
-    grid-template-columns:280px 1fr;
+    grid-template-columns:290px 1fr;
 
     gap:25px;
 
-    margin-top:30px;
-
 }
 
-/*==================================================
+/*=========================================================
     SIDEBAR
-==================================================*/
+=========================================================*/
 
 #sidebar{
 
     width:100%;
 
-}
+} 
 
-/*==================================================
-    FILTROS
-==================================================*/
+/*=========================================================
+    PAINEL DE FILTROS
+=========================================================*/
 
 #filtros{
 
     width:100%;
 
-    background:var(--cor-card);
+    background:var(--card);
 
     border-radius:12px;
 
@@ -432,11 +477,15 @@ img{
 
     box-shadow:var(--shadow);
 
+    position:sticky;
+
+    top:75px;
+
 }
 
-/*==================================================
-    TÍTULO DOS FILTROS
-==================================================*/
+/*=========================================================
+    TÍTULO
+=========================================================*/
 
 #filtros::before{
 
@@ -448,9 +497,9 @@ img{
 
     font-weight:800;
 
-    color:var(--texto);
+    color:var(--branco);
 
-    margin-bottom:18px;
+    margin-bottom:20px;
 
     padding-bottom:12px;
 
@@ -458,13 +507,13 @@ img{
 
 }
 
-/*==================================================
-    BLOCO DE FILTRO
-==================================================*/
+/*=========================================================
+    BLOCO
+=========================================================*/
 
 .bloco-filtro{
 
-    margin-bottom:28px;
+    margin-bottom:30px;
 
 }
 
@@ -474,11 +523,13 @@ img{
 
 }
 
-/*==================================================
-    TÍTULO
-==================================================*/
+/*=========================================================
+    TÍTULO DO BLOCO
+=========================================================*/
 
 .titulo-filtro{
+
+    color:var(--verde);
 
     font-size:14px;
 
@@ -486,17 +537,15 @@ img{
 
     font-weight:700;
 
-    color:var(--verde);
-
     margin-bottom:15px;
 
     letter-spacing:.5px;
 
 }
 
-/*==================================================
+/*=========================================================
     CONTEÚDO
-==================================================*/
+=========================================================*/
 
 .conteudo-filtro{
 
@@ -508,9 +557,9 @@ img{
 
 }
 
-/*==================================================
+/*=========================================================
     CHECKBOX
-==================================================*/
+=========================================================*/
 
 .checkbox-item{
 
@@ -528,19 +577,15 @@ img{
 
 .checkbox-item:hover{
 
-    transform:translateX(5px);
+    transform:translateX(6px);
 
 }
 
-/*==================================================
-    INPUT
-==================================================*/
-
 .checkbox-item input{
 
-    width:17px;
+    width:16px;
 
-    height:17px;
+    height:16px;
 
     cursor:pointer;
 
@@ -548,13 +593,9 @@ img{
 
 }
 
-/*==================================================
-    TEXTO
-==================================================*/
-
 .checkbox-item span{
 
-    color:var(--texto2);
+    color:var(--cinza);
 
     font-size:14px;
 
@@ -564,13 +605,13 @@ img{
 
 .checkbox-item:hover span{
 
-    color:#ffffff;
+    color:var(--branco);
 
 }
 
-/*==================================================
+/*=========================================================
     RADIO
-==================================================*/
+=========================================================*/
 
 .radio-item{
 
@@ -594,15 +635,15 @@ img{
 
 .radio-item span{
 
-    color:var(--texto2);
+    color:var(--cinza);
 
     font-size:14px;
 
 }
 
-/*==================================================
+/*=========================================================
     LINHA DIVISÓRIA
-==================================================*/
+=========================================================*/
 
 .filtro-divisor{
 
@@ -616,9 +657,9 @@ img{
 
 }
 
-/*==================================================
-    PREÇO
-==================================================*/
+/*=========================================================
+    FAIXA DE PREÇO
+=========================================================*/
 
 .faixa-preco{
 
@@ -628,17 +669,17 @@ img{
 
     align-items:center;
 
-    color:#ffffff;
+    margin-bottom:12px;
 
     font-size:13px;
 
-    margin-bottom:12px;
+    color:var(--branco);
 
 }
 
-/*==================================================
+/*=========================================================
     RANGE
-==================================================*/
+=========================================================*/
 
 .range-box{
 
@@ -652,13 +693,13 @@ img{
 
     cursor:pointer;
 
-    accent-color:var(--verde);
+    accent-color:var(--vermelho);
 
 }
 
-/*==================================================
+/*=========================================================
     TAGS
-==================================================*/
+=========================================================*/
 
 .tags-filtro{
 
@@ -666,17 +707,17 @@ img{
 
     flex-wrap:wrap;
 
-    gap:10px;
+    gap:8px;
 
 }
 
 .tag-filtro{
 
+    padding:8px 12px;
+
     background:#555;
 
     color:#fff;
-
-    padding:7px 12px;
 
     border-radius:30px;
 
@@ -696,9 +737,9 @@ img{
 
 }
 
-/*==================================================
+/*=========================================================
     BOTÃO LIMPAR
-==================================================*/
+=========================================================*/
 
 .botao-limpar{
 
@@ -706,11 +747,9 @@ img{
 
     margin-top:18px;
 
+    padding:14px;
+
     border:none;
-
-    cursor:pointer;
-
-    padding:13px;
 
     border-radius:8px;
 
@@ -718,9 +757,9 @@ img{
 
     color:#fff;
 
-    font-size:14px;
+    font-weight:bold;
 
-    font-weight:700;
+    cursor:pointer;
 
     transition:var(--transition);
 
@@ -728,27 +767,97 @@ img{
 
 .botao-limpar:hover{
 
-    background:var(--vermelho-hover);
+    background:#d10000;
 
 }
 
-/*==================================================
-    SCROLL DA SIDEBAR
-==================================================*/
+/*=========================================================
+    QUANTIDADE DE PRODUTOS
+=========================================================*/
 
-#sidebar{
+.filtro-quantidade{
 
-    position:sticky;
+    margin-top:18px;
 
-    top:80px;
+    padding-top:18px;
 
-    align-self:flex-start;
+    border-top:1px solid #555;
+
+    color:var(--cinza);
+
+    font-size:13px;
 
 }
 
-/*==================================================
-    RESPONSIVO TABLET
-==================================================*/
+.filtro-quantidade strong{
+
+    color:var(--verde);
+
+}
+
+/*=========================================================
+    BADGES DOS FILTROS
+=========================================================*/
+
+.filtro-badge{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:4px 10px;
+
+    border-radius:20px;
+
+    background:var(--verde);
+
+    color:#000;
+
+    font-size:11px;
+
+    font-weight:bold;
+
+}
+
+/*=========================================================
+    SCROLL INTERNO
+=========================================================*/
+
+.filtros-scroll{
+
+    max-height:700px;
+
+    overflow-y:auto;
+
+    padding-right:6px;
+
+}
+
+.filtros-scroll::-webkit-scrollbar{
+
+    width:6px;
+
+}
+
+.filtros-scroll::-webkit-scrollbar-track{
+
+    background:#3a3a3a;
+
+}
+
+.filtros-scroll::-webkit-scrollbar-thumb{
+
+    background:var(--vermelho);
+
+    border-radius:20px;
+
+}
+
+/*=========================================================
+    TABLET
+=========================================================*/
 
 @media(max-width:991px){
 
@@ -758,7 +867,7 @@ img{
 
     }
 
-    #sidebar{
+    #filtros{
 
         position:relative;
 
@@ -766,17 +875,11 @@ img{
 
     }
 
-    #filtros{
-
-        margin-bottom:25px;
-
-    }
-
 }
 
-/*==================================================
-    RESPONSIVO MOBILE
-==================================================*/
+/*=========================================================
+    MOBILE
+=========================================================*/
 
 @media(max-width:768px){
 
@@ -788,16 +891,9 @@ img{
 
     #filtros::before{
 
-        text-align:center;
-
         font-size:22px;
 
-    }
-
-    .checkbox-item span,
-    .radio-item span{
-
-        font-size:13px;
+        text-align:center;
 
     }
 
@@ -807,11 +903,30 @@ img{
 
     }
 
+    .checkbox-item span{
+
+        font-size:13px;
+
+    }
+
+    .radio-item span{
+
+        font-size:13px;
+
+    }
+
+    .botao-limpar{
+
+        padding:12px;
+
+    }
+
 }
 
-/*==================================================
+
+/*=========================================================
     ÁREA DOS PRODUTOS
-==================================================*/
+=========================================================*/
 
 #produtos-area{
 
@@ -825,13 +940,11 @@ img{
 
 }
 
-/*==================================================
+/*=========================================================
     TOPO DOS PRODUTOS
-==================================================*/
+=========================================================*/
 
 #produtos-topo{
-
-    width:100%;
 
     display:flex;
 
@@ -839,11 +952,9 @@ img{
 
     align-items:center;
 
-    gap:20px;
+    background:var(--card);
 
     padding:18px 25px;
-
-    background:var(--cor-card);
 
     border-radius:12px;
 
@@ -851,9 +962,9 @@ img{
 
 }
 
-/*==================================================
+/*=========================================================
     TÍTULO
-==================================================*/
+=========================================================*/
 
 #titulo-produtos{
 
@@ -861,7 +972,7 @@ img{
 
     flex-direction:column;
 
-    gap:6px;
+    gap:5px;
 
 }
 
@@ -869,23 +980,25 @@ img{
 
     font-size:30px;
 
-    font-weight:800;
+    font-weight:900;
 
-    color:var(--texto);
+    color:var(--branco);
+
+    text-transform:uppercase;
 
 }
 
 #titulo-produtos span{
 
-    font-size:14px;
+    color:var(--cinza);
 
-    color:var(--texto2);
+    font-size:14px;
 
 }
 
-/*==================================================
+/*=========================================================
     ORDENAÇÃO
-==================================================*/
+=========================================================*/
 
 #ordenacao{
 
@@ -893,13 +1006,11 @@ img{
 
     align-items:center;
 
-    gap:10px;
-
 }
 
 #ordenacao select{
 
-    min-width:220px;
+    width:220px;
 
     height:42px;
 
@@ -927,9 +1038,9 @@ img{
 
 }
 
-/*==================================================
-    GRID DOS PRODUTOS
-==================================================*/
+/*=========================================================
+    GRID
+=========================================================*/
 
 #lista-produtos{
 
@@ -941,27 +1052,27 @@ img{
 
 }
 
-/*==================================================
+/*=========================================================
     CARD
-==================================================*/
+=========================================================*/
 
 .produto-card{
 
-    position:relative;
+    display:flex;
 
-    overflow:hidden;
+    flex-direction:column;
 
-    background:var(--cor-card);
+    background:var(--card);
 
     border-radius:12px;
+
+    overflow:hidden;
 
     box-shadow:var(--shadow);
 
     transition:var(--transition);
 
-    display:flex;
-
-    flex-direction:column;
+    position:relative;
 
 }
 
@@ -969,41 +1080,53 @@ img{
 
     transform:translateY(-8px);
 
-    box-shadow:0 12px 30px rgba(0,0,0,.45);
+    box-shadow:0 15px 30px rgba(0,0,0,.45);
 
 }
 
-/*==================================================
-    ETIQUETA
-==================================================*/
+/*=========================================================
+    TOPO DO CARD
+=========================================================*/
 
-.produto-etiqueta{
+.produto-topo{
 
     position:absolute;
 
-    top:18px;
+    top:15px;
 
-    left:18px;
+    left:15px;
+
+    z-index:2;
+
+}
+
+/*=========================================================
+    ETIQUETA
+=========================================================*/
+
+.produto-etiqueta{
+
+    display:inline-block;
 
     background:var(--vermelho);
 
     color:#fff;
 
-    font-size:12px;
-
-    font-weight:700;
-
-    padding:6px 12px;
+    padding:7px 12px;
 
     border-radius:20px;
 
-    z-index:5;
+    font-size:11px;
+
+    font-weight:bold;
+
+    text-transform:uppercase;
 
 }
 
-/*==================================================
+/*=========================================================
     IMAGEM
-==================================================*/
+=========================================================*/
 
 .produto-imagem{
 
@@ -1013,21 +1136,17 @@ img{
 
     display:flex;
 
-    align-items:center;
-
     justify-content:center;
 
+    align-items:center;
+
+    background:#272526;
+
     padding:20px;
-
-    background:#252525;
-
-    overflow:hidden;
 
 }
 
 .produto-imagem img{
-
-    max-width:100%;
 
     max-height:180px;
 
@@ -1043,13 +1162,11 @@ img{
 
 }
 
-/*==================================================
-    CONTEÚDO
-==================================================*/
+/*=========================================================
+    INFORMAÇÕES
+=========================================================*/
 
-.produto-conteudo{
-
-    padding:22px;
+.produto-info{
 
     display:flex;
 
@@ -1057,11 +1174,13 @@ img{
 
     flex:1;
 
+    padding:22px;
+
 }
 
-/*==================================================
+/*=========================================================
     NOME
-==================================================*/
+=========================================================*/
 
 .produto-nome{
 
@@ -1073,13 +1192,13 @@ img{
 
     line-height:1.4;
 
-    margin-bottom:15px;
+    margin-bottom:18px;
 
 }
 
-/*==================================================
+/*=========================================================
     ESPECIFICAÇÕES
-==================================================*/
+=========================================================*/
 
 .produto-especificacoes{
 
@@ -1093,21 +1212,21 @@ img{
 
 }
 
-.produto-especificacoes li{
+.spec-item{
 
-    color:var(--texto2);
-
-    font-size:14px;
+    position:relative;
 
     padding-left:18px;
 
-    position:relative;
+    color:var(--cinza);
+
+    font-size:14px;
 
     line-height:1.5;
 
 }
 
-.produto-especificacoes li::before{
+.spec-item::before{
 
     content:"✔";
 
@@ -1121,13 +1240,31 @@ img{
 
 }
 
-/*==================================================
-    PREÇO
-==================================================*/
+/*=========================================================
+    PREÇOS
+=========================================================*/
 
-.produto-preco{
+.produto-precos{
 
     margin-top:auto;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:6px;
+
+}
+
+.produto-a-vista{
+
+    color:var(--cinza);
+
+    font-size:13px;
+
+}
+
+.produto-preco{
 
     font-size:34px;
 
@@ -1137,29 +1274,23 @@ img{
 
 }
 
-/*==================================================
-    PARCELAMENTO
-==================================================*/
+.produto-parcelado{
 
-.produto-parcelamento{
-
-    margin-top:8px;
-
-    color:var(--texto2);
+    color:var(--cinza);
 
     font-size:14px;
 
 }
 
-/*==================================================
+/*=========================================================
     BOTÃO
-==================================================*/
+=========================================================*/
 
 .produto-botao{
 
-    margin-top:22px;
-
     width:100%;
+
+    margin-top:20px;
 
     height:48px;
 
@@ -1173,7 +1304,7 @@ img{
 
     font-size:15px;
 
-    font-weight:800;
+    font-weight:bold;
 
     cursor:pointer;
 
@@ -1183,15 +1314,15 @@ img{
 
 .produto-botao:hover{
 
-    background:var(--verde-hover);
+    background:var(--verdeHover);
 
     transform:translateY(-2px);
 
 }
 
-/*==================================================
-    RESPONSIVO TABLET
-==================================================*/
+/*=========================================================
+    TABLET
+=========================================================*/
 
 @media(max-width:991px){
 
@@ -1200,6 +1331,8 @@ img{
         flex-direction:column;
 
         align-items:flex-start;
+
+        gap:15px;
 
     }
 
@@ -1217,9 +1350,9 @@ img{
 
 }
 
-/*==================================================
-    RESPONSIVO MOBILE
-==================================================*/
+/*=========================================================
+    MOBILE
+=========================================================*/
 
 @media(max-width:768px){
 
@@ -1247,11 +1380,17 @@ img{
 
     }
 
+    .produto-info{
+
+        padding:18px;
+
+    }
+
 }
 
-/*==================================================
+/*=========================================================
     FOOTER
-==================================================*/
+=========================================================*/
 
 #footer{
 
@@ -1259,17 +1398,15 @@ img{
 
     margin-top:60px;
 
-    background:#262324;
+    background:#2d2a2c;
 
     border-top:3px solid var(--vermelho);
-
-    box-shadow:0 -5px 15px rgba(0,0,0,.30);
 
 }
 
 .footer-container{
 
-    max-width:1400px;
+    max-width:1450px;
 
     margin:auto;
 
@@ -1277,91 +1414,17 @@ img{
 
     display:grid;
 
-    grid-template-columns:repeat(4,1fr);
+    grid-template-columns:2fr 1fr 1fr 1fr;
 
     gap:35px;
 
 }
 
-/*==================================================
+/*=========================================================
     LOGO
-==================================================*/
+=========================================================*/
 
 .footer-logo{
-
-    display:flex;
-
-    flex-direction:column;
-
-    gap:15px;
-
-}
-
-.footer-logo img{
-
-    width:180px;
-
-    object-fit:contain;
-
-}
-
-.footer-logo p{
-
-    color:var(--texto2);
-
-    font-size:14px;
-
-    line-height:1.7;
-
-}
-
-/*==================================================
-    LINKS
-==================================================*/
-
-.footer-links{
-
-    display:flex;
-
-    flex-direction:column;
-
-    gap:14px;
-
-}
-
-.footer-links h3{
-
-    color:var(--verde);
-
-    font-size:18px;
-
-    margin-bottom:8px;
-
-}
-
-.footer-links a{
-
-    color:var(--texto2);
-
-    font-size:14px;
-
-    transition:var(--transition);
-
-}
-
-.footer-links a:hover{
-
-    color:#ffffff;
-
-    padding-left:8px;
-
-}
-
-/*==================================================
-    REDES SOCIAIS
-==================================================*/
-
-.footer-social{
 
     display:flex;
 
@@ -1371,25 +1434,97 @@ img{
 
 }
 
-.footer-social h3{
+.footer-logo img{
 
-    color:var(--verde);
+    width:180px;
 
 }
 
-.footer-social-icons{
+.footer-logo p{
+
+    color:var(--cinza);
+
+    line-height:1.8;
+
+    font-size:14px;
+
+}
+
+/*=========================================================
+    LINKS
+=========================================================*/
+
+.footer-links{
 
     display:flex;
+
+    flex-direction:column;
+
+    gap:12px;
+
+}
+
+.footer-links h3{
+
+    color:var(--verde);
+
+    margin-bottom:10px;
+
+    font-size:18px;
+
+}
+
+.footer-link{
+
+    color:var(--cinza);
+
+    transition:var(--transition);
+
+    font-size:14px;
+
+}
+
+.footer-link:hover{
+
+    color:#fff;
+
+    padding-left:8px;
+
+}
+
+/*=========================================================
+    REDES SOCIAIS
+=========================================================*/
+
+.footer-redes{
+
+    display:flex;
+
+    flex-direction:column;
 
     gap:15px;
 
 }
 
-.footer-social-icons a{
+.footer-redes h3{
 
-    width:44px;
+    color:var(--verde);
 
-    height:44px;
+}
+
+.redes-icons{
+
+    display:flex;
+
+    gap:12px;
+
+}
+
+.social-item{
+
+    width:45px;
+
+    height:45px;
 
     border-radius:50%;
 
@@ -1401,11 +1536,15 @@ img{
 
     align-items:center;
 
+    color:#FFF;
+
+    font-size:18px;
+
     transition:var(--transition);
 
 }
 
-.footer-social-icons a:hover{
+.social-item:hover{
 
     background:var(--vermelho);
 
@@ -1413,47 +1552,35 @@ img{
 
 }
 
-.footer-social-icons img{
-
-    width:22px;
-
-}
-
-/*==================================================
+/*=========================================================
     COPYRIGHT
-==================================================*/
+=========================================================*/
 
 .footer-copy{
 
     display:flex;
 
-    flex-direction:column;
+    align-items:flex-end;
 
     justify-content:flex-end;
 
-    gap:10px;
+    text-align:right;
 
 }
 
 .footer-copy p{
 
-    color:var(--texto2);
+    color:var(--cinza);
 
     font-size:13px;
 
-    line-height:1.7;
+    line-height:1.8;
 
 }
 
-.footer-copy strong{
-
-    color:#fff;
-
-}
-
-/*==================================================
+/*=========================================================
     ANIMAÇÕES
-==================================================*/
+=========================================================*/
 
 @keyframes fadeUp{
 
@@ -1509,9 +1636,9 @@ img{
 
 }
 
-/*==================================================
+/*=========================================================
     SCROLLBAR
-==================================================*/
+=========================================================*/
 
 ::-webkit-scrollbar{
 
@@ -1521,7 +1648,7 @@ img{
 
 ::-webkit-scrollbar-track{
 
-    background:#2a2a2a;
+    background:#2d2d2d;
 
 }
 
@@ -1535,29 +1662,35 @@ img{
 
 ::-webkit-scrollbar-thumb:hover{
 
-    background:#ff3d3d;
+    background:#ff3b3b;
 
 }
 
-/*==================================================
+/*=========================================================
     RESPONSIVO TABLET
-==================================================*/
+=========================================================*/
 
 @media(max-width:991px){
 
     .footer-container{
 
-        grid-template-columns:repeat(2,1fr);
+        grid-template-columns:1fr 1fr;
 
-        gap:30px;
+    }
+
+    .footer-copy{
+
+        justify-content:flex-start;
+
+        text-align:left;
 
     }
 
 }
 
-/*==================================================
+/*=========================================================
     RESPONSIVO MOBILE
-==================================================*/
+=========================================================*/
 
 @media(max-width:768px){
 
@@ -1566,6 +1699,8 @@ img{
         grid-template-columns:1fr;
 
         text-align:center;
+
+        gap:30px;
 
         padding:35px 20px;
 
@@ -1583,13 +1718,13 @@ img{
 
     }
 
-    .footer-social{
+    .footer-redes{
 
         align-items:center;
 
     }
 
-    .footer-social-icons{
+    .redes-icons{
 
         justify-content:center;
 
@@ -1597,21 +1732,37 @@ img{
 
     .footer-copy{
 
-        align-items:center;
+        justify-content:center;
+
+        text-align:center;
 
     }
 
 }
 
-/*==================================================
-    TELAS MUITO PEQUENAS
-==================================================*/
+/*=========================================================
+    TELAS PEQUENAS
+=========================================================*/
 
 @media(max-width:480px){
+
+    #main{
+
+        padding:12px;
+
+    }
+
+    .menu{
+
+        padding:0 15px;
+
+    }
 
     .banner{
 
         padding:25px;
+
+        min-height:260px;
 
     }
 
@@ -1651,12 +1802,6 @@ img{
 
     }
 
-    .produto-conteudo{
-
-        padding:18px;
-
-    }
-
     .produto-preco{
 
         font-size:26px;
@@ -1667,15 +1812,13 @@ img{
 
         height:46px;
 
-        font-size:14px;
-
     }
 
 }
 
-/*==================================================
-    UTILITÁRIOS
-==================================================*/
+/*=========================================================
+    CLASSES UTILITÁRIAS
+=========================================================*/
 
 .oculto{
 
@@ -1705,21 +1848,15 @@ img{
 
 }
 
-.sombra{
-
-    box-shadow:var(--shadow);
-
-}
-
-.radius{
-
-    border-radius:var(--radius);
-
-}
-
 .w-100{
 
     width:100%;
+
+}
+
+.mt-10{
+
+    margin-top:10px;
 
 }
 
@@ -1735,6 +1872,18 @@ img{
 
 }
 
+.radius{
+
+    border-radius:var(--radius);
+
+}
+
+.sombra{
+
+    box-shadow:var(--shadow);
+
+}
+
 .pointer{
 
     cursor:pointer;
@@ -1747,3 +1896,33 @@ img{
 
 }
 
+/*=========================================================
+    ESTADOS
+=========================================================*/
+
+button:disabled{
+
+    opacity:.6;
+
+    cursor:not-allowed;
+
+}
+
+input:focus,
+select:focus{
+
+    outline:2px solid var(--verde);
+
+    outline-offset:2px;
+
+}
+
+.menu-btn:focus,
+.banner-botao:focus,
+.produto-botao:focus{
+
+    outline:2px solid #fff;
+
+    outline-offset:3px;
+
+}

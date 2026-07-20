@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard do Lojista</title>
+
+    <link rel="stylesheet" href="/style/home-lojista.css">
+
+</head>
+
+<body>
+
+    <!-- ========================= -->
+    <!-- CONTAINER PRINCIPAL -->
+    <!-- ========================= -->
+
+    <div class="container">
+
+        <!-- ========================= -->
+        <!-- MENU LATERAL -->
+        <!-- ========================= -->
+
+        <aside class="sidebar">
+
+            <div class="logo">
+
+                <div class="logoImagem"></div>
+
+                <h2 id="nomeLojista">
+                    Home do Lojista
+                </h2>
+
+            </div>
+
+            <nav class="menu">
+
+                <ul>
+
+                    <li class="ativo">
+                        <a href="#" id="menuInicio"></a>
+                    </li>
+
+                    <li>
+                        <a href="#" id="menuPedidos"></a>
+                    </li>
+
+                    <li>
+                        <a href="#" id="menuPromocoes"></a>
+                    </li>
+
+                    <li>
+                        <a href="#" id="menuProdutos"></a>
+                    </li>
+
+                    <li>
+                        <a href="#" id="menuAnalytics"></a>
+                    </li>
+
+                    <li>
+                        <a href="#" id="menuMensagens"></a>
+                    </li>
+
+                    <li>
+                        <a href="#" id="menuConfiguracoes"></a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+        </aside>
+
+        <!-- ========================= -->
+        <!-- ÁREA PRINCIPAL -->
+        <!-- ========================= -->
+
+        <main class="conteudo">
+
+            <!-- ========================= -->
+            <!-- TOPO -->
+            <!-- ========================= -->
+
+            <header class="topbar">
+
+                <nav class="menuSuperior">
+
+                    <a href="#" id="topHome"></a>
+
+                    <a href="#" id="topPedidos"></a>
+
+                    <a href="#" id="topProdutos"></a>
+
+                </nav>
+
+                <div class="pesquisa">
+
+                    <input
+                        type="search"
+                        id="campoPesquisa"
+                        placeholder="">
+
+                    <button id="btnPesquisar">
+
+                        <i class="fa-solid fa-magnifying-glass"></i>
+
+                    </button>
+
+                </div>
+
+            </header>
+
+            <!-- ========================= -->
+            <!-- HERO -->
+            <!-- ========================= -->
+
+            <section class="hero">
+
+                <div class="heroTexto">
+
+                    <h1 id="tituloBoasVindas"></h1>
+
+                    <p id="descricaoBoasVindas"></p>
+
+                    <input
+                        type="text"
+                        id="buscarProdutos"
+                        placeholder="">
+
+                    <div class="botoesHero">
+
+                        <button id="btnRelatorios"></button>
+
+                        <button id="btnOferta"></button>
+
+                    </div>
+
+                    <div class="filtros">
+
+                        <button id="btnHoje"></button>
+
+                        <button id="btn7Dias"></button>
+
+                        <button id="btn30Dias"></button>
+
+                    </div>
+
+                </div>
+
+                <div class="heroImagem">
+
+                    <img
+                        id="bannerDashboard"
+                        src=""
+                        alt="">
+
+                </div>
+
+            </section>
+
+            <!-- ========================= -->
+            <!-- RESUMO -->
+            <!-- ========================= -->
+
+            <section class="resumo">
+
+                <h2 id="tituloResumo"></h2>
+
+                <p id="descricaoResumo"></p>
+
+                <div class="acoesResumo">
+
+                    <button id="btnConfigurar"></button>
+
+                    <button id="btnExportar"></button>
+
+                </div>
+
+                <div class="cardsResumo">
+
+                    <div class="card">
+
+                        <span id="tituloReceita"></span>
+
+                        <h3 id="valorReceita"></h3>
+
+                        <small id="percentualReceita"></small>
+
+                    </div>
+
+                    <div class="card">
+
+                        <span id="tituloPedidos"></span>
+
+                        <h3 id="valorPedidos"></h3>
+
+                        <small id="percentualPedidos"></small>
+
+                    </div>
+
+                    <div class="card">
+
+                        <span id="tituloTicket"></span>
+
+                        <h3 id="valorTicket"></h3>
+
+                        <small id="percentualTicket"></small>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <script src="https://kit.fontawesome.com/yourkit.js"></script>
+
+    <script src="/js/home-lojista.js"></script>
+
+</body>
+
+</html>
+
+<!-- ========================= -->
+<!-- DESEMPENHO DE VENDAS -->
+<!-- ========================= -->
+
+<section class="desempenho">
+
+    <div class="cabecalhoDesempenho">
+
+        <h2 id="tituloDesempenho"></h2>
+
+        <p id="descricaoDesempenho"></p>
+
+        <div class="acoesDesempenho">
+
+            <button id="btnBaixarGrafico"></button>
+
+            <button id="btnAnalisar"></button>
+
+        </div>
+
+    </div>
+
+    <div class="graficos">
+
+        <!-- ========================= -->
+        <!-- GRÁFICO DE LINHA -->
+        <!-- ========================= -->
+
+        <div class="graficoCard">
+
+            <div class="graficoHeader">
+
+                <h3 id="tituloGraficoLinha"></h3>
+
+                <span id="subtituloGraficoLinha"></span>
+
+            </div>
+
+            <div class="graficoContainer">
+
+                <canvas id="graficoLinha"></canvas>
+
+            </div>
+
+        </div>
+
+        <!-- ========================= -->
+        <!-- GRÁFICO DE BARRAS -->
+        <!-- ========================= -->
+
+        <div class="graficoCard">
+
+            <div class="graficoHeader">
+
+                <h3 id="tituloGraficoBarra"></h3>
+
+                <span id="subtituloGraficoBarra"></span>
+
+            </div>
+
+            <div class="graficoContainer">
+
+                <canvas id="graficoBarra"></canvas>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ========================================== -->
+<!-- PRODUTOS EM DESTAQUE -->
+<!-- ========================================== -->
+
+<section class="produtosDestaque">
+
+    <div class="cabecalhoProdutos">
+
+        <h2 id="tituloProdutos"></h2>
+
+        <p id="descricaoProdutos"></p>
+
+        <div class="acoesProdutos">
+
+            <button id="btnPromocao"></button>
+
+            <button id="btnCatalogo"></button>
+
+        </div>
+
+    </div>
+
+    <div class="listaProdutos">
+
+        <!-- Produto 1 -->
+
+        <article class="cardProduto">
+
+            <span class="badge" id="badgeProduto1"></span>
+
+            <div class="imagemProduto">
+
+                <img
+                    id="imagemProduto1"
+                    src=""
+                    alt="">
+
+            </div>
+
+            <div class="informacoesProduto">
+
+                <h3 id="nomeProduto1"></h3>
+
+                <p class="vendas">
+
+                    <span id="textoVendas1"></span>
+
+                    <strong id="valorVendas1"></strong>
+
+                </p>
+
+                <div class="acoesCard">
+
+                    <button class="icone" id="produto1Carrinho"></button>
+
+                    <button class="icone" id="produto1Favorito"></button>
+
+                    <button class="icone" id="produto1Editar"></button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+        <!-- Produto 2 -->
+
+        <article class="cardProduto">
+
+            <span class="badge" id="badgeProduto2"></span>
+
+            <div class="imagemProduto">
+
+                <img
+                    id="imagemProduto2"
+                    src=""
+                    alt="">
+
+            </div>
+
+            <div class="informacoesProduto">
+
+                <h3 id="nomeProduto2"></h3>
+
+                <p class="vendas">
+
+                    <span id="textoVendas2"></span>
+
+                    <strong id="valorVendas2"></strong>
+
+                </p>
+
+                <div class="acoesCard">
+
+                    <button class="icone" id="produto2Carrinho"></button>
+
+                    <button class="icone" id="produto2Favorito"></button>
+
+                    <button class="icone" id="produto2Editar"></button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+        <!-- Produto 3 -->
+
+        <article class="cardProduto">
+
+            <span class="badge" id="badgeProduto3"></span>
+
+            <div class="imagemProduto">
+
+                <img
+                    id="imagemProduto3"
+                    src=""
+                    alt="">
+
+            </div>
+
+            <div class="informacoesProduto">
+
+                <h3 id="nomeProduto3"></h3>
+
+                <p class="vendas">
+
+                    <span id="textoVendas3"></span>
+
+                    <strong id="valorVendas3"></strong>
+
+                </p>
+
+                <div class="acoesCard">
+
+                    <button class="icone" id="produto3Carrinho"></button>
+
+                    <button class="icone" id="produto3Favorito"></button>
+
+                    <button class="icone" id="produto3Editar"></button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+        <!-- Produto 4 -->
+
+        <article class="cardProduto">
+
+            <span class="badge" id="badgeProduto4"></span>
+
+            <div class="imagemProduto">
+
+                <img
+                    id="imagemProduto4"
+                    src=""
+                    alt="">
+
+            </div>
+
+            <div class="informacoesProduto">
+
+                <h3 id="nomeProduto4"></h3>
+
+                <p class="vendas">
+
+                    <span id="textoVendas4"></span>
+
+                    <strong id="valorVendas4"></strong>
+
+                </p>
+
+                <div class="acoesCard">
+
+                    <button class="icone" id="produto4Carrinho"></button>
+
+                    <button class="icone" id="produto4Favorito"></button>
+
+                    <button class="icone" id="produto4Editar"></button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+<!-- ========================================== -->
+<!-- ATALHOS DO LOJISTA -->
+<!-- ========================================== -->
+
+<section class="atalhosLojista">
+
+    <div class="cabecalhoAtalhos">
+
+        <h2 id="tituloAtalhos"></h2>
+
+        <p id="descricaoAtalhos"></p>
+
+    </div>
+
+    <div class="listaAtalhos">
+
+        <!-- Novo Pedido -->
+
+        <article class="cardAtalho">
+
+            <div class="iconeAtalho">
+
+                <img
+                    id="iconePedidos"
+                    src=""
+                    alt="">
+
+            </div>
+
+            <h3 id="tituloPedido"></h3>
+
+            <span id="descricaoPedido"></span>
+
+            <strong id="valorPedido"></strong>
+
+        </article>
+
+        <!-- Expedição -->
+
+        <article class="cardAtalho">
+
+            <div class="iconeAtalho">
+
+                <img
+                    id="iconeExpedicao"
+                    src=""
+                    alt="">
+
+            </div>
+
+            <h3 id="tituloExpedicao"></h3>
+
+            <span id="descricaoExpedicao"></span>
+
+            <strong id="valorExpedicao"></strong>
+
+        </article>
+
+        <!-- Pagamentos -->
+
+        <article class="cardAtalho">
+
+            <div class="iconeAtalho">
+
+                <img
+                    id="iconePagamento"
+                    src=""
+                    alt="">
+
+            </div>
+
+            <h3 id="tituloPagamento"></h3>
+
+            <span id="descricaoPagamento"></span>
+
+            <strong id="valorPagamento"></strong>
+
+        </article>
+
+        <!-- Mensagens -->
+
+        <article class="cardAtalho">
+
+            <div class="iconeAtalho">
+
+                <img
+                    id="iconeMensagem"
+                    src=""
+                    alt="">
+
+            </div>
+
+            <h3 id="tituloMensagem"></h3>
+
+            <span id="descricaoMensagem"></span>
+
+            <strong id="valorMensagem"></strong>
+
+        </article>
+
+    </div>
+
+</section>
+
+<!-- ========================================== -->
+<!-- AVALIAÇÕES RECENTES -->
+<!-- ========================================== -->
+
+<section class="avaliacoesRecentes">
+
+    <div class="cabecalhoAvaliacoes">
+
+        <h2 id="tituloAvaliacoes"></h2>
+
+        <p id="descricaoAvaliacoes"></p>
+
+    </div>
+
+    <div class="listaAvaliacoes">
+
+        <!-- Avaliação 1 -->
+
+        <article class="cardAvaliacao">
+
+            <div class="topoAvaliacao">
+
+                <div class="cliente">
+
+                    <div class="avatar">
+
+                        <img
+                            id="avatarCliente1"
+                            src=""
+                            alt="">
+
+                    </div>
+
+                    <span id="nomeCliente1"></span>
+
+                </div>
+
+                <div
+                    class="estrelas"
+                    id="estrelasCliente1">
+                </div>
+
+            </div>
+
+            <p
+                class="comentario"
+                id="comentarioCliente1">
+            </p>
+
+            <div class="acoesAvaliacao">
+
+                <button
+                    class="icone"
+                    id="favoritarComentario1">
+                </button>
+
+                <button
+                    class="icone"
+                    id="responderComentario1">
+                </button>
+
+                <button
+                    class="icone"
+                    id="removerComentario1">
+                </button>
+
+            </div>
+
+        </article>
+
+        <!-- Avaliação 2 -->
+
+        <article class="cardAvaliacao">
+
+            <div class="topoAvaliacao">
+
+                <div class="cliente">
+
+                    <div class="avatar">
+
+                        <img
+                            id="avatarCliente2"
+                            src=""
+                            alt="">
+
+                    </div>
+
+                    <span id="nomeCliente2"></span>
+
+                </div>
+
+                <div
+                    class="estrelas"
+                    id="estrelasCliente2">
+                </div>
+
+            </div>
+
+            <p
+                class="comentario"
+                id="comentarioCliente2">
+            </p>
+
+            <div class="acoesAvaliacao">
+
+                <button
+                    class="icone"
+                    id="favoritarComentario2">
+                </button>
+
+                <button
+                    class="icone"
+                    id="responderComentario2">
+                </button>
+
+                <button
+                    class="icone"
+                    id="removerComentario2">
+                </button>
+
+            </div>
+
+        </article>
+
+        <!-- Avaliação 3 -->
+
+        <article class="cardAvaliacao">
+
+            <div class="topoAvaliacao">
+
+                <div class="cliente">
+
+                    <div class="avatar">
+
+                        <img
+                            id="avatarCliente3"
+                            src=""
+                            alt="">
+
+                    </div>
+
+                    <span id="nomeCliente3"></span>
+
+                </div>
+
+                <div
+                    class="estrelas"
+                    id="estrelasCliente3">
+                </div>
+
+            </div>
+
+            <p
+                class="comentario"
+                id="comentarioCliente3">
+            </p>
+
+            <div class="acoesAvaliacao">
+
+                <button
+                    class="icone"
+                    id="favoritarComentario3">
+                </button>
+
+                <button
+                    class="icone"
+                    id="responderComentario3">
+                </button>
+
+                <button
+                    class="icone"
+                    id="removerComentario3">
+                </button>
+
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+<!-- ========================================== -->
+<!-- BOAS PRÁTICAS PARA VENDER MAIS -->
+<!-- ========================================== -->
+
+<section class="boasPraticas">
+
+    <div class="cabecalhoBoasPraticas">
+
+        <h2 id="tituloBoasPraticas"></h2>
+
+        <p id="descricaoBoasPraticas"></p>
+
+    </div>
+
+    <div class="listaBoasPraticas">
+
+        <!-- Dica 1 -->
+
+        <article class="cardPratica">
+
+            <div class="imagemPratica">
+
+                <img
+                    id="imagemPratica1"
+                    src=""
+                    alt="">
+
+            </div>
+
+            <div class="conteudoPratica">
+
+                <h3 id="tituloPratica1"></h3>
+
+                <span
+                    class="categoriaPratica"
+                    id="categoriaPratica1">
+                </span>
+
+                <p id="descricaoPratica1"></p>
+
+                <div class="acoesPratica">
+
+                    <button
+                        class="icone"
+                        id="salvarPratica1">
+                    </button>
+
+                    <button
+                        class="icone"
+                        id="compartilharPratica1">
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+        <!-- Dica 2 -->
+
+        <article class="cardPratica">
+
+            <div class="imagemPratica">
+
+                <img
+                    id="imagemPratica2"
+                    src=""
+                    alt="">
+
+            </div>
+
+            <div class="conteudoPratica">
+
+                <h3 id="tituloPratica2"></h3>
+
+                <span
+                    class="categoriaPratica"
+                    id="categoriaPratica2">
+                </span>
+
+                <p id="descricaoPratica2"></p>
+
+                <div class="acoesPratica">
+
+                    <button
+                        class="icone"
+                        id="salvarPratica2">
+                    </button>
+
+                    <button
+                        class="icone"
+                        id="compartilharPratica2">
+                    </button>
+
+                </div>
+
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+<!-- ========================================== -->
+<!-- ATUALIZAR STATUS DE PROMOÇÕES -->
+<!-- ========================================== -->
+
+<section class="statusPromocoes">
+
+    <div class="cabecalhoPromocao">
+
+        <div class="imagemPromocao">
+
+            <img
+                id="imagemPromocao"
+                src=""
+                alt="">
+
+        </div>
+
+        <div class="textoPromocao">
+
+            <h2 id="tituloPromocao"></h2>
+
+            <p id="descricaoPromocao"></p>
+
+        </div>
+
+    </div>
+
+    <form class="formularioPromocao">
+
+        <div class="campo">
+
+            <label id="labelTipoPromocao" for="tipoPromocao"></label>
+
+            <input
+                type="text"
+                id="tipoPromocao"
+                placeholder="">
+
+            <small id="ajudaTipoPromocao"></small>
+
+        </div>
+
+        <div class="campo">
+
+            <label id="labelDuracaoPromocao" for="duracaoPromocao"></label>
+
+            <input
+                type="text"
+                id="duracaoPromocao"
+                placeholder="">
+
+            <small id="ajudaDuracaoPromocao"></small>
+
+        </div>
+
+    </form>
+
+    <div class="acoesPromocao">
+
+        <button
+            type="button"
+            id="btnSalvarRascunho">
+        </button>
+
+        <button
+            type="button"
+            id="btnPublicarPromocao">
+        </button>
+
+    </div>
+
+</section>

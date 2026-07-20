@@ -90,13 +90,19 @@ const app = {
 
         },
 
-        {
+        
 
-            texto:"PC Gamer",
+           
+
+ {
+
+            texto:"PCs montados",
 
             link:"#"
 
-        },
+        }
+
+
 
     ],
 
