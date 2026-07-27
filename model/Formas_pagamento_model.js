@@ -40,15 +40,15 @@ function listar(callback) {
 // Buscar por ID
 // =========================
 
-function buscarPornome(nome, callback) {
+function buscarPorId(id, callback) {
 
     const sql = `
         SELECT *
         FROM Formas_pagamento
-        WHERE nome = ?
+        WHERE id = ?
     `;
 
-    conexao.query(sql, [nome], callback);
+    conexao.query(sql, [id], callback);
 
 }
 

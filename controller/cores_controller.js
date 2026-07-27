@@ -3,7 +3,7 @@
 // passe aqui o caminho correto do seu arquivo model
 //==========================================
 
-const coresModel = require("../model/cores_model");
+const coresModel = require("../model/Core_model");
 
 //==========================================
 // CADASTRAR CORES

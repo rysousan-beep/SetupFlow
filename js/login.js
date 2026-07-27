@@ -47,7 +47,7 @@ const app = {
 
         {
 
-            icone: "/assets/escudo.png",
+            icone: "/assets/escudo..png",
 
             alt: "Segurança",
 
