@@ -1,5 +1,7 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
 
     <meta charset="UTF-8">
@@ -20,38 +22,158 @@
     <!--=========================================
         HEADER
     ==========================================-->
-    <header id="header"></header>
+    <header id="header">
+
+        <div class="header-container">
+
+            <img id="logo" src="" alt="Logo">
+
+            <h2 id="header-titulo"></h2>
+
+        </div>
+
+    </header>
 
     <!--=========================================
         CONTEÚDO PRINCIPAL
     ==========================================-->
     <main id="main">
 
-        <!-- Banner Superior -->
+        <!-- Banner -->
         <section id="banner"></section>
 
-        <!-- Área de Cadastro -->
+        <!-- Cadastro -->
         <section id="cadastro">
 
             <div id="cadastro-container">
 
-                <!-- Cabeçalho do Formulário -->
-                <div id="cadastro-topo"></div>
+                <!-- Topo -->
+                <div id="cadastro-topo">
 
-                <!-- Formulário (Campos criados pelo JS) -->
-                <form id="form-cadastro"></form>
+                    <h1 id="pagina-titulo"></h1>
+
+                    <p id="pagina-subtitulo"></p>
+
+                </div>
+
+                <!-- Formulário -->
+                <form id="form-cadastro" autocomplete="off">
+
+                    <div class="campo">
+
+                        <label id="label-nome" for="nome"></label>
+
+                        <input
+                            id="nome"
+                            type="text"
+                            placeholder=""
+                        >
+
+                    </div>
+
+                    <div class="campo">
+
+                        <label id="label-cpf" for="cpf"></label>
+
+                        <input
+                            id="cpf"
+                            type="text"
+                            placeholder=""
+                        >
+
+                    </div>
+
+                    <div class="campo">
+
+                        <label id="label-telefone" for="telefone"></label>
+
+                        <input
+                            id="telefone"
+                            type="tel"
+                            placeholder=""
+                        >
+
+                    </div>
+
+                    <div class="campo">
+
+                        <label id="label-email" for="email"></label>
+
+                        <input
+                            id="email"
+                            type="email"
+                            placeholder=""
+                        >
+
+                    </div>
+
+                    <div class="campo">
+
+                        <label id="label-senha" for="senha"></label>
+
+                        <input
+                            id="senha"
+                            type="password"
+                            placeholder=""
+                        >
+
+                    </div>
+
+                    <div class="campo">
+
+                        <label id="label-nascimento" for="nascimento"></label>
+
+                        <input
+                            id="nascimento"
+                            type="date"
+                        >
+
+                    </div>
+
+                    <!-- Mensagem -->
+                    <div id="mensagem"></div>
+
+                </form>
 
                 <!-- Botões -->
-                <div id="cadastro-botoes"></div>
+                <div id="cadastro-botoes">
+
+                    <button
+                        id="btnCadastrar"
+                        type="button">
+                    </button>
+
+                    <button
+                        id="btnLogin"
+                        type="button">
+                    </button>
+
+                </div>
 
             </div>
 
         </section>
 
-        <!-- Área de Benefícios -->
+        <!-- Benefícios -->
         <section id="beneficios">
 
-            <div id="beneficios-container"></div>
+            <div id="beneficios-container">
+
+                <div class="card-beneficio">
+
+                    <img
+                        id="beneficio-img"
+                        src=""
+                        alt="Benefício"
+                    >
+
+                    <h3 id="beneficio-titulo"></h3>
+
+                    <p id="beneficio-descricao"></p>
+
+                </div>
+
+            </div>
 
         </section>
 
@@ -60,7 +182,19 @@
     <!--=========================================
         RODAPÉ
     ==========================================-->
-    <footer id="footer"></footer>
+    <footer id="footer">
+
+        <div class="footer-container">
+
+            <span id="footer-texto"></span>
+
+            <span id="footer-link"></span>
+
+        </div>
+
+    </footer>
 
 </body>
+
 </html>
+

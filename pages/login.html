@@ -1,97 +1,134 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
 <head>
 
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title id="pageTitle"></title>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="/style/login.css">
+    <title>Login | SetupFlow! Tech</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet"
+          href="../style/login.css">
+
+    <!-- JavaScript -->
+    <script src="../js/login.js" defer></script>
 
 </head>
 
 <body>
 
-    <!-- ================= HEADER ================= -->
+    <!--=========================================
+        HEADER
+    ==========================================-->
 
-    <header>
+    <header id="header">
 
-        <div class="container">
+        <div class="header-container">
 
             <div class="logo-area">
 
-                <img id="logo" src="" alt="">
+                <img
+                    id="logo"
+                    src=""
+                    alt="Logo">
 
-                <h1 id="empresaNome"></h1>
+                <h2 id="empresaNome"></h2>
 
             </div>
 
+            <nav class="menu">
+
+                <a
+                    id="menuEntrar"
+                    href="login.html">
+                </a>
+
+                <a
+                    id="menuCadastro"
+                    href="/pages/cadastro.html">
+                </a>
+
+            </nav>
+
         </div>
-
-
-    <div class="menu">
-        <a href="login.html" class="active">Entrar</a>
-        <a href="pages/cadastro.html">Criar Conta</a>
-    </div>
-
 
     </header>
 
-    <!-- ================= MENU ================= -->
+    <!--=========================================
+        CONTEÚDO PRINCIPAL
+    ==========================================-->
 
-    <nav>
+    <main id="main">
 
-        <ul id="menu"></ul>
+        <!-- Banner -->
 
-    </nav>
+        <section id="banner"></section>
 
-    <!-- ================= MAIN ================= -->
+        <!-- Login -->
 
-    <main>
+        <section id="login">
 
-        <!-- LOGIN -->
+            <div id="login-container">
 
-        <section class="login">
+                <div id="login-topo">
 
-            <div class="container-login">
-
-                <div class="login-info">
-
-                    <h2 id="tituloLogin"></h2>
+                    <h1 id="tituloLogin"></h1>
 
                     <p id="descricaoLogin"></p>
 
-                    <form id="formLogin">
+                </div>
+
+                <form id="formLogin"
+                      autocomplete="off">
+
+                    <div class="campo">
+
+                        <label
+                            id="labelEmail"
+                            for="email">
+                        </label>
 
                         <input
                             id="email"
                             type="email"
-                            placeholder=""
-                        >
+                            placeholder="">
+
+                    </div>
+
+                    <div class="campo">
+
+                        <label
+                            id="labelSenha"
+                            for="senha">
+                        </label>
 
                         <input
                             id="senha"
                             type="password"
-                            placeholder=""
-                        >
+                            placeholder="">
 
-                        <div class="botoes">
+                    </div>
 
-                            <button
-                                id="btnEntrar"
-                                type="button">
-                            </button>
+                    <div id="mensagem"></div>
 
-                            <button
-                                id="btnCadastrar"
-                                type="button">
-                            </button>
+                </form>
 
-                        </div>
+                <div id="login-botoes">
 
-                    </form>
+                    <button
+                        id="btnEntrar"
+                        type="button">
+                    </button>
+
+                    <button
+                        id="btnCadastrar"
+                        type="button">
+                    </button>
 
                 </div>
 
@@ -99,39 +136,41 @@
 
         </section>
 
-        <!-- BENEFÍCIOS -->
+        <!-- Benefícios -->
 
-        <section class="beneficios">
+        <section id="beneficios">
 
-            <div class="beneficio">
+            <div id="beneficios-container">
 
-                <div class="icone">
+                <div class="card-beneficio">
 
-                    <img id="icone1" src="" alt="">
+                    <img
+                        id="icone1"
+                        src=""
+                        alt="">
 
-                </div>
+                    <h3 id="tituloCard1"></h3>
 
-                <h3 id="tituloCard1"></h3>
+                    <p id="descricaoCard1"></p>
 
-                <p id="descricaoCard1"></p>
-
-                <strong id="destaqueCard1"></strong>
-
-            </div>
-
-            <div class="beneficio">
-
-                <div class="icone">
-
-                    <img id="icone2" src="" alt="">
+                    <strong id="destaqueCard1"></strong>
 
                 </div>
 
-                <h3 id="tituloCard2"></h3>
+                <div class="card-beneficio">
 
-                <p id="descricaoCard2"></p>
+                    <img
+                        id="icone2"
+                        src=""
+                        alt="">
 
-                <strong id="destaqueCard2"></strong>
+                    <h3 id="tituloCard2"></h3>
+
+                    <p id="descricaoCard2"></p>
+
+                    <strong id="destaqueCard2"></strong>
+
+                </div>
 
             </div>
 
@@ -139,18 +178,26 @@
 
     </main>
 
-    <!-- ================= FOOTER ================= -->
+    <!--=========================================
+        FOOTER
+    ==========================================-->
 
-    <footer>
+    <footer id="footer">
 
-        <p id="copyright"></p>
+        <div class="footer-container">
 
-        <a id="linkPrivacidade" href=""></a>
+            <span id="copyright"></span>
+
+            <a
+                id="linkPrivacidade"
+                href="#">
+            </a>
+
+        </div>
 
     </footer>
-
-    <script src="/js/login.js"></script>
 
 </body>
 
 </html>
+

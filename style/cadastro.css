@@ -1,6 +1,7 @@
-/*==================================================
-    RESET
-==================================================*/
+
+/*==================================================*
+ * RESET
+ *==================================================*/
 
 *{
     margin:0;
@@ -18,10 +19,9 @@ body{
     color:#333;
 }
 
-
-/*==================================================
-    HEADER
-==================================================*/
+/*==================================================*
+ * HEADER
+ *==================================================*/
 
 #header{
     width:100%;
@@ -33,19 +33,34 @@ body{
     box-shadow:0 2px 8px rgba(0,0,0,.08);
 }
 
+.header-container{
+    width:95%;
+    max-width:1200px;
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
 
-/*==================================================
-    MAIN
-==================================================*/
+#logo{
+    height:45px;
+}
+
+#header-titulo{
+    font-size:22px;
+    color:#333;
+}
+
+/*==================================================*
+ * MAIN
+ *==================================================*/
 
 #main{
     width:100%;
 }
 
-
-/*==================================================
-    BANNER
-==================================================*/
+/*==================================================*
+ * BANNER
+ *==================================================*/
 
 #banner{
     width:100%;
@@ -53,10 +68,9 @@ body{
     background:#6D6D6D;
 }
 
-
-/*==================================================
-    ÁREA DE CADASTRO
-==================================================*/
+/*==================================================*
+ * CADASTRO
+ *==================================================*/
 
 #cadastro{
     width:100%;
@@ -88,10 +102,9 @@ body{
     line-height:1.6;
 }
 
-
-/*==================================================
-    FORMULÁRIO
-==================================================*/
+/*==================================================*
+ * FORMULÁRIO
+ *==================================================*/
 
 #form-cadastro{
     display:flex;
@@ -119,8 +132,8 @@ body{
     outline:none;
     padding:0 16px;
     font-size:15px;
-    transition:.3s;
     background:#FFFFFF;
+    transition:.3s;
 }
 
 .campo input::placeholder{
@@ -128,14 +141,24 @@ body{
 }
 
 .campo input:focus{
-    box-shadow:0 0 10px rgba(73,169,207,.45);
     border:2px solid #49A9CF;
+    box-shadow:0 0 10px rgba(73,169,207,.45);
 }
 
+/*==================================================*
+ * MENSAGEM
+ *==================================================*/
 
-/*==================================================
-    BOTÕES
-==================================================*/
+#mensagem{
+    min-height:22px;
+    font-size:14px;
+    font-weight:bold;
+    text-align:center;
+}
+
+/*==================================================*
+ * BOTÕES
+ *==================================================*/
 
 #cadastro-botoes{
     display:flex;
@@ -154,28 +177,29 @@ body{
     transition:.3s;
 }
 
-#cadastro-botoes button:first-child{
+#btnCadastrar{
     background:#49A9CF;
     color:#FFFFFF;
 }
 
-#cadastro-botoes button:first-child:hover{
-    background:#328CB3;
+#btnCadastrar:hover{
+    background:#3794B9;
 }
 
-#cadastro-botoes button:last-child{
-    background:#D7D7D7;
-    color:#555555;
+#btnLogin{
+    background:#FFFFFF;
+    color:#49A9CF;
+    border:2px solid #49A9CF;
 }
 
-#cadastro-botoes button:last-child:hover{
-    background:#C3C3C3;
+#btnLogin:hover{
+    background:#49A9CF;
+    color:#FFFFFF;
 }
 
-
-/*==================================================
-    BENEFÍCIOS
-==================================================*/
+/*==================================================*
+ * BENEFÍCIOS
+ *==================================================*/
 
 #beneficios{
     width:100%;
@@ -218,10 +242,9 @@ body{
     line-height:1.6;
 }
 
-
-/*==================================================
-    FOOTER
-==================================================*/
+/*==================================================*
+ * FOOTER
+ *==================================================*/
 
 #footer{
     width:100%;
@@ -229,15 +252,24 @@ body{
     background:#FFFFFF;
     border-top:1px solid #E5E5E5;
     display:flex;
-    align-items:center;
     justify-content:center;
+    align-items:center;
     padding:20px;
 }
 
+.footer-container{
+    width:95%;
+    max-width:1200px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:15px;
+}
 
-/*==================================================
-    RESPONSIVIDADE
-==================================================*/
+/*==================================================*
+ * RESPONSIVIDADE
+ *==================================================*/
 
 @media(max-width:768px){
 
@@ -265,13 +297,25 @@ body{
         width:100%;
     }
 
-}
+    .footer-container{
+        flex-direction:column;
+        text-align:center;
+    }
 
+}
 
 @media(max-width:480px){
 
     #header{
         min-height:70px;
+    }
+
+    #logo{
+        height:38px;
+    }
+
+    #header-titulo{
+        font-size:18px;
     }
 
     #banner{
@@ -300,3 +344,4 @@ body{
     }
 
 }
+

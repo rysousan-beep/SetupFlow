@@ -1,6 +1,6 @@
-/*==================================================
-    CONFIGURAÇÃO DA APLICAÇÃO
-==================================================*/
+/*==================================================*
+ * CONFIGURAÇÃO DA APLICAÇÃO
+ *==================================================*/
 
 const app = {
 
@@ -63,148 +63,163 @@ const app = {
     beneficios: [
 
         {
-            imagem: "/assets/cadeado.png",
-            titulo: "Cadastro Seguro",
-            descricao: "Protegemos suas informações com criptografia."
-        },
 
-        
+            imagem: "/assets/cadeado.png",
+
+            titulo: "Cadastro Seguro",
+
+            descricao: "Protegemos suas informações com criptografia."
+
+        }
+
     ],
 
     footer: {
+
         texto: "© 2026 SetupFlow • Loja Tech & eSports",
+
         link: "Privacidade • Segurança"
+
     }
 
 };
 
-
-/*==================================================
-    INICIALIZAÇÃO
-==================================================*/
+/*==================================================*
+ * INICIALIZAÇÃO
+ *==================================================*/
 
 document.addEventListener("DOMContentLoaded", () => {
 
-    criarHeader();
-    criarTopoCadastro();
-    criarFormulario();
-    criarBotoes();
-    criarBeneficios();
-    criarFooter();
+    preencherHeader();
+
+    preencherPagina();
+
+    preencherFormulario();
+
+    preencherBotoes();
+
+    preencherBeneficios();
+
+    preencherFooter();
+
+    configurarEventos();
+
     aplicarMascaras();
 
 });
 
+/*==================================================*
+ * HEADER
+ *==================================================*/
 
-/*==================================================
-    HEADER
-==================================================*/
+function preencherHeader() {
 
-function criarHeader(){
+    document.getElementById("logo").src =
+        app.header.logo;
 
-    const header = document.getElementById("header");
-
-    header.innerHTML = `
-
-        <div style="
-            width:95%;
-            max-width:1200px;
-            display:flex;
-            align-items:center;
-            gap:15px;
-        ">
-
-            <img
-                src="${app.header.logo}"
-                alt="Logo"
-                style="height:45px;"
-            >
-
-            <h2>${app.header.titulo}</h2>
-
-        </div>
-
-    `;
+    document.getElementById("header-titulo").textContent =
+        app.header.titulo;
 
 }
 
+/*==================================================*
+ * TOPO
+ *==================================================*/
 
-/*==================================================
-    TOPO CADASTRO
-==================================================*/
+function preencherPagina() {
 
-function criarTopoCadastro(){
+    document.getElementById("pagina-titulo").textContent =
+        app.pagina.titulo;
 
-    const topo = document.getElementById("cadastro-topo");
-
-    topo.innerHTML = `
-
-        <h1>${app.pagina.titulo}</h1>
-
-        <p>${app.pagina.subtitulo}</p>
-
-    `;
+    document.getElementById("pagina-subtitulo").textContent =
+        app.pagina.subtitulo;
 
 }
 
+/*==================================================*
+ * FORMULÁRIO
+ *==================================================*/
 
-/*==================================================
-    FORMULÁRIO
-==================================================*/
-
-function criarFormulario(){
-
-    const formulario = document.getElementById("form-cadastro");
+function preencherFormulario() {
 
     app.campos.forEach(campo => {
 
-        formulario.innerHTML += `
+        document.getElementById(`label-${campo.id}`).textContent =
+            campo.label;
 
-            <div class="campo">
+        const input =
+            document.getElementById(campo.id);
 
-                <label for="${campo.id}">
-                    ${campo.label}
-                </label>
+        input.type =
+            campo.tipo;
 
-                <input
-                    id="${campo.id}"
-                    type="${campo.tipo}"
-                    placeholder="${campo.placeholder}"
-                    autocomplete="off"
-                >
-
-            </div>
-
-        `;
+        input.placeholder =
+            campo.placeholder;
 
     });
 
 }
 
+/*==================================================*
+ * BOTÕES
+ *==================================================*/
 
-/*==================================================
-    BOTÕES
-==================================================*/
+function preencherBotoes() {
 
-function criarBotoes(){
+    document.getElementById("btnCadastrar").textContent =
+        "Criar Conta";
 
-    const area = document.getElementById("cadastro-botoes");
+    document.getElementById("btnLogin").textContent =
+        "Voltar para Login";
 
-    area.innerHTML = `
+}
 
-        <button id="btnCadastrar">
-            Criar Conta
-        </button>
+/*==================================================*
+ * BENEFÍCIOS
+ *==================================================*/
 
-        <button id="btnLogin">
-            Voltar para Login
-        </button>
+function preencherBeneficios() {
 
-    `;
+    const beneficio =
+        app.beneficios[0];
+
+    document.getElementById("beneficio-img").src =
+        beneficio.imagem;
+
+    document.getElementById("beneficio-img").alt =
+        beneficio.titulo;
+
+    document.getElementById("beneficio-titulo").textContent =
+        beneficio.titulo;
+
+    document.getElementById("beneficio-descricao").textContent =
+        beneficio.descricao;
+
+}
+
+/*==================================================*
+ * FOOTER
+ *==================================================*/
+
+function preencherFooter() {
+
+    document.getElementById("footer-texto").textContent =
+        app.footer.texto;
+
+    document.getElementById("footer-link").textContent =
+        app.footer.link;
+
+}
+
+/*==================================================*
+ * EVENTOS
+ *==================================================*/
+
+function configurarEventos() {
 
     document
         .getElementById("btnCadastrar")
-        .addEventListener("click", cadastrarUsuario);
+        .addEventListener("click", cadastrarCliente);
 
     document
         .getElementById("btnLogin")
@@ -216,134 +231,191 @@ function criarBotoes(){
 
 }
 
+/*==================================================*
+ * CADASTRAR CLIENTE
+ *==================================================*/
 
-/*==================================================
-    BENEFÍCIOS
-==================================================*/
+function cadastrarCliente() {
 
-function criarBeneficios(){
+    const nome =
+        document.getElementById("nome").value.trim();
 
-    const container = document.getElementById("beneficios-container");
+    const cpf =
+        document.getElementById("cpf").value.trim();
 
-    app.beneficios.forEach(item => {
+    const telefone =
+        document.getElementById("telefone").value.trim();
 
-        container.innerHTML += `
+    const email =
+        document.getElementById("email").value.trim();
 
-            <div class="card-beneficio">
+    const senha =
+        document.getElementById("senha").value;
 
-                <img src="${item.imagem}" alt="${item.titulo}">
+    const dataNascimento =
+        document.getElementById("nascimento").value;
 
-                <h3>${item.titulo}</h3>
+    const mensagem =
+        document.getElementById("mensagem");
 
-                <p>${item.descricao}</p>
 
-            </div>
+    mensagem.innerHTML = "";
+    mensagem.style.color = "";
 
-        `;
+
+    if (
+        nome === "" ||
+        cpf === "" ||
+        telefone === "" ||
+        email === "" ||
+        senha === "" ||
+        dataNascimento === ""
+    ) {
+
+        mensagem.style.color = "red";
+        mensagem.innerHTML =
+            "Preencha todos os campos.";
+
+        return;
+
+    }
+
+
+    if (senha.length < 6 || senha.length > 13) {
+
+        mensagem.style.color = "red";
+        mensagem.innerHTML =
+            "A senha deve possuir entre 6 e 13 caracteres.";
+
+        return;
+
+    }
+
+
+    if (!email.includes("@")) {
+
+        mensagem.style.color = "red";
+        mensagem.innerHTML =
+            "Digite um e-mail válido.";
+
+        return;
+
+    }
+
+
+    const cliente = {
+
+        nome: nome,
+
+        cpf: cpf.replace(/\D/g, ""),
+
+        telefone: telefone.replace(/\D/g, ""),
+
+        email: email,
+
+        senha: senha,
+
+        data_nascimento: dataNascimento,
+
+        Loja_idLoja: 1
+
+    };
+
+
+    fetch("http://localhost:3000/clientes", {
+
+        method: "POST",
+
+        headers: {
+
+            "Content-Type": "application/json"
+
+        },
+
+        body: JSON.stringify(cliente)
+
+    })
+
+    .then(res => res.json())
+
+    .then(resposta => {
+
+        if (resposta.sucesso) {
+
+            mensagem.style.color = "green";
+
+            mensagem.innerHTML =
+                resposta.mensagem;
+
+
+            document.getElementById("nome").value = "";
+
+            document.getElementById("cpf").value = "";
+
+            document.getElementById("telefone").value = "";
+
+            document.getElementById("email").value = "";
+
+            document.getElementById("senha").value = "";
+
+            document.getElementById("nascimento").value = "";
+
+        }
+        else {
+
+            mensagem.style.color = "red";
+
+            mensagem.innerHTML =
+                resposta.mensagem;
+
+        }
+
+    })
+
+    .catch(() => {
+
+        mensagem.style.color = "red";
+
+        mensagem.innerHTML =
+            "Erro ao conectar com o servidor.";
 
     });
 
 }
 
 
-/*==================================================
-    FOOTER
-==================================================*/
+/*==================================================*
+ * MÁSCARAS
+ *==================================================*/
 
-function criarFooter(){
+function aplicarMascaras() {
 
-    const footer = document.getElementById("footer");
+    const cpf =
+        document.getElementById("cpf");
 
-    footer.innerHTML = `
-
-        <div style="
-            width:95%;
-            max-width:1200px;
-            display:flex;
-            justify-content:space-between;
-            flex-wrap:wrap;
-            gap:15px;
-        ">
-
-            <span>${app.footer.texto}</span>
-
-            <span>${app.footer.link}</span>
-
-        </div>
-
-    `;
-
-}
-
-
-/*==================================================
-    CADASTRAR USUÁRIO
-==================================================*/
-
-function cadastrarUsuario(event){
-
-    event.preventDefault();
-
-    const usuario = {
-
-        nome: document.getElementById("nome").value.trim(),
-
-        cpf: document.getElementById("cpf").value.trim(),
-
-        telefone: document.getElementById("telefone").value.trim(),
-
-        email: document.getElementById("email").value.trim(),
-
-        senha: document.getElementById("senha").value,
-
-        nascimento: document.getElementById("nascimento").value
-
-    };
-
-
-    for(const chave in usuario){
-
-        if(usuario[chave] === ""){
-
-            alert("Preencha todos os campos.");
-
-            return;
-
-        }
-
-    }
-
-
-    localStorage.setItem(
-        "usuarioCadastro",
-        JSON.stringify(usuario)
-    );
-
-    console.table(usuario);
-
-    alert("Cadastro realizado com sucesso!");
-
-}
-
-
-/*==================================================
-    MÁSCARAS
-==================================================*/
-
-function aplicarMascaras(){
-
-    const cpf = document.getElementById("cpf");
-
-    const telefone = document.getElementById("telefone");
+    const telefone =
+        document.getElementById("telefone");
 
 
     cpf.addEventListener("input", () => {
 
-        let valor = cpf.value.replace(/\D/g,'');
+        let valor =
+            cpf.value.replace(/\D/g, "");
 
-        valor = valor.replace(/(\d{3})(\d)/,'$1.$2');
-        valor = valor.replace(/(\d{3})(\d)/,'$1.$2');
-        valor = valor.replace(/(\d{3})(\d{1,2})$/,'$1-$2');
+        valor = valor.replace(
+            /(\d{3})(\d)/,
+            "$1.$2"
+        );
+
+        valor = valor.replace(
+            /(\d{3})(\d)/,
+            "$1.$2"
+        );
+
+        valor = valor.replace(
+            /(\d{3})(\d{1,2})$/,
+            "$1-$2"
+        );
 
         cpf.value = valor;
 
@@ -352,139 +424,21 @@ function aplicarMascaras(){
 
     telefone.addEventListener("input", () => {
 
-        let valor = telefone.value.replace(/\D/g,'');
+        let valor =
+            telefone.value.replace(/\D/g, "");
 
-        valor = valor.replace(/^(\d{2})(\d)/g,'($1) $2');
-        valor = valor.replace(/(\d)(\d{4})$/,'$1-$2');
+        valor = valor.replace(
+            /^(\d{2})(\d)/,
+            "($1) $2"
+        );
+
+        valor = valor.replace(
+            /(\d)(\d{4})$/,
+            "$1-$2"
+        );
 
         telefone.value = valor;
 
     });
 
 }
-
-document.getElementById("btnCadastrar").addEventListener("click", () => {
- 
-    const nome = document.getElementById("nome").value.trim();
- 
-    const cpf = document.getElementById("cpf").value.trim();
- 
-    const telefone = document.getElementById("telefone").value.trim();
- 
-    const email = document.getElementById("email").value.trim();
- 
-    const senha = document.getElementById("senha").value;
- 
-    const dataNascimento =
-        document.getElementById("nascimento").value;
- 
- 
-    if (
-        nome == "" ||
-        cpf == "" ||
-        telefone == "" ||
-        email == "" ||
-        senha == "" ||
-        dataNascimento == ""
-    ) {
- 
-       
-        mensagem.innerHTML = "Preencha todos os campos.";
- 
-        return;
- 
-    }
- 
-    if (senha.length > 13) {
- 
-        mensagem.style.color = "red";
-        mensagem.innerHTML =
-            "A senha deve possuir entre 6 a 13 caracteres.";
- 
-        return;
- 
-    }
- 
-    if (!email.includes("@")) {
- 
-        mensagem.style.color = "red";
-        mensagem.innerHTML = "Digite um e-mail válido.";
- 
-        return;
- 
-    }
- 
-    mensagem.style.color = "green";
- 
-    mensagem.innerHTML =
-        "Cadastro realizado com sucesso!";
- 
-    // Objeto pronto para enviar ao Node.js
- 
-    const cliente = {
- 
-        nome: nome,
- 
-        cpf: cpf.replace(/\D/g, ""),
- 
-        telefone: telefone.replace(/\D/g, ""),
- 
-        email: email,
- 
-        senha: senha,
- 
-        data_nascimento: dataNascimento,
- 
-        Loja_idLoja: 1
- 
-    };
- 
-    console.log(cliente);
- 
- 
-    fetch("http://localhost:3000/clientes", {
- 
-        method: "POST",
- 
-        headers: {
-            "Content-Type": "application/json"
-        },
- 
-        body: JSON.stringify(cliente)
- 
-    })
-        .then(res => res.json())
- 
-        .then(resposta => {
- 
-            if (resposta.sucesso) {
- 
-                mensagem.style.color = "green";
-                mensagem.innerHTML = resposta.mensagem;
- 
-                // Limpa os campos
-                document.getElementById("nome").value = "";
-                document.getElementById("cpf").value = "";
-                document.getElementById("telefone").value = "";
-                document.getElementById("email").value = "";
-                document.getElementById("senha").value = "";
-                document.getElementById("dataNascimento").value = "";
- 
-            } else {
- 
-                mensagem.style.color = "red";
-                mensagem.innerHTML = resposta.mensagem;
- 
-            }
- 
-        })
- 
-        .catch(() => {
- 
-            mensagem.style.color = "red";
-            mensagem.innerHTML = "Erro ao conectar com o servidor.";
- 
-        });
- 
- 
-});

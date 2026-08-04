@@ -27,8 +27,8 @@ function cadastrar(req, res) {
         !cliente.telefone ||
         !cliente.email ||
         !cliente.senha ||
-        !cliente.data_nascimento ||
-        !cliente.Loja_idLoja
+        !cliente.data_nascimento 
+       
     ) {
 
         return res.status(400).json({
@@ -42,7 +42,7 @@ function cadastrar(req, res) {
 
     // Verifica se já existe um usuário com o mesmo e-mail
 
-    clienteModel.buscarPorCpf(cliente.cpf, (erro, resultado) => {
+    clienteModel.buscarPorEmail(cliente.email, (erro, resultado) => {
 
         if (erro) {
 
@@ -204,6 +204,63 @@ function excluir(req, res) {
 
 }
 
+
+
+
+function login(req, res) {
+
+    const { email, senha } = req.body;
+
+    clienteModel.buscarPorEmail(email, (erro, resultado) => {
+
+        if (erro) {
+
+            return res.status(500).json({
+                sucesso: false,
+                mensagem: "Erro interno."
+            });
+
+        }
+
+        if (resultado.length === 0) {
+
+            return res.json({
+                sucesso: false,
+                mensagem: "E-mail ou senha inválidos."
+            });
+
+        }
+
+        const cliente = resultado[0];
+
+        if (cliente.senha !== senha) {
+
+            return res.json({
+                sucesso: false,
+                mensagem: "E-mail ou senha inválidos."
+            });
+
+        }
+
+        res.json({
+
+            sucesso: true,
+
+            cliente: {
+
+                id: cliente.idCliente,
+                nome: cliente.nome,
+                email: cliente.email,
+                telefone: cliente.telefone,
+                cpf: cliente.cpf
+
+            }
+
+        });
+
+    });
+
+}
 //==========================================
 // EXPORTAÇÃO
 //==========================================
@@ -214,6 +271,7 @@ module.exports = {
     listar,
     buscarPorId,
     atualizar,
-    excluir
+    excluir,
+    login
 
 };

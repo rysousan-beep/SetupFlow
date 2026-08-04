@@ -6,6 +6,8 @@ const Controller = require("../controller/cliente_controller.js");
 
 router.post("/", Controller.cadastrar);
 
+router.post("/login", Controller.login);
+
 router.get("/", Controller.listar);
 
 router.get("/:id", Controller.buscarPorId);
