@@ -1,44 +1,76 @@
+// ============================================================
+// MODEL DE CATEGORIAS
+// ============================================================
+
 const conexao = require("../conexao/conexao.js");
 
-// =========================
-// Cadastrar Produto
-// =========================
 
-function cadastrar(Categoria, callback) {
+// ============================================================
+// CADASTRAR
+// ============================================================
 
-    const sql = `INSERT INTO Categoria
+function cadastrar(categoria, callback) {
+
+    const sql = `
+        INSERT INTO Categoria
         (nome)
-        VALUES (?)`;
+        VALUES (?)
+    `;
 
     conexao.query(
         sql,
         [
-            Categoria.nome
+            categoria.nome
         ],
         callback
     );
-
 }
 
-// =========================
-// Listar Categorias
-// =========================
+
+// ============================================================
+// LISTAR
+// ============================================================
 
 function listar(callback) {
 
     const sql = `
-        SELECT * FROM Categoria
+        SELECT *
+        FROM Categoria
+        ORDER BY nome ASC
     `;
 
-    conexao.query(sql, callback);
-
+    conexao.query(
+        sql,
+        callback
+    );
 }
 
-// =========================
-// Buscar por ID
-// =========================
 
-function buscarPorId(nome, callback) {
+// ============================================================
+// BUSCAR POR ID
+// ============================================================
+
+function buscarPorId(id, callback) {
+
+    const sql = `
+        SELECT *
+        FROM Categoria
+        WHERE idCategoria = ?
+    `;
+
+    conexao.query(
+        sql,
+        [id],
+        callback
+    );
+}
+
+
+// ============================================================
+// BUSCAR POR NOME
+// ============================================================
+
+function buscarPorNome(nome, callback) {
 
     const sql = `
         SELECT *
@@ -46,30 +78,23 @@ function buscarPorId(nome, callback) {
         WHERE nome = ?
     `;
 
-    conexao.query(sql, [nome], callback);
-
+    conexao.query(
+        sql,
+        [nome],
+        callback
+    );
 }
 
-// =========================
-// Buscar por nome
-// =========================
 
-function buscarPornome(nome, callback) {
+// ============================================================
+// ATUALIZAR
+// ============================================================
 
-    const sql = `
-        SELECT * FROM Categoria
-        WHERE nome = ?
-    `;
-
-    conexao.query(sql, [nome], callback);
-
-}
-
-// =========================
-// Atualizar Categoria
-// =========================
-
-function atualizar(id, Categoria, callback) {
+function atualizar(
+    id,
+    categoria,
+    callback
+) {
 
     const sql = `
         UPDATE Categoria
@@ -81,34 +106,46 @@ function atualizar(id, Categoria, callback) {
     conexao.query(
         sql,
         [
-            Categoria.nome,
+            categoria.nome,
             id
         ],
         callback
     );
 }
 
-// ========================
-// Excluir Categoria
-// =========================
 
-function excluir(id, callback) {
+// ============================================================
+// EXCLUIR
+// ============================================================
+
+function excluir(
+    id,
+    callback
+) {
 
     const sql = `
         DELETE FROM Categoria
         WHERE idCategoria = ?
     `;
 
-    conexao.query(sql, [id], callback);
-
+    conexao.query(
+        sql,
+        [id],
+        callback
+    );
 }
+
+
+// ============================================================
+// EXPORTAÇÃO
+// ============================================================
 
 module.exports = {
 
     cadastrar,
     listar,
     buscarPorId,
-    buscarPornome,
+    buscarPorNome,
     atualizar,
     excluir
 

@@ -1,43 +1,78 @@
+// ============================================================
+// MODEL DE MARCA
+// ============================================================
+
 const conexao = require("../conexao/conexao.js");
 
-// =========================
-// Cadastrar Produto
-// =========================
 
-function cadastrar(Marca, callback) {
+// ============================================================
+// CADASTRAR MARCA
+// ============================================================
 
-    const sql = `INSERT INTO Marca
-        (nome, logo)
-        VALUES (?, ?)`;
+function cadastrar(marca, callback) {
+
+    const sql = `
+        INSERT INTO Marca
+        (
+            nome,
+            logo
+        )
+        VALUES (?, ?)
+    `;
 
     conexao.query(
         sql,
         [
-            Marca.nome,
-            Marca.logo
+            marca.nome,
+            marca.logo
         ],
         callback
     );
-
 }
 
-// =========================
-// Listar Marcas
-// =========================
+
+// ============================================================
+// LISTAR MARCAS
+// ============================================================
 
 function listar(callback) {
 
     const sql = `
-        SELECT * FROM Marca
+        SELECT *
+        FROM Marca
+        ORDER BY nome ASC
     `;
 
-    conexao.query(sql, callback);
-
+    conexao.query(
+        sql,
+        callback
+    );
 }
 
-// =========================
-// Buscar por nome
-// =========================
+
+// ============================================================
+// BUSCAR MARCA POR ID
+// ============================================================
+
+function buscarPorId(id, callback) {
+
+    const sql = `
+        SELECT *
+        FROM Marca
+        WHERE idMarca = ?
+    `;
+
+    conexao.query(
+        sql,
+        [id],
+        callback
+    );
+}
+
+
+// ============================================================
+// BUSCAR MARCA POR NOME
+// ============================================================
 
 function buscarPorNome(nome, callback) {
 
@@ -47,57 +82,79 @@ function buscarPorNome(nome, callback) {
         WHERE nome = ?
     `;
 
-    conexao.query(sql, [nome], callback);
-
-}
-
-// =========================
-// Buscar por Email
-// =========================
-
-function buscarPorEmail(nome, callback) {
-
-    const sql = `
-        SELECT * FROM marca
-        WHERE nome = ?
-    `;
-
-    conexao.query(sql, [email], callback);
-
-}
-
-// =========================
-// Atualizar Marca
-// =========================
-
-function atualizar(id, Marca, callback) {
-
-    const sql = `
-        UPDATE Marca
-        SET
-
-            nome = ?,
-            logo = ?
-        WHERE idMarca = ?
-    `;
-
-     
     conexao.query(
         sql,
-        [
-            Marca.nome,
-            Marca.logo,
-            id
-        ],
+        [nome],
         callback
     );
-
-
 }
 
-// =========================
-// Excluir Marca
-// =========================
+
+// ============================================================
+// ATUALIZAR MARCA
+// ============================================================
+
+function atualizar(id, marca, callback) {
+
+    let sql;
+    let valores;
+
+
+    // --------------------------------------------------------
+    // COM NOVA LOGO
+    // --------------------------------------------------------
+
+    if (marca.logo) {
+
+        sql = `
+            UPDATE Marca
+            SET
+                nome = ?,
+                logo = ?
+            WHERE idMarca = ?
+        `;
+
+        valores = [
+            marca.nome,
+            marca.logo,
+            id
+        ];
+
+    }
+
+
+    // --------------------------------------------------------
+    // SEM NOVA LOGO
+    // --------------------------------------------------------
+
+    else {
+
+        sql = `
+            UPDATE Marca
+            SET
+                nome = ?
+            WHERE idMarca = ?
+        `;
+
+        valores = [
+            marca.nome,
+            id
+        ];
+
+    }
+
+
+    conexao.query(
+        sql,
+        valores,
+        callback
+    );
+}
+
+
+// ============================================================
+// EXCLUIR MARCA
+// ============================================================
 
 function excluir(id, callback) {
 
@@ -106,16 +163,24 @@ function excluir(id, callback) {
         WHERE idMarca = ?
     `;
 
-    conexao.query(sql, [id], callback);
-
+    conexao.query(
+        sql,
+        [id],
+        callback
+    );
 }
+
+
+// ============================================================
+// EXPORTAÇÃO
+// ============================================================
 
 module.exports = {
 
     cadastrar,
     listar,
+    buscarPorId,
     buscarPorNome,
-    buscarPorEmail,
     atualizar,
     excluir
 

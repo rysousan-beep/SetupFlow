@@ -7,6 +7,7 @@ const app = express();
 
 app.use(cors());
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 const conexao = require('./conexao');
 const avaliacaoProdutoRouter = require("../routes/avaliacao_produto_router");
@@ -35,6 +36,10 @@ const produtoHasPromocaoRouter = require("../routes/produto_has_promocao_router"
 const produtoRouter = require("../routes/produto_router");
 const promocaoRouter = require("../routes/promocao_router");
 const tamanhoRouter = require("../routes/tamanho_router");
+const categoriasRouter = require("../routes/categorias_router");
+
+
+app.use("/categorias", categoriasRouter);
 app.use("/avaliacao-produto", avaliacaoProdutoRouter);
 app.use("/banner-has-produto", bannerHasProdutoRouter);
 app.use("/banners", bannerRouter);

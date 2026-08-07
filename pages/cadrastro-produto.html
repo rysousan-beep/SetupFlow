@@ -9,7 +9,9 @@
         name="viewport"
         content="width=device-width, initial-scale=1.0">
 
-    <title id="pageTitle">Cadastrar Produto</title>
+    <title id="pageTitle">
+        Cadastrar Produto
+    </title>
 
     <link
         rel="stylesheet"
@@ -19,109 +21,576 @@
 
 <body>
 
-    <!-- ================= SIDEBAR ================= -->
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
 
     <aside id="sidebar">
 
-        <!-- Criado pelo JavaScript -->
+        <div class="sidebar-logo">
+
+            <img
+                id="logoEmpresa"
+                src="/ASSETS/logo.n.png"
+                alt="Logo da Empresa">
+
+            <h2 id="nomeEmpresa">
+                SetupFlow
+            </h2>
+
+        </div>
+
+
+        <nav class="sidebar-menu">
+
+            <a
+                id="menuDashboard"
+                class="sidebar-item"
+                href="home-lojista.html">
+
+                <span>📊</span>
+
+                Dashboard
+
+            </a>
+
+
+            <a
+                id="menuProdutos"
+                class="sidebar-item"
+                href="produtos.html">
+
+                <span>📦</span>
+
+                Produtos
+
+            </a>
+
+
+            <a
+                id="menuCadastro"
+                class="sidebar-item active"
+                href="cadastrar-produto.html">
+
+                <span>➕</span>
+
+                Cadastrar Produto
+
+            </a>
+
+
+            <a
+                id="menuPedidos"
+                class="sidebar-item"
+                href="pedidos.html">
+
+                <span>🛒</span>
+
+                Pedidos
+
+            </a>
+
+        </nav>
 
     </aside>
 
-    <!-- ================= CONTEÚDO ================= -->
+
+    <!-- =====================================================
+         APP
+    ====================================================== -->
 
     <div id="app">
 
-        <!-- ================= HEADER ================= -->
+
+        <!-- =================================================
+             HEADER
+        ================================================== -->
 
         <header id="header">
 
-            <!-- Criado pelo JavaScript -->
+            <div class="header-left">
+
+                <input
+                    id="pesquisa"
+                    class="header-search"
+                    type="search"
+                    placeholder="Pesquisar produtos...">
+
+            </div>
+
+
+            <div class="header-right">
+
+                <span id="nomeUsuario">
+                    Administrador
+                </span>
+
+
+                <img
+                    id="avatarUsuario"
+                    class="header-avatar"
+                    src="/ASSETS/homem.png"
+                    alt="Administrador">
+
+            </div>
 
         </header>
 
-        <!-- ================= MAIN ================= -->
+
+        <!-- =================================================
+             MAIN
+        ================================================== -->
 
         <main id="mainContent">
 
-            <!-- Breadcrumb -->
 
-            <section id="breadcrumb">
+            <h1 id="tituloPagina">
+                Cadastro de Produtos
+            </h1>
 
-                <!-- Criado pelo JavaScript -->
 
-            </section>
+            <p id="subtituloPagina">
+                Gerencie produtos, marcas, categorias, tamanhos e imagens.
+            </p>
 
-            <!-- Título -->
 
-            <section id="pageHeader">
 
-                <h1 id="tituloPagina"></h1>
+            <!-- =================================================
+                 CARDS
+            ================================================== -->
 
-                <p id="subtituloPagina"></p>
+            <section
+                id="cards"
+                class="cards">
 
-            </section>
 
-            <!-- Formulário -->
+                <!-- =============================================
+                     CADASTRO DE PRODUTO
+                ============================================== -->
 
-            <section id="formSection">
+                <div
+                    id="cardProduto"
+                    class="card grande">
 
-                <form id="produtoForm">
+                    <h2>
+                        Cadastro Produto
+                    </h2>
 
-                    <div id="formGrid">
 
-                        <!-- Campos criados pelo JS -->
+                    <!-- Nome -->
 
-                    </div>
+                    <div class="form-group">
 
-                    <!-- Upload -->
+                        <label for="produtoNome">
+                            Nome do Produto
+                        </label>
 
-                    <div id="uploadArea">
-
-                        <!-- Criado pelo JS -->
-
-                    </div>
-
-                    <!-- Galeria -->
-
-                    <div id="galeriaImagens">
-
-                        <!-- Criado pelo JS -->
-
-                    </div>
-
-                    <!-- Informações adicionais -->
-
-                    <div id="informacoesAdicionais">
-
-                        <!-- Switches criados pelo JS -->
+                        <input
+                            id="produtoNome"
+                            name="nome"
+                            type="text"
+                            placeholder="Digite o nome do produto">
 
                     </div>
 
-                    <!-- Botões -->
 
-                    <div id="acoesFormulario">
+                    <!-- Descrição -->
 
-                        <!-- Criado pelo JS -->
+                    <div class="form-group">
+
+                        <label for="produtoDescricao">
+                            Descrição
+                        </label>
+
+                        <textarea
+                            id="produtoDescricao"
+                            name="descricao"
+                            placeholder="Digite a descrição do produto">
+                        </textarea>
 
                     </div>
 
-                </form>
+
+                    <!-- Código / Preços -->
+
+                    <div class="linha">
+
+
+                        <div class="form-group">
+
+                            <label for="produtoCodigo">
+                                Código
+                            </label>
+
+                            <input
+                                id="produtoCodigo"
+                                name="codigo"
+                                type="text"
+                                placeholder="PROD001">
+
+                        </div>
+
+
+
+                        <div class="form-group">
+
+                            <label for="produtoPrecoAntigo">
+                                Preço Antigo
+                            </label>
+
+                            <input
+                                id="produtoPrecoAntigo"
+                                name="precoAntigo"
+                                type="number"
+                                step="0.01"
+                                min="0"
+                                placeholder="0,00">
+
+                        </div>
+
+
+
+                        <div class="form-group">
+
+                            <label for="produtoPrecoPromo">
+                                Preço Promoção
+                            </label>
+
+                            <input
+                                id="produtoPrecoPromo"
+                                name="precoPromo"
+                                type="number"
+                                step="0.01"
+                                min="0"
+                                placeholder="0,00">
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Estoque / Marca / Categoria -->
+
+                    <div class="linha">
+
+
+                        <!-- Estoque -->
+
+                        <div class="form-group">
+
+                            <label for="produtoEstoque">
+                                Estoque
+                            </label>
+
+                            <input
+                                id="produtoEstoque"
+                                name="estoque"
+                                type="number"
+                                min="0"
+                                placeholder="0">
+
+                        </div>
+
+
+
+                        <!-- Marca -->
+
+                        <div class="form-group">
+
+                            <label for="produtoMarca">
+                                Marca
+                            </label>
+
+                            <select
+                                id="produtoMarca"
+                                name="marca">
+
+                                <option value="">
+                                    Selecione uma marca
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+
+                        <!-- Categoria -->
+
+                        <div class="form-group">
+
+                            <label for="produtoCategoria">
+                                Categoria
+                            </label>
+
+                            <select
+                                id="produtoCategoria"
+                                name="categoria">
+
+                                <option value="">
+                                    Selecione uma categoria
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Status -->
+
+                    <div class="form-group">
+
+                        <label for="produtoStatus">
+                            Status
+                        </label>
+
+
+                        <select
+                            id="produtoStatus"
+                            name="status">
+
+                            <option value="true">
+                                Ativo
+                            </option>
+
+                            <option value="false">
+                                Inativo
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+
+                    <!-- Botão -->
+
+                    <button
+                        id="btnProduto"
+                        type="button">
+
+                        Cadastrar Produto
+
+                    </button>
+
+                </div>
+
+
+
+                <!-- =============================================
+                     CADASTRO DE MARCA
+                ============================================== -->
+
+                <div
+                    id="cardMarca"
+                    class="card">
+
+                    <h2>
+                        Cadastro de Marca
+                    </h2>
+
+
+                    <!-- Nome da Marca -->
+
+                    <div class="form-group">
+
+                        <label for="marcaNome">
+                            Nome da Marca
+                        </label>
+
+                        <input
+                            id="marcaNome"
+                            name="nome"
+                            type="text"
+                            placeholder="Digite o nome da marca">
+
+                    </div>
+
+
+                    <!-- Logo -->
+
+                    <div class="form-group">
+
+                        <label for="marcaLogo">
+                            Logo da Marca
+                        </label>
+
+                        <input
+                            id="marcaLogo"
+                            name="logo"
+                            type="file"
+                            accept="image/png,image/jpeg,image/webp">
+
+                        <small id="marcaLogoInfo">
+                            Formatos aceitos: PNG, JPG e WEBP.
+                        </small>
+
+                    </div>
+
+
+                    <!-- Preview -->
+
+                    <div
+                        id="marcaLogoPreview"
+                        class="logo-preview">
+
+                        <img
+                            id="marcaLogoImagem"
+                            src=""
+                            alt="Pré-visualização da logo"
+                            hidden>
+
+                    </div>
+
+
+                    <!-- Botão -->
+
+                    <button
+                        id="btnMarca"
+                        type="button">
+
+                        Salvar Marca
+
+                    </button>
+
+                </div>
+
+
+
+                <!-- =============================================
+                     CADASTRO DE CATEGORIA
+                ============================================== -->
+
+                <div
+                    id="cardCategoria"
+                    class="card">
+
+                    <h2>
+                        Cadastro de Categoria
+                    </h2>
+
+
+                    <div class="form-group">
+
+                        <label for="categoriaNome">
+                            Nome da Categoria
+                        </label>
+
+                        <input
+                            id="categoriaNome"
+                            name="nome"
+                            type="text"
+                            placeholder="Digite o nome da categoria">
+
+                    </div>
+
+
+                    <button
+                        id="btnCategoria"
+                        type="button">
+
+                        Salvar Categoria
+
+                    </button>
+
+                </div>
+
+
+
+                <!-- =============================================
+                     IMAGEM DO PRODUTO
+                ============================================== -->
+
+                <div
+                    id="cardImagem"
+                    class="card">
+
+                    <h2>
+                        Imagem do Produto
+                    </h2>
+
+
+                    <!-- Produto -->
+
+                    <div class="form-group">
+
+                        <label for="imagemProduto">
+                            Produto
+                        </label>
+
+                        <select
+                            id="imagemProduto"
+                            name="produto">
+
+                            <option value="">
+                                Selecione um produto
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- Arquivo -->
+
+                    <div class="form-group">
+
+                        <label for="imagemArquivo">
+                            Imagem
+                        </label>
+
+                        <input
+                            id="imagemArquivo"
+                            name="imagem"
+                            type="file"
+                            accept="image/png,image/jpeg,image/webp">
+
+                    </div>
+
+
+                    <!-- Preview -->
+
+                    <div
+                        id="imagemProdutoPreview"
+                        class="image-preview">
+
+                        <img
+                            id="imagemProdutoImagem"
+                            src=""
+                            alt="Pré-visualização da imagem"
+                            hidden>
+
+                    </div>
+
+
+                    <!-- Botão -->
+
+                    <button
+                        id="btnImagem"
+                        type="button">
+
+                        Salvar Imagem
+
+                    </button>
+
+                </div>
+
 
             </section>
 
         </main>
 
-        <!-- ================= FOOTER ================= -->
-
-        <footer id="footer">
-
-            <!-- Criado pelo JavaScript -->
-
-        </footer>
-
     </div>
 
-    <!-- ================= MODAL ================= -->
+
+
+    <!-- =====================================================
+         MODAL
+    ====================================================== -->
 
     <div
         id="modal"
@@ -129,21 +598,44 @@
 
         <div id="modalConteudo">
 
-            <!-- Criado pelo JavaScript -->
+            <h2 id="modalTitulo">
+                Operação realizada!
+            </h2>
+
+
+            <p id="modalTexto">
+                Operação realizada com sucesso.
+            </p>
+
+
+            <button
+                id="btnFecharModal"
+                type="button">
+
+                Fechar
+
+            </button>
 
         </div>
 
     </div>
 
-    <!-- ================= TOAST ================= -->
+
+
+    <!-- =====================================================
+         TOAST
+    ====================================================== -->
 
     <div
         id="toast"
         class="toast oculto">
-
     </div>
 
-    <!-- ================= LOADING ================= -->
+
+
+    <!-- =====================================================
+         LOADING
+    ====================================================== -->
 
     <div
         id="loading"
@@ -152,6 +644,12 @@
         <div class="spinner"></div>
 
     </div>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
 
     <script src="/js/cadastro-produto.js"></script>
 
